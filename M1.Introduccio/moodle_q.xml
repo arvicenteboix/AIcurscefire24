@@ -1,0 +1,124 @@
+<quiz>
+    <question type="multichoice">
+        <name>
+            <text>Què és la Intel·ligència Artificial?</text>
+        </name>
+        <questiontext format="html">
+            <text><![CDATA[<p>Què és la Intel·ligència Artificial?</p>]]></text>
+        </questiontext>
+        <answer fraction="0">
+            <text>La capacitat dels ordinadors per a realitzar tasques automatitzades.</text>
+        </answer>
+        <answer fraction="100">
+            <text>Un conjunt de tècniques i algoritmes per a crear sistemes que simulen la intel·ligència humana.</text>
+        </answer>
+        <answer fraction="0">
+            <text>L'ús de xarxes neuronals per a resoldre problemes complexos.</text>
+        </answer>
+        <answer fraction="0">
+            <text>La capacitat de les màquines per a aprendre i adaptar-se.</text>
+        </answer>
+    </question>
+
+
+    <question type="multichoice">
+        <name>
+            <text>Què és un Model de Llenguatge a Gran Escala (MLL)?</text>
+        </name>
+        <questiontext format="html">
+            <text><![CDATA[<p>Què és un Model de Llenguatge a Gran Escala (MLL)?</p>]]></text>
+        </questiontext>
+        <answer fraction="0">
+            <text>a. Un model que utilitza dades textuals per a generar imatges.</text>
+        </answer>
+        <answer fraction="100">
+            <text>b. Un model que entén el significat de frases i respon preguntes.</text>
+        </answer>
+        <answer fraction="0">
+            <text>c. Un model que genera contingut creatiu i poesia.</text>
+        </answer>
+        <answer fraction="0">
+            <text>d. Un model que millora la traducció automàtica i les recomanacions personalitzades.</text>
+        </answer>
+    </question>
+    <question type="multichoice">
+        <name>
+            <text>Quina és una aplicació dels Models de Llenguatge a Gran Escala (MLL)?</text>
+        </name>
+        <questiontext format="html">
+            <text><![CDATA[<p>Quina és una aplicació dels Models de Llenguatge a Gran Escala (MLL)?</p>]]></text>
+        </questiontext>
+        <answer fraction="0">
+            <text>a. Generació de textos científics i mèdics.</text>
+        </answer>
+        <answer fraction="0">
+            <text>b. Traducció automàtica de llenguatges de programació.</text>
+        </answer>
+        <answer fraction="0">
+            <text>c. Anàlisi de dades no estructurades per a informes periodístics.</text>
+        </answer>
+        <answer fraction="100">
+            <text>d. Creació de contingut multimèdia i resums automàtics.</text>
+        </answer>
+    </question>
+    <question type="multichoice">
+        <name>
+            <text>Què caracteritza als Models de Difusió?</text>
+        </name>
+        <questiontext format="html">
+            <text><![CDATA[<p>Què caracteritza als Models de Difusió?</p>]]></text>
+        </questiontext>
+        <answer fraction="0">
+            <text>a. Utilitzen xarxes neuronals per a resoldre problemes complexos.</text>
+        </answer>
+        <answer fraction="100">
+            <text>b. Generen imatges utilitzant tècniques de difusió probabilística.</text>
+        </answer>
+        <answer fraction="0">
+            <text>c. S'integren en assistents virtuals per a millorar la comprensió del llenguatge.</text>
+        </answer>
+        <answer fraction="0">
+            <text>d. Són capaços de superar la intel·ligència humana en tasques variades.</text>
+        </answer>
+    </question>
+    <question type="multichoice">
+        <name>
+            <text>Quina és una aplicació dels Models de Difusió?</text>
+        </name>
+        <questiontext format="html">
+            <text><![CDATA[<p>Quina és una aplicació dels Models de Difusió?</p>]]></text>
+        </questiontext>
+        <answer fraction="100">
+            <text>a. Generació d'il·lustracions i art digital.</text>
+        </answer>
+        <answer fraction="0">
+            <text>b. Creació de mons i elements visuals en videojocs.</text>
+        </answer>
+        <answer fraction="0">
+            <text>c. Simulació i entrenament en realitat virtual.</text>
+        </answer>
+        <answer fraction="0">
+            <text>d. Generació de resums automàtics de textos llargs.</text>
+        </answer>
+    </question>
+    <question type="multichoice">
+        <name>
+            <text>Què diferencia a la Intel·ligència Artificial Estreta (IAE) de la Intel·ligència Artificial General (IAG)?</text>
+        </name>
+        <questiontext format="html">
+            <text><![CDATA[<p>Què diferencia a la Intel·ligència Artificial Estreta (IAE) de la Intel·ligència Artificial General (IAG)?</p>]]></text>
+        </questiontext>
+        <answer fraction="100">
+            <text>a. La IAE pot realitzar una única tasca, mentre que la IAG pot realitzar tasques complexes i variades.</text>
+        </answer>
+        <answer fraction="0">
+            <text>b. La IAE té la capacitat de superar la intel·ligència humana en totes les àrees, mentre que la IAG està programada per a realitzar una sola tasca.</text>
+        </answer>
+        <answer fraction="0">
+            <text>c. La IAE utilitza algoritmes amb llenguatges de programació, mentre que la IAG utilitza una manera de programar diferent.</text>
+        </answer>
+        <answer fraction="0">
+            <text>d. La IAE extreu informació d'un conjunt de dades específic, mentre que la IAG autoapren i autoraciona dins del seu entorn.</text>
+        </answer>
+    </question>
+</quiz>

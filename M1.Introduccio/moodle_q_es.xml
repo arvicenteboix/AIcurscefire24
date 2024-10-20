@@ -1,0 +1,124 @@
+<quiz>
+    <question type="multichoice">
+        <name>
+            <text>¿Qué es la Inteligencia Artificial?</text>
+        </name>
+        <questiontext format="html">
+            <text><![CDATA[<p>¿Qué es la Inteligencia Artificial?</p>]]></text>
+        </questiontext>
+        <answer fraction="0">
+            <text>La capacidad de las computadoras para realizar tareas automatizadas.</text>
+        </answer>
+        <answer fraction="100">
+            <text>Un conjunto de técnicas y algoritmos para crear sistemas que simulan la inteligencia humana.</text>
+        </answer>
+        <answer fraction="0">
+            <text>El uso de redes neuronales para resolver problemas complejos.</text>
+        </answer>
+        <answer fraction="0">
+            <text>La capacidad de las máquinas para aprender y adaptarse.</text>
+        </answer>
+    </question>
+
+
+    <question type="multichoice">
+        <name>
+            <text>¿Qué es un Modelo de Lenguaje a Gran Escala (MLL)?</text>
+        </name>
+        <questiontext format="html">
+            <text><![CDATA[<p>¿Qué es un Modelo de Lenguaje a Gran Escala (MLL)?</p>]]></text>
+        </questiontext>
+        <answer fraction="0">
+            <text>a. Un modelo que utiliza datos textuales para generar imágenes.</text>
+        </answer>
+        <answer fraction="100">
+            <text>b. Un modelo que entiende el significado de frases y responde preguntas.</text>
+        </answer>
+        <answer fraction="0">
+            <text>c. Un modelo que genera contenido creativo y poesía.</text>
+        </answer>
+        <answer fraction="0">
+            <text>d. Un modelo que mejora la traducción automática y las recomendaciones personalizadas.</text>
+        </answer>
+    </question>
+    <question type="multichoice">
+        <name>
+            <text>¿Cuál es una aplicación de los Modelos de Lenguaje a Gran Escala (MLL)?</text>
+        </name>
+        <questiontext format="html">
+            <text><![CDATA[<p>¿Cuál es una aplicación de los Modelos de Lenguaje a Gran Escala (MLL)?</p>]]></text>
+        </questiontext>
+        <answer fraction="0">
+            <text>a. Generación de textos científicos y médicos.</text>
+        </answer>
+        <answer fraction="0">
+            <text>b. Traducción automática de lenguajes de programación.</text>
+        </answer>
+        <answer fraction="0">
+            <text>c. Análisis de datos no estructurados para informes periodísticos.</text>
+        </answer>
+        <answer fraction="100">
+            <text>d. Creación de contenido multimedia y resúmenes automáticos.</text>
+        </answer>
+    </question>
+    <question type="multichoice">
+        <name>
+            <text>¿Qué caracteriza a los Modelos de Difusión?</text>
+        </name>
+        <questiontext format="html">
+            <text><![CDATA[<p>¿Qué caracteriza a los Modelos de Difusión?</p>]]></text>
+        </questiontext>
+        <answer fraction="0">
+            <text>a. Utilizan redes neuronales para resolver problemas complejos.</text>
+        </answer>
+        <answer fraction="100">
+            <text>b. Generan imágenes utilizando técnicas de difusión probabilística.</text>
+        </answer>
+        <answer fraction="0">
+            <text>c. Se integran en asistentes virtuales para mejorar la comprensión del lenguaje.</text>
+        </answer>
+        <answer fraction="0">
+            <text>d. Son capaces de superar la inteligencia humana en tareas variadas.</text>
+        </answer>
+    </question>
+    <question type="multichoice">
+        <name>
+            <text>¿Cuál es una aplicación de los Modelos de Difusión?</text>
+        </name>
+        <questiontext format="html">
+            <text><![CDATA[<p>¿Cuál es una aplicación de los Modelos de Difusión?</p>]]></text>
+        </questiontext>
+        <answer fraction="100">
+            <text>a. Generación de ilustraciones y arte digital.</text>
+        </answer>
+        <answer fraction="0">
+            <text>b. Creación de mundos y elementos visuales en videojuegos.</text>
+        </answer>
+        <answer fraction="0">
+            <text>c. Simulación y entrenamiento en realidad virtual.</text>
+        </answer>
+        <answer fraction="0">
+            <text>d. Generación de resúmenes automáticos de textos largos.</text>
+        </answer>
+    </question>
+    <question type="multichoice">
+        <name>
+            <text>¿Qué diferencia a la Inteligencia Artificial Estrecha (IAE) de la Inteligencia Artificial General (IAG)?</text>
+        </name>
+        <questiontext format="html">
+            <text><![CDATA[<p>¿Qué diferencia a la Inteligencia Artificial Estrecha (IAE) de la Inteligencia Artificial General (IAG)?</p>]]></text>
+        </questiontext>
+        <answer fraction="100">
+            <text>a. La IAE puede realizar una única tarea, mientras que la IAG puede realizar tareas complejas y variadas.</text>
+        </answer>
+        <answer fraction="0">
+            <text>b. La IAE tiene la capacidad de superar la inteligencia humana en todas las áreas, mientras que la IAG está programada para realizar una sola tarea.</text>
+        </answer>
+        <answer fraction="0">
+            <text>c. La IAE utiliza algoritmos con lenguajes de programación, mientras que la IAG utiliza una forma de programar diferente.</text>
+        </answer>
+        <answer fraction="0">
+            <text>d. La IAE extrae información de un conjunto de datos específico, mientras que la IAG autoaprende y autorregula dentro de su entorno.</text>
+        </answer>
+    </question>
+</quiz>

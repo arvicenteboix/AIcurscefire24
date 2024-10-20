@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ca" xml:lang="ca" >
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />        <title>1. Introducció. Conceptes inicials</title>
+    <style>
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+        <link rel="stylesheet" href="aqua.css" />  
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+    <![endif]-->
+      
+</head>
+
+<body>
+    <div id="content">
+                 <header id="title-block-header">
+            <h1 class="title">1. Introducció. Conceptes inicials</h1>
+            <!---->
+            <!--  -->
+                    </header>
+                 <nav id="TOC" role="doc-toc">
+            <div class="navContainer">
+                                <h2 id="toc-title">Continguts</h2>
+                 <ul>
+<li><a href="#introducció" id="toc-introducció"><span
+class="toc-section-number">1</span> Introducció</a></li>
+<li><a href="#que-és-i-què-no-és-la-intelligència-artificial"
+id="toc-que-és-i-què-no-és-la-intelligència-artificial"><span
+class="toc-section-number">2</span> Que és i què no és la intel·ligència
+artificial?</a>
+<ul>
+<li><a href="#models-de-llenguatge-a-gran-escala"
+id="toc-models-de-llenguatge-a-gran-escala"><span
+class="toc-section-number">2.1</span> Models de llenguatge a gran
+escala</a></li>
+<li><a href="#models-de-difusió" id="toc-models-de-difusió"><span
+class="toc-section-number">2.2</span> Models de difusió</a></li>
+<li><a href="#exemples-dús-per-a-començar-a-experimentar"
+id="toc-exemples-dús-per-a-començar-a-experimentar"><span
+class="toc-section-number">2.3</span> Exemples d’ús per a començar a
+experimentar</a>
+<ul>
+<li><a href="#teachable-machine-de-google"
+id="toc-teachable-machine-de-google"><span
+class="toc-section-number">2.3.1</span> Teachable Machine de
+Google</a></li>
+<li><a href="#autodraw" id="toc-autodraw"><span
+class="toc-section-number">2.3.2</span> Autodraw</a></li>
+<li><a href="#quickdraw" id="toc-quickdraw"><span
+class="toc-section-number">2.3.3</span> Quickdraw</a></li>
+</ul></li>
+</ul></li>
+</ul>
+            </div>
+        </nav>
+                <main>
+            <!-- \awesomebox[violet]{2pt}{\faRocket}{violet}{Lorem ipsum…} -->
+            <!-- \awesomebox[violet]{2pt}{\faRobot}{violet}{Lorem ipsum…} -->
+            <!-- IMATGE ![Pregunta inicial](./img/proxi/5b.png) -->
+            <!-- \textbf{greatest} -->
+            <p><img src="img/cc.png" height="50" /></p>
+            <p>Aquest document està subjecte a una llicència creative
+            commons que permet la seua difusió i ús comercial
+            reconeixent sempre l’autoria del seu creador. Aquest
+            document es troba per a ser modificat al següent repositori
+            de github: <!-- CANVIAR L'ENLLAÇ --> <a
+            href="https://github.com/arvicenteboix/AIcurscefire24">https://github.com/arvicenteboix/AIcurscefire24</a>
+            </p>
+            <h1 data-number="1" id="introducció"><span
+            class="header-section-number">1</span> Introducció</h1>
+            <p>De segur que molts de vosaltres ja heu sentit parlar de
+            la intel·ligència artificial y de tot allò que pot fer,
+            alguns ja heu començat a utilitzar-lo en el vostre dia a dia
+            i cal distingir alguns conceptes sobre el que és la IA. En
+            aquest curs tractarem de fer-vos una introducció sobre les
+            diferents ferramentes que existeixen i com traure-ls
+            profit.</p>
+            <p>Cal tenir en compte que es tracta d’un curs d’iniciació i
+            és possible que us sentiu aclaparats de tota la informació
+            que aneu a veure, òbviament per la durada del curs no anem a
+            poder aprofundir en moltes de les utilitats que us
+            presentarem, això ja us ho deixarem a vosaltres.</p>
+            <p>Els mòduls seran breus però intensos, tractarem
+            d’ajudar-vos en tots els dubtes que se us plantegen,
+            pràcticament tot el text escrit està redactat i no s’ha
+            utilitzat la IA, algunes imatges són la excepció, en molts
+            casos us presentarem el prompt<a href="#fn1"
+            class="footnote-ref" id="fnref1"
+            role="doc-noteref"><sup>1</sup></a> i la resposta que ens
+            donarà, tractarem de limitar l’extensió al que realment
+            necessiteu. Les respostes us diem que estaran retocades ja
+            que la resposta que dona sempre qualsevol plataforma sempre
+            ha de retocar-se per a que siga el més idònia possible al
+            que desitges. Us ho presentarem amb la següent icona.</p>
+            <p>Òbviament és una resposta molt estàndard que no s’ens
+            hauria ocorregut escriure. Però és aquella que respón.</p>
+            <p>Però anem més enllà i preguntem:</p>
+            <div class="warning">
+            <p>Hi ha molt que debatre al respecte…</p>
+            </div>
+            <h1 data-number="2"
+            id="que-és-i-què-no-és-la-intelligència-artificial"><span
+            class="header-section-number">2</span> Que és i què no és la
+            intel·ligència artificial?</h1>
+            <p>Podem pensar que tot el que fem a l’ordinador té a veure
+            amb la intel·ligència artificial i òbviament no és així, els
+            ordinadors utilitzen algoritmes amb llenguatges de
+            programació per a poder automatitzar tasques o realitzar
+            programes.</p>
+            <p>Aqui teniu un exemple de diagrama de flux senzill:</p>
+            <!-- DIAGRAMA FLUXE -->
+            <figure>
+            <img src="img/1.svg" height="300"
+            alt="Diagrama de flux. Orige: Wikipedia" />
+            <figcaption aria-hidden="true">Diagrama de flux. Orige:
+            Wikipedia</figcaption>
+            </figure>
+            <p>Aquestes funcions porten una lògica enrere, en canvi les
+            IA utilitzen una manera de programar diferent que baralla
+            moltíssimes més possibilitats per a donar una resposta més
+            creativa basant-se en entrades més complexes. Ací tenim un
+            exemple de xarxa neuronal</p>
+            <figure>
+            <img src="img/2.png" height="300"
+            alt="Xarxa neuronal. Orige: Wikipedia" />
+            <figcaption aria-hidden="true">Xarxa neuronal. Orige:
+            Wikipedia</figcaption>
+            </figure>
+            <div class="note">
+            <p>La Intel·ligència Artificial (IA) és un camp ampli que
+            inclou diferents tècniques i algoritmes per a crear sistemes
+            que puguen simular la intel·ligència humana. Les xarxes
+            neuronals són una de les tècniques d’IA que imiten el
+            funcionament del cervell humà per a resoldre problemes</p>
+            </div>
+            <p>Dins de la mateixa intel·ligència artificial ens podem
+            trobar diferents categories que anirem veient al llarg dels
+            propers anys.</p>
+            <table>
+            <colgroup>
+            <col style="width: 33%" />
+            <col style="width: 33%" />
+            <col style="width: 33%" />
+            </colgroup>
+            <thead>
+            <tr class="header">
+            <th>Tipus d’IA</th>
+            <th>Descripció</th>
+            <th>Exemples</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="odd">
+            <td><strong>Intel·ligència Artificial Estreta
+            (IAE)</strong></td>
+            <td>La IAE està programada per a realitzar una sola tasca,
+            ja siga verificar el clima, poder jugar al escacs o
+            analitzar dades sense processar per a escriure informes
+            periodístics. Els sistemes IAE poden atendre una tasca en
+            temps real, però extreuen informació d’un conjunt de dades
+            específic. No funcionen fora de l’única tasca per a la qual
+            estan dissenyats.</td>
+            <td>Verificar el clima, jugar al escacs, analitzar dades
+            sense processar per a escriure informes periodístics¹.</td>
+            </tr>
+            <tr class="even">
+            <td><strong>Intel·ligència Artificial General
+            (IAG)</strong></td>
+            <td>La IAG pot autoaprendre i autoracionar dins del seu
+            entorn. Es centra en tasques complexes i variades, amb la
+            mateixa eficiència que un ésser humà.</td>
+            <td>Encara en desenvolupament.</td>
+            </tr>
+            <tr class="odd">
+            <td><strong>Intel·ligència Artificial Superintelectual
+            (IAS)</strong></td>
+            <td>La IAS té la capacitat de superar la intel·ligència
+            humana en totes les àrees.</td>
+            <td>Teòricament possible, però encara no existeix.</td>
+            </tr>
+            </tbody>
+            </table>
+            <h2 data-number="2.1"
+            id="models-de-llenguatge-a-gran-escala"><span
+            class="header-section-number">2.1</span> Models de
+            llenguatge a gran escala</h2>
+            <p>Els Models de Llenguatge a Gran Escala
+            (<strong>MLL</strong>, per les seues sigles en anglès, Large
+            Language Models) són models d’intel·ligència artificial que
+            han sigut entrenats amb enormes quantitats de dades textuals
+            per a aprendre patrons, estructures i representacions del
+            llenguatge natural. Estos models són capaços de realitzar
+            tasques relacionades amb el processament del llenguatge, com
+            entendre el significat de frases, generar text coherent i
+            respondre preguntes.</p>
+            <p>Exemples de MLL inclouen GPT-3 y 4 (Generative
+            Pre-trained Transformer) d’OpenAI, BERT (Bidirectional
+            Encoder Representations from Transformers) de Google, i T5
+            (Text-to-Text Transfer Transformer) de Google. Alguns més
+            actuals com Grok (de Meta) o Codex (de OpenAI) també són
+            models de llenguatge a gran escala.</p>
+            <p>Algunes aplicacions destacades dels MLL són:</p>
+            <ol type="1">
+            <li><strong>Generació de Text Creatiu</strong>: MLL com
+            GPT-3 poden ser utilitzats per a generar contingut textual
+            creatiu, des de poesia fins a narrativa.</li>
+            <li><strong>Assistents Virtuals Avançats</strong>: MLL
+            s’integren en assistents virtuals per a millorar la seua
+            capacitat de comprensió i generació de respostes en
+            llenguatge natural.</li>
+            <li><strong>Traducció Automàtica Millorada</strong>: Models
+            com T5 han demostrat millores significatives en tasques de
+            traducció automàtica.</li>
+            <li><strong>Generació de Resums Automàtics</strong>: MLL són
+            empleats per a resumir automàticament textos llargs,
+            facilitant l’extracció d’informació clau.</li>
+            <li><strong>Preguntes i Respostes</strong>: Models com BERT
+            són utilitzats en sistemes de preguntes i respostes per a
+            entendre i respondre consultes en llenguatge natural.</li>
+            <li><strong>Anàlisi de Sentiment Avançat</strong>: MLL poden
+            millorar la capacitat d’analitzar el sentiment en grans
+            quantitats de text, beneficiant aplicacions en xarxes
+            socials i comentaris en línia.</li>
+            <li><strong>Autocompletat de Text Millorat</strong>: Eines
+            d’autocompletat, com les utilitzades en correus electrònics
+            o cerques en la web, es beneficien de la capacitat
+            predictiva dels MLL.</li>
+            <li><strong>Creació de Contingut Multimèdia</strong>: MLL
+            poden ser combinats amb altres models d’intel·ligència
+            artificial per a crear contingut multimèdia, com imatges,
+            vídeos o àudio, a partir de text.</li>
+            <li><strong>Creació de Contingut per a Xarxes
+            Socials</strong>: Els MLL són utilitzats per a generar
+            contingut rellevant i atractiu en plataformes de xarxes
+            socials.</li>
+            <li><strong>Reconeixement d’Entitats Millorat</strong>:
+            Models com GPT-3 poden ajudar en la identificació i
+            classificació precisa d’entitats en textos.</li>
+            <li><strong>Personalització de Recomanacions</strong>: Els
+            MLL contribueixen a millorar la personalització en sistemes
+            de recomanació en àrees com streaming i comerç
+            electrònic.</li>
+            </ol>
+            <p>Estes aplicacions ressalten com els MLL estan
+            transformant la forma en què les màquines interactuen amb el
+            llenguatge humà, obrint noves possibilitats en diverses
+            àrees.</p>
+            <h2 data-number="2.2" id="models-de-difusió"><span
+            class="header-section-number">2.2</span> Models de
+            difusió</h2>
+            <p>Els models de difusió, com DALL-E, són models generatius
+            avançats que utilitzen tècniques de difusió per a generar
+            imatges. Aquests models es basen en la difusió
+            probabilística, que és un procés estocàstic per a generar
+            dades complexes pas a pas. En lloc de generar directament
+            píxels d’una imatge, els models de difusió generen una
+            imatge al “difondre” gradualment informació a través de
+            múltiples passos, la qual cosa permet capturar patrons
+            complexos i estructures en les dades.</p>
+            <p>Exemples de models de difusió inclouen:</p>
+            <ol type="1">
+            <li><p><strong>DALL-E</strong>: Desenvolupat per OpenAI,
+            DALL-E és conegut per generar imatges creatives a partir de
+            descripcions textuals. Pot crear imatges realistes i úniques
+            a partir de conceptes específics.</p></li>
+            <li><p><strong>MidJourney</strong>: Un altre model de
+            difusió que es centra en la generació d’imatges a través de
+            processos de difusió probabilística. Pot utilitzar-se per a
+            crear imatges realistes i detallades.</p></li>
+            <li><p><strong>Stable Diffusion</strong>: Un enfocament de
+            difusió que busca aconseguir una difusió més estable i
+            eficient en termes d’entrenament i generació
+            d’imatges.</p></li>
+            <li><p><strong>Imagen</strong>: Desenvolupat per Google
+            Research, aquest model genera imatges d’alta qualitat a
+            partir de descripcions en llenguatge natural.</p></li>
+            <li><p><strong>BigGAN</strong>: Un model de xarxa
+            adversarial generativa (GAN) que pot produir imatges de gran
+            resolució amb detalls realistes.</p></li>
+            </ol>
+            <p>Aquests models de difusió tenen aplicacions en diverses
+            àrees, incloent:</p>
+            <ol type="1">
+            <li><p><strong>Generació d’Imatges Artístiques i
+            Creatives</strong>: Els models de difusió com DALL-E
+            s’utilitzen per a generar imatges artístiques i creatives
+            basades en descripcions textuals.</p></li>
+            <li><p><strong>Reconstrucció i Millora d’Imatges</strong>:
+            Poden aplicar-se per a reconstruir o millorar imatges
+            existents, generant versions més detallades o
+            modificades.</p></li>
+            <li><p><strong>Generació de Contingut Visual
+            Personalitzat</strong>: Es poden emprar en la creació de
+            contingut visual personalitzat per a aplicacions de disseny
+            gràfic, publicitat i màrqueting.</p></li>
+            <li><p><strong>Simulació i Entrenament en Realitat
+            Virtual</strong>: Aquests models poden generar escenaris
+            visuals realistes per a aplicacions de realitat virtual,
+            simulació i entrenament.</p></li>
+            <li><p><strong>Síntesi de Dades per a la
+            Investigació</strong>: En àmbits com la recerca científica i
+            mèdica, els models de difusió poden sintetitzar dades
+            visuals per a fins experimentals.</p></li>
+            <li><p><strong>Generació de Contingut per a
+            Videojocs</strong>: Poden utilitzar-se en la creació de mons
+            i elements visuals en videojocs, oferint varietat i
+            realisme.</p></li>
+            <li><p><strong>Creació d’il·lustracions i Art
+            Digital</strong>: Els artistes digitals poden emprar models
+            de difusió per a crear il·lustracions i art digital
+            únic.</p></li>
+            </ol>
+            <p>Aquestes aplicacions destaquen la versatilitat dels
+            models de difusió en la generació de contingut visual, des
+            de la creació d’art fins a la simulació d’entorns complexos.
+            La seua capacitat per a manejar dades de manera
+            probabilística i generar resultats detallats els fa valuosos
+            en diverses disciplines creatives i tecnològiques.</p>
+            <h2 data-number="2.3"
+            id="exemples-dús-per-a-començar-a-experimentar"><span
+            class="header-section-number">2.3</span> Exemples d’ús per a
+            començar a experimentar</h2>
+            <p>En este apartat experimentarem de manera molt senzilla
+            amb algunes eines que ens permetran entendre com funcionen
+            les xarxes neuronals i com podem utilitzar-les per a
+            realitzar tasques senzilles.</p>
+            <div class="caution">
+            <p>És recomanable utilitzar correus desexables per a tasques
+            temporals o quan no es requereix un alt nivell de seguretat.
+            Utiltizar correus personals per a tasques importants o el
+            nostre correu corporatiu no és aconsejable.</p>
+            </div>
+            <h3 data-number="2.3.1"
+            id="teachable-machine-de-google"><span
+            class="header-section-number">2.3.1</span> Teachable Machine
+            de Google</h3>
+            <p>Teachable Machine de Google és una plataforma que permet
+            als usuaris crear models d’aprenentatge automàtic sense
+            necessitat d’escriure codi. Els usuaris poden entrenar
+            models de classificació d’imatges, sons o posicions
+            utilitzant una interfície amigable, facilitant la
+            incorporació d’intel·ligència artificial en projectes
+            creatius.</p>
+            <p>Aquesta ferramenta ens permet entrenar a xicoteta escala
+            el nostre model d’intel·ligència artificial per a un
+            propòsit, per exemple el de reconèixer objectes, sons o
+            postures. Només ens cal una webcam per a fer-ho. Podem
+            accedir a la plataforma des d’ací: <a
+            href="https://teachablemachine.withgoogle.com/">https://teachablemachine.withgoogle.com/</a></p>
+            <figure>
+            <img src="img/24.png" style="width:13cm"
+            alt="Teachablemachine" />
+            <figcaption aria-hidden="true">Teachablemachine</figcaption>
+            </figure>
+            <p>I creem el nostre primer projecte.</p>
+            <figure>
+            <img src="img/25.png" style="width:13cm"
+            alt="Model d’imatge" />
+            <figcaption aria-hidden="true">Model d’imatge</figcaption>
+            </figure>
+            <p>Nosaltres hem preparat un model per a distingir entre un
+            bolígraf i unes tisores, hem anant pujant imatges de
+            cadascun.</p>
+            <figure>
+            <img src="img/26.png" style="width:13cm"
+            alt="Model d’imatge creat" />
+            <figcaption aria-hidden="true">Model d’imatge
+            creat</figcaption>
+            </figure>
+            <p>Aquest model el podem exportar i el podem compartir.
+            Òbviament el model que he creat no és massa interessant,
+            però pots entrenar millors models amb moltes fotografies,
+            d’objectes de la classe i crear el teu propi reconeixedor de
+            d’objectes. Podeu descarregar el model des <a
+            href="https://teachablemachine.withgoogle.com/models/9OqM8E4An/">d’ací</a></p>
+            <p>Hem d’entendre que el model ens donarà una resposta amb
+            una probabilitat, en el nostre cas ens donarà la
+            probabilitat de que siga un bolígraf o unes tisores.</p>
+            <figure>
+            <img src="img/26.png" style="width:13cm"
+            alt="Posan’t a prova el model" />
+            <figcaption aria-hidden="true">Posan’t a prova el
+            model</figcaption>
+            </figure>
+            <h3 data-number="2.3.2" id="autodraw"><span
+            class="header-section-number">2.3.2</span> Autodraw</h3>
+            <p>La funció principal d’AutoDraw és facilitar la creació de
+            dibuixos reconeixibles fins i tot per a aquells que no són
+            hàbils en el dibuix. La eina ofereix una varietat d’icones i
+            formes que coincideixen amb el contingut aproximat del
+            dibuix original, permetent als usuaris millorar i refinar
+            les seues creacions de manera intuitiva.</p>
+            <p><a
+            href="https://www.autodraw.com/">https://www.autodraw.com/</a></p>
+            <p>Per exemple, si dibuixem un vaixell de la millor manera
+            que sabem</p>
+            <figure>
+            <img src="img/3.png" style="width:13cm"
+            alt="Imatge dibuixada per nosaltres" />
+            <figcaption aria-hidden="true">Imatge dibuixada per
+            nosaltres</figcaption>
+            </figure>
+            <p>La barra de menú superior de la plataforma canviarà
+            intentant descobrir què hem dibuixat i ens proporcionarà una
+            imatge un poc millor dibuixada del que hem fet.</p>
+            <figure>
+            <img src="img/4.png" style="width:13cm"
+            alt="Imatge del menú escollida" />
+            <figcaption aria-hidden="true">Imatge del menú
+            escollida</figcaption>
+            </figure>
+            <h3 data-number="2.3.3" id="quickdraw"><span
+            class="header-section-number">2.3.3</span> Quickdraw</h3>
+            <p>Quick, Draw! és un joc en línia desenvolupat per Google
+            que utilitza intel·ligència artificial per a reconèixer i
+            classificar dibuixos realitzats pels usuaris en un temps
+            limitat. El funcionament bàsic del joc és el següent:</p>
+            <ol type="1">
+            <li><p><strong>Dibuix Ràpid</strong>: El jugador rep una
+            paraula suggerida i té un temps limitat (generalment 20
+            segons) per a dibuixar l’objecte o concepte associat en un
+            llenç digital.</p></li>
+            <li><p><strong>Reconeixement en Temps Real</strong>: Mentre
+            el jugador dibuixa, la intel·ligència artificial intenta
+            endevinar el que està representant en temps real. Utilitza
+            algoritmes d’aprenentatge automàtic i xarxes neuronals per a
+            analitzar el traç del dibuix.</p></li>
+            <li><p><strong>Retroalimentació Instantània</strong>: Una
+            vegada que es completa el temps de dibuix, el joc
+            proporciona retroalimentació instantània sobre si la
+            intel·ligència artificial ha reconegut correctament el
+            dibuix o no. A més, mostra exemples de com altres usuaris
+            han representat la mateixa paraula.</p></li>
+            <li><p><strong>Contribució a Conjunt de Dades
+            d’Entrenament</strong>: Els dibuixos realitzats pels usuaris
+            no només són part del joc, sinó que també contribueixen al
+            conjunt de dades utilitzat per a entrenar i millorar els
+            algoritmes de reconeixement de Google.</p></li>
+            </ol>
+            <p>En resum, Quick, Draw! a través de la diversió d’un joc
+            en línia recopila les nostres dades per a millorar els
+            models d’intel·ligència artificial de reconeixement de
+            patrons.</p>
+            <p><a
+            href="https://quickdraw.withgoogle.com/">https://quickdraw.withgoogle.com/</a></p>
+            <div class="note">
+            <p>Es tracta d’un joc senzill que ens permetrà experimentar
+            amb una xarxa neuronal. Aquesta tractarà d’esbrinar què és
+            el que estem dibuixant amb un temps de 20 segons.</p>
+            </div>
+            <figure>
+            <img src="img/5.png" style="width:13cm" alt="Joc" />
+            <figcaption aria-hidden="true">Joc</figcaption>
+            </figure>
+            <figure>
+            <img src="img/6.png" style="width:13cm"
+            alt="Imatge a esbrinar" />
+            <figcaption aria-hidden="true">Imatge a
+            esbrinar</figcaption>
+            </figure>
+            <figure>
+            <img src="img/7.png" style="width:13cm"
+            alt="El nostre dibuix" />
+            <figcaption aria-hidden="true">El nostre dibuix</figcaption>
+            </figure>
+            <p>Així anirà fent durant 6 imatges. És un bon exercici per
+            a entendre com funcionen les xarxes neuronals.</p>
+            <figure>
+            <img src="img/8.png" style="width:13cm"
+            alt="Ens ha encertat els 6" />
+            <figcaption aria-hidden="true">Ens ha encertat els
+            6</figcaption>
+            </figure>
+            <div class="note">
+            <p>En aquesta unitat hem vist una petita introducció a les
+            possibilitats que ens ofereix la IA i les tecnologies que
+            s’estan desenvolupant al respecte. A més, una sèrie de
+            conceptes molt bàsics a tenir en compte, però… Quan ens
+            posem a fer prompts? Això ho vorem al proper mòdul…</p>
+            </div>
+            <aside id="footnotes"
+            class="footnotes footnotes-end-of-document"
+            role="doc-endnotes">
+            <hr />
+            <ol>
+            <li id="fn1"><p>Prompt, és el text que escrius a la
+            plataforma per a que interprete el que realment necessites.
+            Entrarem amb més detall a la propera unitat.<a
+            href="#fnref1" class="footnote-back"
+            role="doc-backlink">↩︎</a></p></li>
+            </ol>
+            </aside>
+        </main>
+        
+
+        <!--- Modal images -->
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- The Close Button -->
+            <!--span class="close">&times;</span-->
+
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="img01">
+
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
+        </div>
+
+        <!-- End Modal Images -->
+
+        <script>
+            function ModalizeImages() {
+                // Script basat en https://www.w3schools.com/howto/howto_css_modal_images.asp
+                // PEr ampliar imatges en fer click
+
+                // Get the modal
+                var modal = document.getElementById("myModal");
+
+                var modalImg = document.getElementById("img01");
+                var captionText = document.getElementById("caption");
+
+                // Get the image and insert it inside the modal - use its "alt" text as a caption
+                //var img = document.getElementById("myImg");
+                document.querySelectorAll("img").forEach((img => {
+                        img.onclick = function() {
+                            modal.style.display = "block";
+                            modalImg.src = this.src;
+                            captionText.innerHTML = this.alt;
+                        }
+                    }))
+                    // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+
+                // When the user clicks on <span> (x), close the modal
+                //span.onclick = function() {
+                myModal.onclick = function() {
+                    modal.style.display = "none";
+                }
+
+
+            }
+
+
+            function markItem(id) {
+                // Restaurem format de tots
+                document.querySelectorAll("#TOC a").forEach(function(item) {
+                        //item.style.fontWeight = "300";
+                        item.classList.remove("navItemSelected");
+                    })
+                    //item.style.color = "#ff0000";
+
+                // Afegim format
+                let items = document.querySelectorAll("#TOC a[href='#" + id + "']");
+                items.forEach(function(item) {
+                    //item.style.fontWeight = "bolder";
+                    item.classList.add("navItemSelected");
+                })
+
+            }
+
+            var observer = new IntersectionObserver(function(entries) {
+                // isIntersecting is true when element and viewport are overlapping
+                // isIntersecting is false when element and viewport don't overlap
+                if (entries[0].isIntersecting === true) {
+                    let id = entries[0].target.id;
+                    markItem(id);
+                }
+
+            }, {
+                threshold: [0]
+            });
+
+            window.addEventListener("load", function() {
+                document.querySelectorAll("h1, h2, h3").forEach(function(item) {
+                    observer.observe(item);
+                });
+
+                document.querySelectorAll("#TOC a").forEach(function(item) {
+                    item.addEventListener("click", function(item) {
+                        markItem(item.id);
+                    })
+                })
+
+                // Fem modals totes les imatges
+                ModalizeImages();
+            })
+
+            document.querySelector("#TOC").addEventListener("click", function(event) {
+                let toc = event.target
+                if (toc.offsetWidth > 10) {
+                    toc.classList.add("minimizedToc");
+                }
+            })
+
+            document.querySelector("#TOC").addEventListener("mouseover", function(event) {
+                let toc = event.target
+                if (toc.classList.contains("minimizedToc"))
+                    toc.classList.remove("minimizedToc");
+            })
+
+
+            //item.style.color = "#ff0000";
+        </script>
+    </div>
+</body>
+
+</html>
