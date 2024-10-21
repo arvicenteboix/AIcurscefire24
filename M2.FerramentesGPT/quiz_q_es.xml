@@ -1,0 +1,199 @@
+<quiz>
+    <question type="multichoice">
+        <name>
+            <text>¿Qué significa GPT?</text>
+        </name>
+        <questiontext>
+            <text><![CDATA[<p>¿Qué significa GPT?</p>]]></text>
+        </questiontext>
+        <answer fraction="100">
+            <text>Generative Pre-trained Transformers</text>
+        </answer>
+        <answer fraction="0">
+            <text>Tecnología de Propósito General</text>
+        </answer>
+        <answer fraction="0">
+            <text>Terminal de Pago Global</text>
+        </answer>
+        <answer fraction="0">
+            <text>Herramienta de Programación Gráfica</text>
+        </answer>
+    </question>
+
+    <question type="multichoice">
+        <name>
+            <text>¿Qué modelo de GPT es el mejor para conversaciones?</text>
+        </name>
+        <questiontext>
+            <text><![CDATA[<p>¿Qué modelo de GPT es el mejor para conversaciones?</p>]]></text>
+        </questiontext>
+        <answer fraction="100">
+            <text>ChatGPT</text>
+        </answer>
+        <answer fraction="0">
+            <text>Bing Copilot</text>
+        </answer>
+        <answer fraction="0">
+            <text>Gemini</text>
+        </answer>
+        <answer fraction="0">
+            <text>Ninguno de los anteriores</text>
+        </answer>
+    </question>
+
+    <question type="multichoice">
+        <name>
+            <text>¿Qué modelo de GPT es el mejor para investigar?</text>
+        </name>
+        <questiontext>
+            <text><![CDATA[<p>¿Qué modelo de GPT es el mejor para investigar?</p>]]></text>
+        </questiontext>
+        <answer fraction="0">
+            <text>ChatGPT</text>
+        </answer>
+        <answer fraction="100">
+            <text>Bing Copilot</text>
+        </answer>
+        <answer fraction="0">
+            <text>Gemini</text>
+        </answer>
+        <answer fraction="0">
+            <text>Ninguno de los anteriores</text>
+        </answer>
+    </question>
+
+    <question type="multichoice">
+        <name>
+            <text>¿Cuál es la principal diferencia entre Gemini y Bing Copilot?</text>
+        </name>
+        <questiontext>
+            <text><![CDATA[<p>¿Cuál es la principal diferencia entre Gemini y Bing Copilot?</p>]]></text>
+        </questiontext>
+        <answer fraction="100">
+            <text>Gemini es más minimalista mientras que Bing Copilot es más funcional</text>
+        </answer>
+        <answer fraction="0">
+            <text>Bing Copilot es más minimalista mientras que Gemini es más funcional</text>
+        </answer>
+        <answer fraction="0">
+            <text>Gemini tiene una mejor interfaz mientras que Bing Copilot tiene más características</text>
+        </answer>
+        <answer fraction="0">
+            <text>Bing Copilot tiene una mejor interfaz mientras que Gemini tiene más características</text>
+        </answer>
+    </question>
+
+    <question type="multichoice">
+        <name>
+            <text>¿Qué modelo de GPT proporciona fuentes de información?</text>
+        </name>
+        <questiontext>
+            <text><![CDATA[<p>¿Qué modelo de GPT proporciona fuentes de información?</p>]]></text>
+        </questiontext>
+        <answer fraction="0">
+            <text>ChatGPT</text>
+        </answer>
+        <answer fraction="100">
+            <text>Bing Copilot</text>
+        </answer>
+        <answer fraction="0">
+            <text>Gemini</text>
+        </answer>
+        <answer fraction="0">
+            <text>Ninguno de los anteriores</text>
+        </answer>
+    </question>
+
+    <question type="multichoice">
+        <name>
+            <text>¿Qué modelo de GPT ofrece una opción de búsqueda?</text>
+        </name>
+        <questiontext>
+            <text><![CDATA[<p>¿Qué modelo de GPT ofrece una opción de búsqueda?</p>]]></text>
+        </questiontext>
+        <answer fraction="0">
+            <text>ChatGPT</text>
+        </answer>
+        <answer fraction="0">
+            <text>Bing Copilot</text>
+        </answer>
+        <answer fraction="100">
+            <text>Gemini</text>
+        </answer>
+        <answer fraction="0">
+            <text>Ninguno de los anteriores</text>
+        </answer>
+    </question>
+
+    <question type="multichoice">
+        <name>
+            <text>¿Cuáles son algunos otros modelos de GPT disponibles para su uso?</text>
+        </name>
+        <questiontext>
+            <text><![CDATA[<p>¿Cuáles son algunos otros modelos de GPT disponibles para su uso?</p>]]></text>
+        </questiontext>
+        <answer fraction="0">
+            <text>TextCortex</text>
+        </answer>
+        <answer fraction="0">
+            <text>Writesonic</text>
+        </answer>
+        <answer fraction="0">
+            <text>Jasper</text>
+        </answer>
+        <answer fraction="100">
+            <text>Todos los anteriores</text>
+        </answer>
+    </question>
+
+    <question type="multichoice">
+        <name>
+            <text>Verdadero o Falso: Los modelos de GPT pueden generar texto, traducir idiomas y proporcionar resultados de búsqueda.</text>
+        </name>
+        <questiontext>
+            <text><![CDATA[<p>Verdadero o Falso: Los modelos de GPT pueden generar texto, traducir idiomas y proporcionar resultados de búsqueda.</p>]]></text>
+        </questiontext>
+        <answer fraction="100">
+            <text>Verdadero</text>
+        </answer>
+        <answer fraction="0">
+            <text>Falso</text>
+        </answer>
+    </question>
+
+    <question type="multichoice">
+        <name>
+            <text>¿Cuáles son algunas prácticas recomendadas de prompts al interactuar con modelos de GPT?</text>
+        </name>
+        <questiontext>
+            <text><![CDATA[<p>¿Cuáles son algunas prácticas recomendadas de prompts al interactuar con modelos de GPT?</p>]]></text>
+        </questiontext>
+        <answer fraction="0">
+            <text>Hacer preguntas claras y concisas</text>
+        </answer>
+        <answer fraction="0">
+            <text>Usar un lenguaje específico</text>
+        </answer>
+        <answer fraction="0">
+            <text>Dar ejemplos para aclarar tus expectativas</text>
+        </answer>
+        <answer fraction="100">
+            <text>Todos los anteriores</text>
+        </answer>
+    </question>
+
+    <question type="multichoice">
+        <name>
+            <text>Verdadero o Falso: Los modelos de GPT siempre proporcionan información precisa y actualizada.</text>
+        </name>
+        <questiontext>
+            <text><![CDATA[<p>Verdadero o Falso: Los modelos de GPT siempre proporcionan información precisa y actualizada.</p>]]></text>
+        </questiontext>
+        <answer fraction="0">
+            <text>Verdadero</text>
+        </answer>
+        <answer fraction="100">
+            <text>Falso</text>
+        </answer>
+    </question>
+</quiz>

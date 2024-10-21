@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question type="multichoice">
+        <name>
+            <text>1. Què és un algoritme?</text>
+        </name>
+        <questiontext format="html">
+            <text><![CDATA[<p>Què és un algoritme?</p>]]></text>
+        </questiontext>
+        <answer fraction="0">
+            <text><![CDATA[a. Un sistema que pot aprendre i modificar-se a si mateix.]]></text>
+        </answer>
+        <answer fraction="100">
+            <text><![CDATA[b. Una seqüència lògica de passos que permet solucionar un problema mitjançant operacions matemàtiques no-ambigües.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[c. Una eina de generació d'imatges.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[d. Un cercador basat en intel·ligència artificial.]]></text>
+        </answer>
+    </question>
+    <question type="multichoice">
+        <name>
+            <text>2. Què és una xarxa neuronal?</text>
+        </name>
+        <questiontext format="html">
+            <text><![CDATA[<p>Què és una xarxa neuronal?</p>]]></text>
+        </questiontext>
+        <answer fraction="100">
+            <text><![CDATA[a. Un sistema que pot aprendre i modificar-se a si mateix.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[b. Una seqüència lògica de passos que permet solucionar un problema mitjançant operacions matemàtiques no-ambigües.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[c. Una eina de generació d'imatges.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[d. Un cercador basat en intel·ligència artificial.]]></text>
+        </answer>
+    </question>
+    <question type="multichoice">
+        <name>
+            <text>3. Quins són els cercadors mencionats en el text?</text>
+        </name>
+        <questiontext format="html">
+            <text><![CDATA[<p>Quins són els cercadors mencionats en el text?</p>]]></text>
+        </questiontext>
+        <answer fraction="0">
+            <text><![CDATA[a. Google i Bing]]></text>
+        </answer>
+        <answer fraction="100">
+            <text><![CDATA[b. Perplexity i You]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[c. Flexclip i Deepai]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[d. Canva i Leonardo]]></text>
+        </answer>
+    </question>
+    <question type="multichoice">
+        <name>
+            <text>4. Quin és el propòsit de Perplexity?</text>
+        </name>
+        <questiontext format="html">
+            <text><![CDATA[<p>Quin és el propòsit de Perplexity?</p>]]></text>
+        </questiontext>
+        <answer fraction="100">
+            <text><![CDATA[a. Facilitar la cerca d'informació a Internet.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[b. Generar vídeos a partir de text.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[c. Crear imatges a partir de text.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[d. Traduir textos a altres idiomes.]]></text>
+        </answer>
+    </question>
+    <question type="multichoice">
+        <name>
+            <text>5. Què permet fer Flexclip?</text>
+        </name>
+        <questiontext format="html">
+            <text><![CDATA[<p>Què permet fer Flexclip?</p>]]></text>
+        </questiontext>
+        <answer fraction="100">
+            <text><![CDATA[a. Crear i editar vídeos.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[b. Generar imatges a partir de text.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[c. Crear presentacions de diapositives.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[d. Traduir textos a altres idiomes.]]></text>
+        </answer>
+    </question>
+    <question type="multichoice">
+        <name>
+            <text>6. Quin és el propòsit de l'eina Leonardo?</text>
+        </name>
+        <questiontext format="html">
+            <text><![CDATA[<p>Quin és el propòsit de l'eina Leonardo?</p>]]></text>
+        </questiontext>
+        <answer fraction="100">
+            <text><![CDATA[a. Generar imatges a partir de text.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[b. Traduir textos a altres idiomes.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[c. Crear presentacions de diapositives.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[d. Editar vídeos.]]></text>
+        </answer>
+    </question>
+    <question type="multichoice">
+        <name>
+            <text>7. Què és Mindsmith?</text>
+        </name>
+        <questiontext format="html">
+            <text><![CDATA[<p>Què és Mindsmith?</p>]]></text>
+        </questiontext>
+        <answer fraction="100">
+            <text><![CDATA[a. Una plataforma per crear materials didàctics.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[b. Un cercador basat en intel·ligència artificial.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[c. Una eina de generació d'imatges.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[d. Un sistema de reconeixement de veu.]]></text>
+        </answer>
+    </question>
+    <question type="multichoice">
+        <name>
+            <text>8. Què és Nolej?</text>
+        </name>
+        <questiontext format="html">
+            <text><![CDATA[<p>Què és Nolej?</p>]]></text>
+        </questiontext>
+        <answer fraction="100">
+            <text><![CDATA[a. Una plataforma per crear materials didàctics.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[b. Una eina de generació d'imatges.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[c. Un sistema de reconeixement de veu.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[d. Un cercador basat en intel·ligència artificial.]]></text>
+        </answer>
+    </question>
+    <question type="multichoice">
+        <name>
+            <text>9. Què és Schemely?</text>
+        </name>
+        <questiontext format="html">
+            <text><![CDATA[<p>Què és Schemely?</p>]]></text>
+        </questiontext>
+        <answer fraction="100">
+            <text><![CDATA[a. Una plataforma per crear materials didàctics.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[b. Una eina de generació d'imatges.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[c. Un sistema de reconeixement de veu.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[d. Un cercador basat en intel·ligència artificial.]]></text>
+        </answer>
+    </question>
+    <question type="multichoice">
+        <name>
+            <text>10. Què és TutorAI?</text>
+        </name>
+        <questiontext format="html">
+            <text><![CDATA[<p>Què és TutorAI?</p>]]></text>
+        </questiontext>
+        <answer fraction="100">
+            <text><![CDATA[a. Una plataforma per crear materials didàctics.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[b. Una eina de generació d'imatges.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[c. Un sistema de reconeixement de veu.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[d. Un cercador basat en intel·ligència artificial.]]></text>
+        </answer>
+    </question>
+</quiz>

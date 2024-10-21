@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es" >
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />        <title>2. Herramientas GPT</title>
+    <style>
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+        <link rel="stylesheet" href="aqua.css" />  
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+    <![endif]-->
+      
+</head>
+
+<body>
+    <div id="content">
+                 <header id="title-block-header">
+            <h1 class="title">2. Herramientas GPT</h1>
+            <!---->
+            <!--  -->
+                    </header>
+                 <nav id="TOC" role="doc-toc">
+            <div class="navContainer">
+                 <ul>
+<li><a href="#introducción" id="toc-introducción"><span
+class="toc-section-number">1</span> Introducción</a></li>
+<li><a href="#qué-es-gpt" id="toc-qué-es-gpt"><span
+class="toc-section-number">2</span> ¿Qué es GPT?</a></li>
+<li><a href="#modelos-gpt" id="toc-modelos-gpt"><span
+class="toc-section-number">3</span> MODELOS GPT</a>
+<ul>
+<li><a href="#chatgpt" id="toc-chatgpt"><span
+class="toc-section-number">3.1</span> ChatGPT</a></li>
+<li><a href="#bing-copilot" id="toc-bing-copilot"><span
+class="toc-section-number">3.2</span> Bing Copilot</a></li>
+<li><a href="#gemini" id="toc-gemini"><span
+class="toc-section-number">3.3</span> Gemini</a></li>
+<li><a href="#poe" id="toc-poe"><span
+class="toc-section-number">3.4</span> POE</a>
+<ul>
+<li><a href="#qué-es-un-bot" id="toc-qué-es-un-bot"><span
+class="toc-section-number">3.4.1</span> ¿Qué es un bot?</a></li>
+<li><a href="#creación-de-bots" id="toc-creación-de-bots"><span
+class="toc-section-number">3.4.2</span> Creación de bots</a></li>
+</ul></li>
+<li><a href="#otros-modelos-conocidos"
+id="toc-otros-modelos-conocidos"><span
+class="toc-section-number">3.5</span> Otros modelos conocidos</a></li>
+<li><a href="#entonces-qué-herramienta-tengo-que-elegir"
+id="toc-entonces-qué-herramienta-tengo-que-elegir"><span
+class="toc-section-number">3.6</span> Entonces, qué herramienta tengo
+que elegir</a></li>
+</ul></li>
+<li><a href="#creando-prompts" id="toc-creando-prompts"><span
+class="toc-section-number">4</span> Creando prompts</a>
+<ul>
+<li><a href="#estructuras-modulares-para-la-creación-de-prompts"
+id="toc-estructuras-modulares-para-la-creación-de-prompts"><span
+class="toc-section-number">4.1</span> Estructuras modulares para la
+creación de prompts</a></li>
+<li><a href="#crea-tu-propia-estructura-que-te-funcione"
+id="toc-crea-tu-propia-estructura-que-te-funcione"><span
+class="toc-section-number">4.2</span> Crea tu propia estructura que te
+funcione</a></li>
+<li><a href="#consejos-para-crear-prompts"
+id="toc-consejos-para-crear-prompts"><span
+class="toc-section-number">4.3</span> Consejos para crear
+prompts</a></li>
+</ul></li>
+<li><a href="#creando-prompts-1" id="toc-creando-prompts-1"><span
+class="toc-section-number">5</span> Creando prompts</a></li>
+<li><a href="#bibliografía" id="toc-bibliografía"><span
+class="toc-section-number">6</span> Bibliografía</a></li>
+</ul>
+            </div>
+        </nav>
+                <main>
+            <!-- \awesomebox[violet]{2pt}{\faRocket}{violet}{Lorem ipsum…} -->
+            <!-- \awesomebox[violet]{2pt}{\faRobot}{violet}{Lorem ipsum…} -->
+            <!-- IMATGE ![Pregunta inicial](./img/proxi/5b.png) -->
+            <!-- \textbf{greatest} -->
+            <!-- \awesomebox[violet]{2pt}{\faRobot}{violet}{\textbf{greatest}} -->
+            <p><img src="img/cc.png" height="50" /></p>
+            <p>Este documento está sujeto a una licencia creative
+            commons que permite su difusión y uso comercial reconociendo
+            siempre la autoría de su creador. Este documento se
+            encuentra para ser modificado en el siguiente repositorio de
+            github: <!-- CANVIAR L'ENLLAÇ --> <a
+            href="https://github.com/arvicenteboix/AIcurscefire24">https://github.com/arvicenteboix/AIcurscefire24</a>
+            </p>
+            <h1 data-number="1" id="introducción"><span
+            class="header-section-number">1</span> Introducción</h1>
+            <p>En esta unidad nos centraremos en aquellas aplicaciones
+            de las que todo el mundo habla. Y, por supuesto, aquellas
+            que pueden facilitarnos más la tarea como docentes. Sin
+            embargo, es importante destacar que el objetivo de este
+            curso no es explorar todo el potencial de las herramientas
+            GPT para los docentes, sino tener un primer contacto con
+            estas herramientas.</p>
+            <p>Cabe mencionar que nos hemos centrado en la parte
+            gratuita de estas herramientas, pero es importante señalar
+            que la versión de pago ofrece mejores resultados y presenta
+            funcionalidades muy convenientes para nuestra tarea, como la
+            creación de GPTs.</p>
+            <h1 data-number="2" id="qué-es-gpt"><span
+            class="header-section-number">2</span> ¿Qué es GPT?</h1>
+            <p>GPT es una sigla que significa “Generative Pre-trained
+            Transformers”. Es una tecnología que ayuda a las máquinas a
+            entender el lenguaje humano y a responder a preguntas de
+            manera parecida a cómo lo haría una persona, es más, podemos
+            interactuar con ella. Esto significa que las máquinas pueden
+            escribir textos, resumir información, hacer traducciones y
+            algunas cosas más que veremos más adelante. Esto es posible
+            gracias a una <strong>red neuronal</strong> que ha aprendido
+            a partir de muchos datos y que puede generar contenido nuevo
+            a partir del que ha aprendido. GPT es una tecnología muy
+            útil para muchas cosas diferentes, es más, cada vez que
+            habláis con ella está aprendiendo de aquello que habla con
+            vosotros, así que cada vez tendrá mejores respuestas.</p>
+            <h1 data-number="3" id="modelos-gpt"><span
+            class="header-section-number">3</span> MODELOS GPT</h1>
+            <p>Los tres servicios más conocidos, aunque no son los
+            únicos, son ChatGPT, Gemini<a href="#fn1"
+            class="footnote-ref" id="fnref1"
+            role="doc-noteref"><sup>1</sup></a> y Copilot. Nosotros nos
+            centraremos en estos 3. En esencia, son ventanas de chat,
+            aunque la implementación de cada uno refleja un lenguaje de
+            diseño diferente. <strong>Gemini</strong> es el más
+            minimalista, mientras que <strong>Bing Copilot</strong> es
+            el menos sencillo y se centra más en la funcionalidad.</p>
+            <p>En cuanto a las capacidades de cada uno,
+            <strong>ChatGPT</strong> es mejor para conversar, mientras
+            que <strong>Bing Copilot</strong> es más adecuado para
+            investigar. Por ejemplo, puede buscar en la web y
+            proporcionar resultados de búsqueda, mientras que
+            <strong>ChatGPT</strong> se centra en responder preguntas y
+            mantener una conversación fluida.</p>
+            <p>Además, <strong>Bing Copilot</strong> es el más
+            transparente, ya que al final de cada respuesta pone las
+            fuentes de donde ha obtenido la información. Por otro lado,
+            <strong>Google Gemini</strong> tiene una opción para hacer
+            una búsqueda de la pregunta que has hecho, y
+            <strong>ChatGPT</strong> no ofrece ninguna pista de dónde ha
+            sacado la información (ya que no proporciona enlaces
+            web).</p>
+            <div class="note">
+            <p>Obviamente, esta información está basada en experiencia
+            personal y en la lectura de algunos artículos que te dan una
+            idea de las características de cada uno. Se trata de
+            diferentes modelos (importante el hecho de ser diferentes)
+            que van creciendo con el tiempo. (1) <a
+            href="https://www.androidauthority.com/chatgpt-vs-bing-chat-3292126/">https://www.androidauthority.com/chatgpt-vs-bing-chat-3292126/</a>
+            (2) <a
+            href="https://zapier.com/blog/chatgpt-vs-bard/">https://zapier.com/blog/chatgpt-vs-bard/</a></p>
+            </div>
+            <h2 data-number="3.1" id="chatgpt"><span
+            class="header-section-number">3.1</span> ChatGPT</h2>
+            <p>Para poder utilizar chatGPT, en primer lugar debemos
+            registrarnos. Iremos a la página de <a
+            href="https://chat.openai.com/auth/login">ChatGPT</a></p>
+            <figure>
+            <img src="img/1.png" style="width:70.0%"
+            alt="Registrarse en ChatGPT" />
+            <figcaption aria-hidden="true">Registrarse en
+            ChatGPT</figcaption>
+            </figure>
+            <p>Podemos empezar directamente haciendo clic en “Start now”
+            y nos aparecerá la siguiente pantalla:</p>
+            <figure>
+            <img src="img/11.png" style="width:70.0%"
+            alt="Chatear con ChatGPT" />
+            <figcaption aria-hidden="true">Chatear con
+            ChatGPT</figcaption>
+            </figure>
+            <p>Podemos ver que no es necesario registrarse para empezar
+            a chatear, pero si queremos guardar las conversaciones o
+            acceder a más funcionalidades, será necesario registrarse.
+            Hacemos clic en “Crear una cuenta” y nos aparecerá la
+            siguiente pantalla:</p>
+            <figure>
+            <img src="img/2.png" style="width:70.0%"
+            alt="Registrarse en ChatGPT" />
+            <figcaption aria-hidden="true">Registrarse en
+            ChatGPT</figcaption>
+            </figure>
+            <div class="warning">
+            <p>Como os hemos comentado antes, podéis crear un correo
+            electrónico para este curso, ya que no es necesario que sea
+            vuestro correo electrónico personal. De esta manera podréis
+            utilizarlo para registraros en las diferentes plataformas
+            que vamos a utilizar sin temer que vuestros datos estén en
+            otras plataformas.</p>
+            </div>
+            <div class="tip">
+            <p>No vamos a explicar cómo se registra en cada una de las
+            plataformas, pero una vez escojas una de todas ellas, es muy
+            recomendable utilizar un correo habitual ya que guardará las
+            conversaciones y podrás acceder a ellas en cualquier
+            momento.</p>
+            </div>
+            <p>Una vez ya te hayas registrado podrás acceder
+            directamente a la página de chatGPT para empezar, y ya le
+            podemos plantear una cuestión:</p>
+            <p><a
+            href="https://chat.openai.com/">https://chat.openai.com/</a></p>
+            <figure>
+            <img src="img/3.png" style="width:70.0%"
+            alt="Respuesta de ChatGPT" />
+            <figcaption aria-hidden="true">Respuesta de
+            ChatGPT</figcaption>
+            </figure>
+            <p>Podemos ver que debajo de cada respuesta hay 5 iconos que
+            nos permitirán leer la respuesta por los altavoces, valorar
+            la respuesta, copiar el texto para después pegarlo donde nos
+            haga falta o que vuelva a regenerar la respuesta (incluso
+            cambiando de modelo).</p>
+            <p>Si le pedimos los enlaces de la respuesta, no nos dará
+            los enlaces de la respuesta:</p>
+            <figure>
+            <img src="img/31.png" style="width:70.0%"
+            alt="Enlaces de la respuesta" />
+            <figcaption aria-hidden="true">Enlaces de la
+            respuesta</figcaption>
+            </figure>
+            <h2 data-number="3.2" id="bing-copilot"><span
+            class="header-section-number">3.2</span> Bing Copilot</h2>
+            <p>Para poder utilizar la herramienta de IA de Microsoft
+            tampoco es necesario registrarse, podemos utilizarla
+            directamente desde el navegador, podemos ir directamente a
+            la página de <a href="https://www.bing.com/">Bing</a> y ya
+            podremos utilizar directamente la herramienta. Hacemos clic
+            sobre el enlace <em>chat</em>”:</p>
+            <figure>
+            <img src="img/4.png" style="width:70.0%"
+            alt="Bing Copilot" />
+            <figcaption aria-hidden="true">Bing Copilot</figcaption>
+            </figure>
+            <p>Nos aparecerá esta pantalla y ya podemos preguntar
+            directamente:</p>
+            <figure>
+            <img src="img/5.png" style="width:70.0%"
+            alt="Bing Copilot chat" />
+            <figcaption aria-hidden="true">Bing Copilot
+            chat</figcaption>
+            </figure>
+            <p>Para que te dé enlaces a la respuesta, es necesario que
+            le pidas que te dé más información, por ejemplo:</p>
+            <figure>
+            <img src="img/6.png" style="width:70.0%"
+            alt="Bing Copilot chat" />
+            <figcaption aria-hidden="true">Bing Copilot
+            chat</figcaption>
+            </figure>
+            <p>Podemos ver que la respuesta que nos da es bastante
+            diferente a la que nos ha ofrecido ChatGPT, al igual que la
+            anterior también nos permite copiar el texto y valorarlo.
+            Una de las cosas destacables es que nos proporciona
+            información de dónde ha extraído su respuesta y nos aporta
+            los enlaces por si queremos ampliar información, pero es
+            necesario que se lo pidas (es una de las cosas que han
+            cambiado en las últimas actualizaciones).</p>
+            <h2 data-number="3.3" id="gemini"><span
+            class="header-section-number">3.3</span> Gemini</h2>
+            <p>En este caso tendremos que ir a la página de <a
+            href="https://Gemini.google.com/chat">Gemini</a>. De la
+            misma manera será necesario que te crees una cuenta de
+            google y entres con esta cuenta, si no no la podrás
+            utilizar, esta herramienta no permite el acceso sin
+            registrarse.</p>
+            <figure>
+            <img src="img/7.png" style="width:70.0%"
+            alt="Gemini chat" />
+            <figcaption aria-hidden="true">Gemini chat</figcaption>
+            </figure>
+            <p>Podemos ver que mi historial está guardado a la izquierda
+            y a la derecha podemos ver la conversación con la IA. En
+            este caso le plantearemos la misma cuestión que a los otros
+            dos modelos:</p>
+            <figure>
+            <img src="img/8.png" style="width:70.0%"
+            alt="Gemini chat" />
+            <figcaption aria-hidden="true">Gemini chat</figcaption>
+            </figure>
+            <p>En este caso no vamos a transcribir toda la respuesta
+            porque es más larga que las otras, pero cabe destacar
+            algunas cosas interesantes de esta interfaz (que no
+            modelo).</p>
+            <ul>
+            <li>Nos permite al igual que las otras valorar la respuesta
+            o regenerarla.</li>
+            <li>Pero podemos ver que ya ha diseñado otras versiones</li>
+            <li>La respuesta ha sido mucho más rápida que en las otras
+            dos.</li>
+            <li>Nos proporciona el icono de Google por si queremos
+            ampliar información.</li>
+            <li>Podemos compartir la respuesta e incluso responder con
+            gmail.</li>
+            </ul>
+            <p>En este caso si hacemos clic sobre el icono de Google nos
+            aparecerán los enlaces de la respuesta.</p>
+            <h2 data-number="3.4" id="poe"><span
+            class="header-section-number">3.4</span> POE</h2>
+            <p><strong>Poe</strong> es otro chatbot de propósito
+            general. Puedes acceder desde aquí: <a
+            href="https://poe.com/login">https://poe.com/login</a>.
+            Presenta una serie de limitaciones por día pero es una
+            herramienta bastante versátil.</p>
+            <p>POE es una plataforma muy conocida y muy utilizada para
+            la creación de contenido. Esta plataforma ofrece una gran
+            variedad de funciones y herramientas que permiten a los
+            usuarios crear contenido de manera fácil y rápida. POE es
+            una herramienta muy potente que permite a los usuarios crear
+            contenido de manera eficiente y eficaz. Además, POE es una
+            herramienta muy fácil de usar y muy intuitiva, lo que la
+            hace ideal para todo tipo de usuarios, desde principiantes
+            hasta expertos.</p>
+            <p>Si nos fijamos en la pantalla de chat, podemos ver que
+            nos permite utilizar diferentes tipos de modelos.</p>
+            <figure>
+            <img src="img/82.png" style="width:70.0%"
+            alt="Gemini chat" />
+            <figcaption aria-hidden="true">Gemini chat</figcaption>
+            </figure>
+            <p>Pero una de las características que más me gusta respecto
+            a las otras plataformas es la creación de bots, esto nos
+            permitirá crear nuestro propio modelo de lenguaje y poder
+            utilizarlo en cualquier momento. Esto es una de las cosas
+            que más llama la atención de esta plataforma.</p>
+            <h3 data-number="3.4.1" id="qué-es-un-bot"><span
+            class="header-section-number">3.4.1</span> ¿Qué es un
+            bot?</h3>
+            <p>Un bot es un programa informático que realiza tareas
+            automatizadas. Los bots pueden ser utilizados para una gran
+            variedad de tareas, como responder preguntas, realizar
+            tareas repetitivas, enviar mensajes automáticos, etc. Los
+            bots son muy útiles para automatizar tareas y mejorar la
+            eficiencia de los procesos. Podrías generar un bot que
+            respondiera las cuestiones de tus alumnos, por ejemplo,
+            basándose en los apuntes que vosotros mismos habéis creado.
+            Aunque si vuestros apuntes están basados en material que
+            habéis encontrado en google, el bot probablemente no os será
+            de mucha ayuda.</p>
+            <h3 data-number="3.4.2" id="creación-de-bots"><span
+            class="header-section-number">3.4.2</span> Creación de
+            bots</h3>
+            <p>Para poder crear un bot, primero será necesario que nos
+            registremos en la plataforma. Una vez registrados, iremos a
+            la página principal y haremos clic en “Crear bot”. Nos
+            aparecerá la siguiente pantalla:</p>
+            <figure>
+            <img src="img/poe1.png" style="width:70.0%"
+            alt="Crear bot" />
+            <figcaption aria-hidden="true">Crear bot</figcaption>
+            </figure>
+            <p>Como bot-base podemos escoger cualquiera de las opciones
+            que nos presenta. Después en el apartado de Instrucción
+            debemos darle una Introducción al prompt que utilizaremos<a
+            href="#fn2" class="footnote-ref" id="fnref2"
+            role="doc-noteref"><sup>2</sup></a> y finalmente en Base de
+            conocimiento debemos darle la fuente de donde queremos que
+            extraiga la información, en este caso he utilizado el último
+            BOE, ya que no hay ningún modelo entrenado con el BOE de
+            hoy. Podemos subir todos los documentos que
+            consideremos.</p>
+            <figure>
+            <img src="img/poe3.png" style="width:70.0%"
+            alt="Crear bot" />
+            <figcaption aria-hidden="true">Crear bot</figcaption>
+            </figure>
+            <p>Una vez le damos a crear bot y le planteamos una pregunta
+            nos da una respuesta basándose en los materiales que
+            nosotros le hemos proporcionado:</p>
+            <figure>
+            <img src="img/poe4.png" style="width:90.0%"
+            alt="Pregunta ejemplo" />
+            <figcaption aria-hidden="true">Pregunta ejemplo</figcaption>
+            </figure>
+            <p>De esta manera tenemos un bot entrenado para responder lo
+            que nosotros le hemos proporcionado. Esto nos permite crear
+            nuestro modelo de lenguaje concreto según nuestras
+            necesidades. De hecho, cuando hablamos con un bot de una
+            compañía o de una plataforma, estamos hablando de un modelo
+            de lenguaje que ha sido entrenado para responder a las
+            preguntas más frecuentes de los usuarios.</p>
+            <div class="caution">
+            <p>Debemos tener en cuenta que esta plataforma es de pago y
+            que la versión gratuita tiene unas limitaciones diarias.
+            Esto significa que si queremos utilizarla de manera
+            continuada, será necesario que nos registremos en la versión
+            de pago. Esto pasará en todas las plataformas. Pero cabe
+            decir que esta es una de las pocas que nos permite crear
+            bots. En siguientes unidades hablaremos de otras similares
+            como chatpdf que nos da resultados similares. En ChatGPT a
+            los bots se les llama GPTs y se accede a ellos con la cuenta
+            de pago.</p>
+            </div>
+            <h2 data-number="3.5" id="otros-modelos-conocidos"><span
+            class="header-section-number">3.5</span> Otros modelos
+            conocidos</h2>
+            <p>Aunque estos son los 3 modelos más conocidos, hay otros
+            modelos de herramientas GPT que se pueden utilizar
+            gratuitamente. A continuación, se presentan algunos
+            ejemplos:</p>
+            <ul>
+            <li><strong>TextCortex</strong> es una herramienta basada en
+            GPT-4 que permite generar texto, traducir idiomas, escribir
+            diferentes tipos de contenido creativo y responder preguntas
+            de manera informativa. Ofrece un plan gratuito con un límite
+            de 200 caracteres por generación. Podemos acceder desde <a
+            href="https://app.textcortex.com">aquí</a></li>
+            <li><strong>Writesonic</strong> es una herramienta de
+            redacción automatizada que utiliza GPT-3 para generar
+            contenido de alta calidad, como artículos, anuncios,
+            guiones, piezas musicales, correos electrónicos, cartas,
+            etc. Ofrece un plan gratuito con un límite de 10 creaciones
+            por día. Podemos acceder desde <a
+            href="https://app.writesonic.com/">aquí</a></li>
+            <li><strong>Copy AI</strong> es una herramienta de creación
+            de contenido que utiliza GPT-3 para generar textos,
+            anuncios, guiones, piezas musicales, correos electrónicos,
+            cartas, etc. Ofrece un plan gratuito con un límite de 2000
+            palabras. Podemos acceder desde <a
+            href="https://www.copy.ai/">aquí</a></li>
+            <li><strong>Rytr</strong> es una herramienta de redacción
+            automatizada que utiliza GPT-3. Ofrece un plan gratuito con
+            un límite de 10000 palabras por mes. Podemos acceder desde
+            <a href="https://rytr.me/">aquí</a></li>
+            </ul>
+            <p>Especial mención a <strong>Code llama 2</strong> <a
+            href="https://ai.meta.com/llama/">https://ai.meta.com/llama/</a>
+            se trata de un modelo de IA que puedes descargar en tu
+            ordenador, pero requiere de conocimientos técnicos un poco
+            avanzados para poder hacerlo funcionar y una máquina muy
+            potente. Pero tendremos nuestro propio modelo de lenguaje en
+            nuestro ordenador. Esta herramienta estará disponible en
+            breve en nuestro país para poder acceder a ella sin
+            necesidad de descargarla.</p>
+            <p>Como puedes ver, la disponibilidad de herramientas GPT
+            gratuitas es muy grande y cada vez hay más oferta
+            disponible. Esto facilita a los usuarios el acceso a las
+            capacidades de estos modelos de lenguaje sin tener que pagar
+            una suscripción.</p>
+            <h2 data-number="3.6"
+            id="entonces-qué-herramienta-tengo-que-elegir"><span
+            class="header-section-number">3.6</span> Entonces, qué
+            herramienta tengo que elegir</h2>
+            <p>Aquella que mejor se adapte a tus necesidades y a sus
+            respuestas. Cada una de ellas ha tenido un entrenamiento
+            diferente, por lo tanto a medida que vayas trabajando en
+            cada una de ellas verás que siempre tiendes a utilizar la
+            misma.</p>
+            <p>En este casa habría que utilizar varías y no centrarse en
+            las 3 principales puesto que aquellas no tan conocidas
+            pueden dar respuestas tan válidas o incluso mejor que las
+            otras.</p>
+            <p>De todas maneras una cosa es cierta, un persona puede ser
+            muy inteligente y tener una muy buena conversación pero si
+            quien conversa en ella no es un buen conversador no podrá
+            sacar su potencial.</p>
+            <p>Por eso hay que saber preguntar adecuadamente a la IA qué
+            es lo que queremos y no puedes preguntar como un humano
+            puesto que esta tecnología no sabe presuponer cosas después
+            de hablar contigo, hay que ser claro con lo que preguntamos.
+            Las cuestiones que le hacemos a la IA lo denominamos
+            <strong>prompts</strong>. Si a la IA no le escribes un buen
+            prompt, no funciona bien, y no te dará una buena
+            respuesta.</p>
+            <h1 data-number="4" id="creando-prompts"><span
+            class="header-section-number">4</span> Creando prompts</h1>
+            <p>Lo prompts, como ya hemos comentado, son aquellos
+            comandos que vamos a darle a la inteligencia artificial, a
+            partir de una cuestión o prompt esperamos tener la respuesta
+            más parecida a la deseada. Una de las máximas que hay que
+            aplicar en estos casos es que la cuestión tiene que ser tan
+            clara que la IA no tenga que presuponer nada.</p>
+            <p>Un ejemplo claro lo podemos tener en las tareas del día a
+            día, si en tu casa le pides a alguien “ve a hacer la compra”
+            es posible que ya tenga una idea de lo que tiene que hacer,
+            donde tiene que ir a comprar y en qué ciudad, cuando puedes
+            ir a comprar, donde encontrar la lista de la compra, el
+            presupuesto, los objetos prioritarios, las alternativas si
+            no hay un producto y qué manías tienen los miembros de la
+            familia. Todas estas cosas la IA no las sabe, por lo tanto
+            los prompts no se pueden parecer a las cuestiones que
+            planteamos en nuestro día a día, tenemos que definir más
+            exactamente qué es lo que queremos.</p>
+            <p>Otra de las cuestiones que hay que tener en cuenta, y es
+            muy importante, es que no es lo mismo preguntar de un tema
+            que desconoces a otro que conoces, siempre podrás plantear
+            mejor el prompt para poder obtener los mejores
+            resultados.</p>
+            <p>Aquí trataremos de dar una serie de orientaciones para
+            plantear prompts, al final, partiendo de estas orientaciones
+            y en función de lo que vayas a realizar acabarás creándote
+            tu propio esquema mental para sacar los resultados que más
+            se adaptan a tus necesidades, y estos no tienen porque ser
+            aptos para todos.</p>
+            <h2 data-number="4.1"
+            id="estructuras-modulares-para-la-creación-de-prompts"><span
+            class="header-section-number">4.1</span> Estructuras
+            modulares para la creación de prompts</h2>
+            <p>La estructura de referencia que Microsoft recomienda para
+            la creación de prompts incluye cuatro elementos clave:</p>
+            <ul>
+            <li><strong>Objetivo</strong>: El objetivo del prompt, es
+            decir, lo que se quiere conseguir con la respuesta.</li>
+            <li><strong>Contexto</strong>: El contexto en que se hace la
+            pregunta o se pide la respuesta.</li>
+            <li><strong>Ejemplos</strong>: Ejemplos concretos que
+            ilustran lo que se quiere conseguir con la respuesta.</li>
+            <li><strong>Expectativas</strong>: Las expectativas para la
+            respuesta, como por ejemplo la longitud, el contenido y el
+            tono.</li>
+            </ul>
+            <p>Las estructuras modulares son una manera eficaz de crear
+            prompts claros y sencillos para diferentes tareas. Aquí
+            tenemos una breve descripción de estructuras:</p>
+            <ul>
+            <li><p><strong>RTF</strong>: RTF es una estructura modular
+            para crear prompts de Rol, Tarea y Formato. Esta estructura
+            es muy útil para crear prompts claros y sencillos para
+            diferentes tareas. Aquí tenemos un ejemplo de cómo se puede
+            utilizar la estructura RTF para crear un prompt:</p>
+            <ul>
+            <li><strong>Role</strong>: Profesor</li>
+            <li><strong>Task</strong>: Explica como funciona el sistema
+            solar.</li>
+            <li><strong>Formato</strong>: Utiliza un lenguaje sencillo y
+            ejemplos visuales.</li>
+            </ul></li>
+            <li><p><strong>TAG</strong>: La estructura TAG (Task,
+            Action, Goal) es una herramienta que se puede utilizar para
+            definir tareas y objetivos claros y sencillos. La estructura
+            TAG se compone de tres elementos:</p>
+            <ul>
+            <li>*<strong>Tarea</strong>: La tarea que se tiene que
+            realizar.</li>
+            <li><strong>Acción</strong>: La acción que se tiene que
+            llevar a cabo para completar la tarea.</li>
+            <li><strong>Objetivo</strong>: El objetivo final de la
+            tarea.</li>
+            </ul>
+            <p>La estructura TAG se puede utilizar para crear prompts
+            que incluyen información sobre la tarea, la acción y el
+            objetivo.</p></li>
+            <li><p><strong>GAIDE</strong>: La estructura GAIL (Goal,
+            Actor, Instructions, Details, Examples) es una herramienta
+            que se puede utilizar para crear prompts detallados y
+            sencillos. La estructura GAIL se compone de cinco
+            elementos:</p>
+            <ul>
+            <li><strong>Objetivo</strong>: El objetivo de la tarea.</li>
+            <li><strong>Usuario</strong>: El usuario que tiene que
+            completar la tarea.</li>
+            <li><strong>Instrucciones</strong>: Las instrucciones
+            detalladas para completar la tarea.</li>
+            <li><strong>Detalles</strong>: Detalles adicionales sobre la
+            tarea.</li>
+            <li><strong>Ejemplos</strong>: Ejemplos de como completar la
+            tarea.</li>
+            </ul>
+            <p>La estructura GAIL se puede utilizar para crear prompts
+            que incluyen información detallada sobre el objetivo, el
+            usuario, las instrucciones, los detalles y los
+            ejemplos.</p></li>
+            </ul>
+            <h2 data-number="4.2"
+            id="crea-tu-propia-estructura-que-te-funcione"><span
+            class="header-section-number">4.2</span> Crea tu propia
+            estructura que te funcione</h2>
+            <p>En el apartado anterior hemos hablado de estructuras
+            modulares que dan buenos resultados, pero al final, cada
+            cual crea la suya y utiliza las guías que mejor le
+            funcionan. Un ejemplo podría ser:</p>
+            <p><strong>Rol:</strong> Hay que especificar qué tipo de rol
+            quiere que asuma. Si le decimos a la IA que actúo como un
+            niño de 8 años que va primaria no nos dará la misma
+            respuesta que si le decimos que actúe como un psicólogo
+            especialista en la infancia.</p>
+            <p><strong>Objetivo:</strong> Define con precisión lo que
+            pretende la señal. Si se quiere un texto, indica qué tipo de
+            texto, tema y propósito. Decid también si queréis un
+            artículo o poema, por ejemplo. La audiencia a la cual se
+            dirige, etc.</p>
+            <p><strong>Lenguaje:</strong> Un prompt tiene la audiencia
+            objetivo. Para generar un texto, por ejemplo, se especifica
+            si es un artículo, lema, poema, etc., qué temas trata; en
+            qué estilo tiene que estar escrito y para qué audiencia.</p>
+            <p><strong>Ejemplos:</strong> Proporciona ejemplos sobre lo
+            que esperas obtener con el prompt. Pueden ser textos que has
+            leído o publicado, fotografías tuyas… parecidos a lo que te
+            gustaría obtener. Los ejemplos permitirán a la IA
+            familiarizarse con los datos y mejorar su rendimiento sin
+            programación explícita.</p>
+            <p><strong>Formato:</strong> Decid qué formato tiene que
+            tener la salida de la IA y cuánta información queréis en
+            cada línea. Decid si queréis que sea un poco poético o más
+            prosaico, etc. Si dices que quieres una imagen, indica la
+            medida, la resolución, la gamma de colores… cualquier
+            detalle o requisito para hacer</p>
+            <p>Teniendo claro estos puntos ya podéis ir creando nuestros
+            prompts. Os dejamos algunos consejos para mejorar vuestros
+            prompts.</p>
+            <h2 data-number="4.3" id="consejos-para-crear-prompts"><span
+            class="header-section-number">4.3</span> Consejos para crear
+            prompts</h2>
+            <ul>
+            <li>Pregunta de manera clara y concisa. Esto ayudará a
+            evitar posibles desviaciones y garantizar que la IA entienda
+            qué estás preguntando.</li>
+            <li>Utiliza un lenguaje específico. Facilita generar
+            respuestas más precisas.</li>
+            <li>Evita utilizar un lenguaje ambiguo o vago. Esto puede
+            llevar a que la IA genere respuestas incorrectas o
+            confusas.</li>
+            <li>Específica el tipo de respuesta que estás buscando. Cómo
+            quieres recibir la producción de salida para que sea
+            relevante y se ajuste a tus necesidades</li>
+            <li>Usa comodines de formato: redacción, tabla, listado,
+            comparativa, diálogo, gráfico…</li>
+            <li>Utiliza palabras clave: Actúa como… / Eres un…</li>
+            <li>Crea una secuencia de prompts para ir acotando y
+            llevando la IA hacia donde tú quieres.</li>
+            <li>Guía la IA para que genere contenido basado en nuestros
+            intereses.</li>
+            <li>Si no estás seguro de la respuesta de la IA, pide que lo
+            explique y argumente. Esto ayuda a comprender mejor la
+            respuesta y a identificar cualquier sesgo o error
+            potencial.</li>
+            <li>Amenaza o dale una propina a la IA. Parece mentira pero,
+            en alguna casos, amenazándola que tu vida corre peligro o
+            que le vas a hacer un regalo puede dar mejores resultados
+            que si no lo haces.</li>
+            </ul>
+            <div class="warning">
+            <p>Una de las cosas que debemos tener en cuenta cuando
+            hacemos un prompt es que existe una cosa que se denominan
+            <strong>alucinaciones</strong>. Las alucinaciones son
+            invenciones de la inteligencia artificial que te da como una
+            respuesta certera pero son totalmente falsas. Cómo en este
+            caso en que forzamos a ChatGPT que nos escriba una reseña
+            sin plantearse si es cierta o no.</p>
+            </div>
+            <figure>
+            <img src="img/9.png" style="width:70.0%"
+            alt="Perico de los palotes" />
+            <figcaption aria-hidden="true">Perico de los
+            palotes</figcaption>
+            </figure>
+            <div class="warning">
+            <p>Algunos Chatbots no tienen toda la información
+            actualizada a 2024 y pueden darte respuestas que no son
+            ciertas en estos momentos.</p>
+            </div>
+            <figure>
+            <img src="img/10.png" style="width:70.0%"
+            alt="Kamala Harris?" />
+            <figcaption aria-hidden="true">Kamala Harris?</figcaption>
+            </figure>
+            <p>Teniendo en cuenta que estamos escribiendo esta cuestión
+            el 23 de octubre de 2024, la respuesta que nos ha dado la IA
+            no es correcta. Hay que tener en cuenta que la información
+            de la que dispone el modelo que estamos utilizando puede no
+            estar actualizada.</p>
+            <p>Y, ciertamente, Copilot no quiere ni oír hablar del
+            tema:</p>
+            <figure>
+            <img src="img/101.png" style="width:70.0%"
+            alt="¿Elecciones?" />
+            <figcaption aria-hidden="true">¿Elecciones?</figcaption>
+            </figure>
+            <h1 data-number="5" id="creando-prompts-1"><span
+            class="header-section-number">5</span> Creando prompts</h1>
+            <p>En la <a
+            href="https://www.iberestudios.como/noticias/21-prompts-o-formas-de-preguntar-a-chatgpt-para-obtener-resultados-asombrosos/">siguiente
+            página</a> podemos encontrar una serie de ejemplos de como
+            crear buenos prompts:</p>
+            <blockquote>
+            <p>Por favor, actúa como un narrador. Inventarás historias
+            entretenidas que sean atractivas, imaginativas y
+            cautivadoras para el público. Pueden ser cuentos de hadas,
+            historias educativas o cualquier otro tipo de historia que
+            tenga el potencial de capturar la atención y la imaginación
+            de las personas. Dependiendo del público objetivo, puedes
+            elegir temas o temas específicos para tu sesión de cuentos.
+            Por ejemplo, si son niños, puedes hablar sobre animales; si
+            son adultos, los cuentos basados en la historia pueden
+            involucrarlos mejor, etc. Mi primera solicitud es «Necesito
+            una historia interesante sobre la perseverancia».</p>
+            </blockquote>
+            <p><a
+            href="https://www.freepik.com/blog/es/escribir-prompts/">Ejemplo
+            de prompts</a> para imágenes:</p>
+            <blockquote>
+            <p>Una foto vintage 8K de gran realismo de una torre de
+            reloj entrelazada con hiedra luminosa, cuyas hojas parpadean
+            con luz bioluminiscente al atardecer. Un intrincado paisaje
+            urbano steampunk al amanecer, con engranajes de latón y
+            vapor surgiendo de calles adoquinadas, todo ello renderizado
+            con una asombrosa claridad 8K.</p>
+            </blockquote>
+            <blockquote>
+            <p>Una imagen hiperrealista de un lago cristalino que
+            refleja un cielo lleno de auroras en un prístino bosque 8K a
+            medianoche. Una ilustración 8K muy detallada de una gran
+            biblioteca cpn estanterías que van del suelo al techo,
+            escaleras ornamentadas y libros antiguos con títulos etéreos
+            que brillan.</p>
+            </blockquote>
+            <blockquote>
+            <p>Un mural realista en 8K de una metrópolis futurista, con
+            coches suspendidos y letreros holográficos, reflejados en
+            las superficies brillantes de la arquitectura de la
+            ciudad.</p>
+            </blockquote>
+            <blockquote>
+            <p>Una imagen hiperrealista en 8K de un intrincado dragón
+            mecánico con escamas de cobre pulido y zafiro, enroscado
+            alrededor de una torre medieval.</p>
+            </blockquote>
+            <p>Ejemplo de generación de código, en este caso SQL.</p>
+            <blockquote>
+            <p>Mesa departments, columnas = [DepartmentId,
+            DepartmentName]. Mesa students, columnas = [DepartmentId,
+            StudentId, StudentName]. Crea una consulta MySQL para todos
+            los estudiantes del departamento de Ciencias de la
+            Computación.</p>
+            </blockquote>
+            <h1 data-number="6" id="bibliografía"><span
+            class="header-section-number">6</span> Bibliografía</h1>
+            <p>Existe una <a
+            href="https://www.promptingguide.ai/ca">página muy
+            interesante</a> sobre la creación de prompts que os
+            recomendamos leer.</p>
+            <aside id="footnotes"
+            class="footnotes footnotes-end-of-document"
+            role="doc-endnotes">
+            <hr />
+            <ol>
+            <li id="fn1"><p>Antes llamado <strong>Bard</strong>.<a
+            href="#fnref1" class="footnote-back"
+            role="doc-backlink">↩︎</a></p></li>
+            <li id="fn2"><p>Más adelante nos centraremos en la creación
+            de prompts para poder definir mejor qué es lo que
+            queremos.<a href="#fnref2" class="footnote-back"
+            role="doc-backlink">↩︎</a></p></li>
+            </ol>
+            </aside>
+        </main>
+        
+
+        <!--- Modal images -->
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- The Close Button -->
+            <!--span class="close">&times;</span-->
+
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="img01">
+
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
+        </div>
+
+        <!-- End Modal Images -->
+
+        <script>
+            function ModalizeImages() {
+                // Script basat en https://www.w3schools.com/howto/howto_css_modal_images.asp
+                // PEr ampliar imatges en fer click
+
+                // Get the modal
+                var modal = document.getElementById("myModal");
+
+                var modalImg = document.getElementById("img01");
+                var captionText = document.getElementById("caption");
+
+                // Get the image and insert it inside the modal - use its "alt" text as a caption
+                //var img = document.getElementById("myImg");
+                document.querySelectorAll("img").forEach((img => {
+                        img.onclick = function() {
+                            modal.style.display = "block";
+                            modalImg.src = this.src;
+                            captionText.innerHTML = this.alt;
+                        }
+                    }))
+                    // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+
+                // When the user clicks on <span> (x), close the modal
+                //span.onclick = function() {
+                myModal.onclick = function() {
+                    modal.style.display = "none";
+                }
+
+
+            }
+
+
+            function markItem(id) {
+                // Restaurem format de tots
+                document.querySelectorAll("#TOC a").forEach(function(item) {
+                        //item.style.fontWeight = "300";
+                        item.classList.remove("navItemSelected");
+                    })
+                    //item.style.color = "#ff0000";
+
+                // Afegim format
+                let items = document.querySelectorAll("#TOC a[href='#" + id + "']");
+                items.forEach(function(item) {
+                    //item.style.fontWeight = "bolder";
+                    item.classList.add("navItemSelected");
+                })
+
+            }
+
+            var observer = new IntersectionObserver(function(entries) {
+                // isIntersecting is true when element and viewport are overlapping
+                // isIntersecting is false when element and viewport don't overlap
+                if (entries[0].isIntersecting === true) {
+                    let id = entries[0].target.id;
+                    markItem(id);
+                }
+
+            }, {
+                threshold: [0]
+            });
+
+            window.addEventListener("load", function() {
+                document.querySelectorAll("h1, h2, h3").forEach(function(item) {
+                    observer.observe(item);
+                });
+
+                document.querySelectorAll("#TOC a").forEach(function(item) {
+                    item.addEventListener("click", function(item) {
+                        markItem(item.id);
+                    })
+                })
+
+                // Fem modals totes les imatges
+                ModalizeImages();
+            })
+
+            document.querySelector("#TOC").addEventListener("click", function(event) {
+                let toc = event.target
+                if (toc.offsetWidth > 10) {
+                    toc.classList.add("minimizedToc");
+                }
+            })
+
+            document.querySelector("#TOC").addEventListener("mouseover", function(event) {
+                let toc = event.target
+                if (toc.classList.contains("minimizedToc"))
+                    toc.classList.remove("minimizedToc");
+            })
+
+
+            //item.style.color = "#ff0000";
+        </script>
+    </div>
+</body>
+
+</html>

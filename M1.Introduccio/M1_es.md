@@ -19,8 +19,8 @@ toque-title: Contenidos
 
 # Cabeceras y pies
 header-left: 1. Introducción. Conceptos iniciales
-header-right: Curso 2023-2024
-footer-left: CEFIRE Valencia
+header-right: Curso 2024-2025
+footer-left: Red CEFIRE
 footer-right: \thepage/\pageref{LastPage}
 
 # Imágenes

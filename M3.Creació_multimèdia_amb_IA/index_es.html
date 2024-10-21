@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="can" xml:lang="can" >
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />        <title>3. Creación multimedia con IA</title>
+    <style>
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    </style>
+        <link rel="stylesheet" href="aqua.css" />  
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+    <![endif]-->
+      
+</head>
+
+<body>
+    <div id="content">
+                 <header id="title-block-header">
+            <h1 class="title">3. Creación multimedia con IA</h1>
+            <!---->
+            <!--  -->
+                    </header>
+                 <nav id="TOC" role="doc-toc">
+            <div class="navContainer">
+                 <ul>
+<li><a href="#introducción" id="toc-introducción"><span
+class="toc-section-number">1</span> Introducción</a></li>
+<li><a href="#buscadores-que-utilizan-inteligencia-artificial"
+id="toc-buscadores-que-utilizan-inteligencia-artificial"><span
+class="toc-section-number">2</span> Buscadores que utilizan inteligencia
+artificial</a>
+<ul>
+<li><a href="#perplexity" id="toc-perplexity"><span
+class="toc-section-number">2.1</span> Perplexity</a></li>
+<li><a href="#you" id="toc-you"><span
+class="toc-section-number">2.2</span> You</a></li>
+</ul></li>
+<li><a href="#creación-de-imágenes-y-videos"
+id="toc-creación-de-imágenes-y-videos"><span
+class="toc-section-number">3</span> Creación de imágenes y videos</a>
+<ul>
+<li><a href="#flexclip" id="toc-flexclip"><span
+class="toc-section-number">3.1</span> Flexclip</a></li>
+<li><a href="#deepai" id="toc-deepai"><span
+class="toc-section-number">3.2</span> Deepai</a></li>
+<li><a href="#canva" id="toc-canva"><span
+class="toc-section-number">3.3</span> Canva</a>
+<ul>
+<li><a href="#animo-style" id="toc-animo-style"><span
+class="toc-section-number">3.3.1</span> Animo Style</a></li>
+<li><a href="#dall-e" id="toc-dall-e"><span
+class="toc-section-number">3.3.2</span> DALL-E</a></li>
+<li><a href="#d-id-ai-presenter" id="toc-d-id-ai-presenter"><span
+class="toc-section-number">3.3.3</span> D-ID AI Presenter</a></li>
+</ul></li>
+<li><a href="#leonardo" id="toc-leonardo"><span
+class="toc-section-number">3.4</span> Leonardo</a></li>
+<li><a href="#wepik" id="toc-wepik"><span
+class="toc-section-number">3.5</span> Wepik</a></li>
+<li><a href="#bing-copilot" id="toc-bing-copilot"><span
+class="toc-section-number">3.6</span> Bing Copilot</a></li>
+<li><a href="#qué-herramienta-escojo"
+id="toc-qué-herramienta-escojo"><span
+class="toc-section-number">3.7</span> ¿Qué herramienta escojo?</a></li>
+</ul></li>
+<li><a href="#aplicaciones-para-dar-a-conocer-la-ia-en-la-escuela"
+id="toc-aplicaciones-para-dar-a-conocer-la-ia-en-la-escuela"><span
+class="toc-section-number">4</span> Aplicaciones para dar a conocer la
+IA en la escuela</a>
+<ul>
+<li><a href="#replicate" id="toc-replicate"><span
+class="toc-section-number">4.1</span> Replicate</a></li>
+<li><a href="#animated-drawings" id="toc-animated-drawings"><span
+class="toc-section-number">4.2</span> Animated Drawings</a></li>
+<li><a href="#teachablemachine" id="toc-teachablemachine"><span
+class="toc-section-number">4.3</span> Teachablemachine</a></li>
+</ul></li>
+<li><a href="#inteligencia-artificial-vs-inteligencia-artificial"
+id="toc-inteligencia-artificial-vs-inteligencia-artificial"><span
+class="toc-section-number">5</span> Inteligencia artificial vs
+Inteligencia artificial</a>
+<ul>
+<li><a href="#gptzero" id="toc-gptzero"><span
+class="toc-section-number">5.1</span> GPTzero</a></li>
+<li><a href="#quillbot" id="toc-quillbot"><span
+class="toc-section-number">5.2</span> Quillbot</a></li>
+</ul></li>
+<li><a href="#creación-de-audio-y-video"
+id="toc-creación-de-audio-y-video"><span
+class="toc-section-number">6</span> Creación de audio y video</a>
+<ul>
+<li><a href="#studio" id="toc-studio"><span
+class="toc-section-number">6.1</span> Studio</a></li>
+<li><a href="#rask" id="toc-rask"><span
+class="toc-section-number">6.2</span> Rask</a></li>
+<li><a href="#opusclip" id="toc-opusclip"><span
+class="toc-section-number">6.3</span> Opusclip</a></li>
+<li><a href="#elevenlabs" id="toc-elevenlabs"><span
+class="toc-section-number">6.4</span> ElevenLabs</a></li>
+<li><a href="#bing-copilot-complemento-suno"
+id="toc-bing-copilot-complemento-suno"><span
+class="toc-section-number">6.5</span> Bing Copilot (complemento
+Suno)</a></li>
+<li><a href="#otras-aplicaciones-multimedia-de-interés"
+id="toc-otras-aplicaciones-multimedia-de-interés"><span
+class="toc-section-number">6.6</span> Otras aplicaciones multimedia de
+interés</a></li>
+<li><a href="#cuál-elegir" id="toc-cuál-elegir"><span
+class="toc-section-number">6.7</span> ¿Cuál elegir?</a></li>
+</ul></li>
+<li><a href="#generación-de-materiales-didácticos"
+id="toc-generación-de-materiales-didácticos"><span
+class="toc-section-number">7</span> Generación de materiales
+didácticos</a>
+<ul>
+<li><a href="#mindsmith" id="toc-mindsmith"><span
+class="toc-section-number">7.1</span> Mindsmith</a></li>
+<li><a href="#nolej" id="toc-nolej"><span
+class="toc-section-number">7.2</span> Nolej</a></li>
+<li><a href="#schemely" id="toc-schemely"><span
+class="toc-section-number">7.3</span> Schemely</a></li>
+<li><a href="#tutorai" id="toc-tutorai"><span
+class="toc-section-number">7.4</span> TutorAI</a></li>
+<li><a href="#magicschoolai" id="toc-magicschoolai"><span
+class="toc-section-number">7.5</span> MagicSchoolAi</a></li>
+<li><a href="#otras-herramientas" id="toc-otras-herramientas"><span
+class="toc-section-number">7.6</span> Otras herramientas</a>
+<ul>
+<li><a href="#quizgecko" id="toc-quizgecko"><span
+class="toc-section-number">7.6.1</span> Quizgecko</a></li>
+<li><a href="#quillionz" id="toc-quillionz"><span
+class="toc-section-number">7.6.2</span> Quillionz</a></li>
+<li><a href="#gitmind" id="toc-gitmind"><span
+class="toc-section-number">7.6.3</span> GitMind</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#otras-herramientas-interesantes"
+id="toc-otras-herramientas-interesantes"><span
+class="toc-section-number">8</span> Otras herramientas interesantes</a>
+<ul>
+<li><a href="#chatpdf" id="toc-chatpdf"><span
+class="toc-section-number">8.1</span> ChatPDF</a></li>
+<li><a href="#geospy" id="toc-geospy"><span
+class="toc-section-number">8.2</span> Geospy</a></li>
+<li><a href="#gpt4all" id="toc-gpt4all"><span
+class="toc-section-number">8.3</span> GPT4All</a></li>
+</ul></li>
+<li><a href="#y-si-no-encuentro-lo-que-busco"
+id="toc-y-si-no-encuentro-lo-que-busco"><span
+class="toc-section-number">9</span> ¿Y si no encuentro lo que
+busco?</a></li>
+</ul>
+            </div>
+        </nav>
+                <main>
+            <!-- \awesomebox[violet]{2pt}{\faRocket}{violet}{Lorem ipsum…} -->
+            <!-- \awesomebox[violet]{2pt}{\faRobot}{violet}{Lorem ipsum…} -->
+            <!-- IMATGE ![Pregunta inicial](./img/proxi/5b.png){ width=10cm } -->
+            <!-- \textbf{greatest} -->
+            <!-- \awesomebox[violet]{2pt}{\faRobot}{violet}{\textbf{greatest}\hfill \break} -->
+            <p><img src="img/cc.png" height="50" /></p>
+            <p>Este documento está sujeto a una licencia creative
+            commons que permite su difusión y uso comercial reconociendo
+            siempre la autoría de su creador. Este documento se
+            encuentra para ser modificado en el siguiente repositorio de
+            github: <!-- CANVIAR L'ENLLAÇ --> <a
+            href="https://github.com/arvicenteboix/AIcurscefire">https://github.com/arvicenteboix/AIcurscefire</a>
+            </p>
+            <h1 data-number="1" id="introducción"><span
+            class="header-section-number">1</span> Introducción</h1>
+            <p>Hasta ahora hemos visto algunas herramientas GPT, pero en
+            la red podemos encontrar muchas mas aplicaciones que hacen
+            uso de la inteligencia artificial para crear casi cualquier
+            producto multimedia. En este módulo os plantearemos algunas
+            herramientas que os pueden ser de utilidad en vuestro día a
+            día. Pero como bien sabréis, son unas cuántas de ejemplo.
+            Estoy seguro que vosotros conoceréis muchas más y que serán
+            tan útiles como las planteadas aquí.</p>
+            <div class="warning">
+            <p>Es recomendable que os creéis un correo aleatorio para
+            poder inscribirse en cada una de las plataformas para probar
+            así todas las herramientas sin necesidad de tener que usar
+            vuestro correo personal. Si alguna os interesa mucho sí que
+            lo podríais utilizar para estar informado de las
+            novedades.</p>
+            </div>
+            <h1 data-number="2"
+            id="buscadores-que-utilizan-inteligencia-artificial"><span
+            class="header-section-number">2</span> Buscadores que
+            utilizan inteligencia artificial</h1>
+            <p>Ya hemos comentado en el módulo 1 la diferencia entre
+            algoritmo y red neuronal, básicamente un algoritmo es una
+            secuencia lógica de pasos que permite solucionar un problema
+            mediante operaciones matemáticas no-ambiguas, mientras que
+            una red neuronal es un sistema que puede aprender y
+            modificarse a sí misma. Los buscadores más conocidos, a
+            pesar de que poco a poco van introduciendo redes neuronales
+            están basados principalmente en algoritmos de búsqueda. Pero
+            existen otro tipo de buscadores que nos pueden facilitar más
+            nuestra búsqueda por Internet. Aquí os damos dos
+            ejemplos:</p>
+            <h2 data-number="2.1" id="perplexity"><span
+            class="header-section-number">2.1</span> Perplexity</h2>
+            <p>Perplexity tiene un entorno similar a los bots
+            conversacionales pero este está centrado en la búsqueda de
+            información y siempre partiendo de unas fuentes, que bien
+            buscará él o podrás proporcionar tú. Podemos acceder desde
+            aquí:</p>
+            <p><a
+            href="http://www.perplexity.ai">http://www.perplexity.ai</a></p>
+            <div class="info">
+            <p>Como en todas las plataformas habrá que acceder con una
+            cuenta de Google o hacer el registro en la página.</p>
+            </div>
+            <p>Aquí tenéis un ejemplo que ilustra un poco lo que estamos
+            comentando. Si le preguntamos a Perplexity:</p>
+            <figure>
+            <img src="./img/1.png" style="width:10cm"
+            alt="Pregunta sin contexto" />
+            <figcaption aria-hidden="true">Pregunta sin
+            contexto</figcaption>
+            </figure>
+            <div class="caution">
+            <p>Fijaos que coge unas referencias que él considera
+            óptimas, pero no son las ideales.</p>
+            </div>
+            <figure>
+            <img src="./img/2.png" style="width:10cm"
+            alt="Pregunta con contexto" />
+            <figcaption aria-hidden="true">Pregunta con
+            contexto</figcaption>
+            </figure>
+            <div class="important">
+            <p>Las respuestas dadas no son una verdad absoluta, les
+            tenemos que dar un contexto. En este caso nos da unos
+            resultados basados en unas medias numéricas que es el
+            contexto que ha considerado el diario como mejor o peor.
+            Hace falta siempre tener una capacidad de valoración para
+            saber el tipo de respuesta que tenemos.</p>
+            </div>
+            <p>Si hacemos una cuestión más general, entenderemos porqué
+            esta herramienta está orientada más en la búsqueda de
+            información:</p>
+            <figure>
+            <img src="./img/3.png" style="width:10cm"
+            alt="Pregunta general" />
+            <figcaption aria-hidden="true">Pregunta general</figcaption>
+            </figure>
+            <p>Probablemente otro chatbot como chatgpt ya nos habría
+            dado algún ejemplo sobre alguna receta de cocina.</p>
+            <div class="tip">
+            <p>Como veis cada IA tiene un propósito específico. Por eso
+            es importante en que no os quedéis solo en una y que vayáis
+            investigando diferentes versiones de todas ellas. También
+            dependerás de las necesidades que se tenga en cada momento
+            para utilizar una u otra.</p>
+            </div>
+            <h2 data-number="2.2" id="you"><span
+            class="header-section-number">2.2</span> You</h2>
+            <p>Podemos encontrar el buscador you en la <a
+            href="https://you.com/">siguiente página</a>. Al igual que
+            Perplexity, You también es una IA centrada en la búsqueda de
+            información, las respuestas que nos da son más naturales
+            pero no nos da las referencias de dónde ha sacado la
+            información. Fijémonos qué respuesta nos da a la misma
+            cuestión plateada a Perplexity:</p>
+            <figure>
+            <img src="./img/4.png" style="width:10cm"
+            alt="Pregunta con contexto" />
+            <figcaption aria-hidden="true">Pregunta con
+            contexto</figcaption>
+            </figure>
+            <div class="note">
+            <p>Si analizamos la respuesta veremos que nos da un
+            resultado bastante diferente del que esperábamos, por eso es
+            importante leer la respuesta puesto que podemos ver que nos
+            dice claramente <em>han llegado a la selectividad con la
+            mejor nota mediana de toda la Comunidad Valenciana al
+            2023</em>. Y no está hablando concretamente de la nota media
+            después sino de antes.</p>
+            </div>
+            <h1 data-number="3" id="creación-de-imágenes-y-videos"><span
+            class="header-section-number">3</span> Creación de imágenes
+            y videos</h1>
+            <h2 data-number="3.1" id="flexclip"><span
+            class="header-section-number">3.1</span> Flexclip</h2>
+            <p>Se trata de una herramienta para crear y editar videos,
+            esta presenta una parte donde puedes generar vídeos a partir
+            de texto. Hay que ser muy específicos con lo que se desea
+            puesto que los resultados no son nunca los que uno está
+            pensando. Podemos acceder desde <a
+            href="https://www.flexclip.com">aquí</a></p>
+            <p>Para crear un video a partir de texto tenemos que ir a la
+            herramienta AI Video Generator:</p>
+            <figure>
+            <img src="img/6.png" style="width:10cm"
+            alt="AI Video Generator" />
+            <figcaption aria-hidden="true">AI Video
+            Generator</figcaption>
+            </figure>
+            <p>Y escribimos un prompt:</p>
+            <figure>
+            <img src="img/5.png" style="width:10cm"
+            alt="AI Video Generator" />
+            <figcaption aria-hidden="true">AI Video
+            Generator</figcaption>
+            </figure>
+            <div class="note">
+            <p>Se trata de una herramienta de pago como casi todas las
+            que vamos a ver, estas nos permiten crear una serie de
+            archivos multimedia en el día. Así que hay que tener en
+            cuenta estas limitaciones. Flexclip, también es un editor de
+            video online muy potente.</p>
+            </div>
+            <h2 data-number="3.2" id="deepai"><span
+            class="header-section-number">3.2</span> Deepai</h2>
+            <p>Podemos acceder a Deepai desde <a
+            href="https://deepai.org">aquí</a>. Se trata de un generador
+            de imágenes. Podemos ver que como todas las IA hay que dar
+            un contexto más amplio para tener un resultado más
+            deseado:</p>
+            <figure>
+            <img src="img/7.png" style="width:10cm"
+            alt="Prompt para generar imagen" />
+            <figcaption aria-hidden="true">Prompt para generar
+            imagen</figcaption>
+            </figure>
+            <div class="caution">
+            <p>Nosotros estamos planteando un prompt en valenciano,
+            siempre dará mejor resultado aquellos que expresamos en
+            inglés. Generar imágenes a partir de IA es un tanto más
+            complejo y requiere de especificar claramente lo que
+            queremos sin dar lugar a dudas, siempre podemos modificar el
+            prompt para ir buscando el resultado esperado. Dos cosas que
+            hay que tener en cuenta cuando se crea un prompt de imagen
+            es que la primera frase es más importante que la última.
+            Fijaos cómo yo quiero que aparezcan los dos alumnos y cambio
+            el prompt para insistir. Recordad que las órdenes que recibe
+            la inteligencia artificial tienen que ser claras y directas.
+            Olvidémonos de la educación, no es necesaria!</p>
+            </div>
+            <figure>
+            <img src="img/9.png" style="width:10cm"
+            alt="Ejemplo cambiando un poco lo prompt" />
+            <figcaption aria-hidden="true">Ejemplo cambiando un poco lo
+            prompt</figcaption>
+            </figure>
+            <p>Esta herramienta permite crear tantas imágenes como
+            queramos y es bastante útil si te adaptas a sus gustos<a
+            href="#fn1" class="footnote-ref" id="fnref1"
+            role="doc-noteref"><sup>1</sup></a></p>
+            <h2 data-number="3.3" id="canva"><span
+            class="header-section-number">3.3</span> Canva</h2>
+            <p>Canva es una herramienta que muchos utilizamos para
+            generar nuestras creaciones. En el apartado de Apps podemos
+            encontrar muchas herramientas que hacen uso de la IA para
+            generar imágenes. Para acceder a todas estas herramientas
+            hemos de ir a Apps en el menú derecho de Canva cuando
+            estamos creando una imagen.</p>
+            <figure>
+            <img src="img/13.png" style="width:10cm"
+            alt="Apps en canva" />
+            <figcaption aria-hidden="true">Apps en canva</figcaption>
+            </figure>
+            <div class="warning">
+            <p>Como casi todas las herramientas de IA para generar
+            imágenes, estas tienen usos limitados, algunas de las
+            herramientas de Canva te permiten crear 25 imágenes al mes
+            por ejemplo.</p>
+            </div>
+            <h3 data-number="3.3.1" id="animo-style"><span
+            class="header-section-number">3.3.1</span> Animo Style</h3>
+            <p>Con esta App de Canva puedes crear imágenes Anime. Por
+            ejemplo.</p>
+            <figure>
+            <img src="img/11.png" style="width:10cm"
+            alt="Animo Style" />
+            <figcaption aria-hidden="true">Animo Style</figcaption>
+            </figure>
+            <h3 data-number="3.3.2" id="dall-e"><span
+            class="header-section-number">3.3.2</span> DALL-E</h3>
+            <p>La tecnología DALL-E nos permite crear imágenes a partir
+            de texto. Canva dispone una aplicación con ese nombre
+            limitada a la creación de 25 imágenes al mes.</p>
+            <figure>
+            <img src="img/12.png" style="width:10cm"
+            alt="Canva DALL-E" />
+            <figcaption aria-hidden="true">Canva DALL-E</figcaption>
+            </figure>
+            <h3 data-number="3.3.3" id="d-id-ai-presenter"><span
+            class="header-section-number">3.3.3</span> D-ID AI
+            Presenter</h3>
+            <p>Podemos generar audio para las presentaciones pero
+            podemos añadir una persona que habla mientras se hace la
+            presentación. Se tiene que conectar a una plataforma externa
+            y solo permite la creación de 5 minutos.</p>
+            <figure>
+            <img src="img/14.png" style="width:10cm"
+            alt="D-ID AI Presenter" />
+            <figcaption aria-hidden="true">D-ID AI
+            Presenter</figcaption>
+            </figure>
+            <p>Hay muchísimas Apps más dentro de Canva que utilizan la
+            IA para facilitarnos la tarea.</p>
+            <h2 data-number="3.4" id="leonardo"><span
+            class="header-section-number">3.4</span> Leonardo</h2>
+            <p>Podemos acceder a Leonardo desde la <a
+            href="https://app.leonardo.ai/">siguiente dirección</a>. Se
+            trata de otra aplicación para crear imágenes que presenta
+            unas funcionalidades bastante interesantes como por ejemplo
+            <em>Image generation</em>, se trata de generación de
+            imágenes a partir de texto y <em>Realtime Canva</em>.</p>
+            <figure>
+            <img src="img/15.png" style="width:10cm" alt="Leonardo" />
+            <figcaption aria-hidden="true">Leonardo</figcaption>
+            </figure>
+            <p>La funcionalidad de generación de imágenes es bastante
+            interesante, pero la de <em>Realtime Canva</em> va a
+            generarnos una imagen a partir de un dibujo que creemos,
+            podemos escanearlo y subirlo o simplemente dibujarlo para
+            que nos haga una interpretación. Se trata de un modelo que
+            generará representaciones artísticas a partir de un concepto
+            más sencillo. Irá generándonos la imagen a partir del dibujo
+            que vayamos dibujando en ese momento:</p>
+            <figure>
+            <img src="img/16.png" style="width:10cm"
+            alt="Ejemplo de Realtime Canva" />
+            <figcaption aria-hidden="true">Ejemplo de Realtime
+            Canva</figcaption>
+            </figure>
+            <p>Es interesante ver que nos permite interactuar tanto en
+            las indicaciones que le damos como texto como en el dibujo
+            que vamos haciendo, de este modo podemos obtener una imagen
+            más ajustada al que buscamos.</p>
+            <div class="note">
+            <p>Está bastante optimizada para sacar retratos, así que no
+            os extrañe si siempre os saca imágenes de personas de primer
+            plano.</p>
+            </div>
+            <p>Freepik es una herramienta con las mismas
+            funcionalidades, podemos encontrarla <a
+            href="https://www.freepik.com/pikaso#">aquí</a>.</p>
+            <h2 data-number="3.5" id="wepik"><span
+            class="header-section-number">3.5</span> Wepik</h2>
+            <p>Es una herramienta con el mismo propósito que la anterior
+            pero que también funciona por créditos y te permite generar
+            unas 8 imágenes al mes.</p>
+            <figure>
+            <img src="img/17.png" alt="Wepik" />
+            <figcaption aria-hidden="true">Wepik</figcaption>
+            </figure>
+            <p>Aquí tendríamos un ejemplo de la herramienta de
+            generación de imágenes con Wepik.</p>
+            <figure>
+            <img src="img/18.png" alt="Ejemplo de Wepik" />
+            <figcaption aria-hidden="true">Ejemplo de Wepik</figcaption>
+            </figure>
+            <h2 data-number="3.6" id="bing-copilot"><span
+            class="header-section-number">3.6</span> Bing Copilot</h2>
+            <p>Hemos estado hablando hasta ahora de Bing Copilot como un
+            modelo de lenguaje pero este también trae incorporada la
+            tecnología DALL-E y podemos generar imágenes desde el mismo
+            Chat de Bing Copilot. Este te lleva a la página <a
+            href="https://www.bing.com/images/create?">https://www.bing.com/images/create?</a>
+            para que te des de alta y ya puedes crear imágenes. Es
+            recomendable tener una cuenta de Outlook<a href="#fn2"
+            class="footnote-ref" id="fnref2"
+            role="doc-noteref"><sup>2</sup></a> para darse de alta.</p>
+            <figure>
+            <img src="img/19.png" alt="Ejemplo de Bing Copilot" />
+            <figcaption aria-hidden="true">Ejemplo de Bing
+            Copilot</figcaption>
+            </figure>
+            <h2 data-number="3.7" id="qué-herramienta-escojo"><span
+            class="header-section-number">3.7</span> ¿Qué herramienta
+            escojo?</h2>
+            <p>OpenAI (ChatGPT) y Bard (nombrado recientemente como
+            Gemini) también tienen la tecnología DALL-E implementada en
+            sus chats, aunque OpenAI es de pago, pero la tendencia es
+            que cada vez más y más plataformas implementen estos
+            sistemas de generación de imágenes, los resultados de
+            algunos de ellos pueden ser mejor que otros, siempre
+            dependerá de tu manera de generar el prompt.</p>
+            <div class="caution">
+            <p>La IA no ha venido para crearnos todo, sino que nosotros
+            tenemos que saber qué preguntamos y cómo podemos orientarla
+            para sacar los resultados esperados.</p>
+            </div>
+            <p>Obviamente hay muchas otras opciones interesantes que os
+            invitamos a utilizar como:</p>
+            <ul>
+            <li><a href="https://openai.com/dall-e-2/">OpenAI</a>: De
+            pago</li>
+            <li><a href="https://lexica.arte/">Lexica</a></li>
+            <li><a href="https://clipdrop.co">lipDrop</a></li>
+            </ul>
+            <h1 data-number="4"
+            id="aplicaciones-para-dar-a-conocer-la-ia-en-la-escuela"><span
+            class="header-section-number">4</span> Aplicaciones para dar
+            a conocer la IA en la escuela</h1>
+            <p>Hay muchísimas herramientas que nos permiten ver las
+            posibilidades de la inteligencia artificial y acercarla a
+            nuestros alumnos. Tendemos a quedarnos con las herramientas
+            GPT, pero hay otras muchas posibilidades.</p>
+            <h2 data-number="4.1" id="replicate"><span
+            class="header-section-number">4.1</span> Replicate</h2>
+            <p>Replicate es una plataforma que te permite utilizar su
+            API<a href="#fn3" class="footnote-ref" id="fnref3"
+            role="doc-noteref"><sup>3</sup></a> para tus aplicaciones
+            (evidentemente con un coste), te da diferentes modelos de
+            ejemplos, para reconocimiento de imágenes, estilizarlas,
+            crear imágenes más realistas, pero introduce conceptos muy
+            interesantes como el de <em>negative prompt</em> que es
+            aquello que no queremos que aparezca en nuestra
+            creación.</p>
+            <p>Podemos ir a la página de replicate <a
+            href="https://replicate.com">aquí</a>, vamos a probar uno de
+            los modelos como por ejemplo este:</p>
+            <p><a
+            href="https://replicate.com/rossjillian/controlnet">https://replicate.com/rossjillian/controlnet</a></p>
+            <p>Este modelo nos permite reconocer fotografías a partir de
+            un esbozo creado por nosotros y crear uno más estilizado,
+            nos permite modificar diferentes parámetros para ver el
+            resultado.</p>
+            <figure>
+            <img src="img/20.png" alt="Ejemplo de modelo" />
+            <figcaption aria-hidden="true">Ejemplo de
+            modelo</figcaption>
+            </figure>
+            <div class="caution">
+            <p>El modelo de ejemplo es bastante rápido, pero los otros
+            modelo de ejemplo pueden tardar mucho tiempo para realizar
+            lo que estamos pidiendo. Aun así es una herramienta para
+            entender diferentes conceptos nuevos de la IA, desde los más
+            simples hasta los más avanzados. Si lo utilizáis mucho
+            también os dirá que habéis llegado al límite, pero si
+            cambiáis de navegador podéis continuar, también podéis
+            borrar los datos del navegador para continuar.</p>
+            </div>
+            <h2 data-number="4.2" id="animated-drawings"><span
+            class="header-section-number">4.2</span> Animated
+            Drawings</h2>
+            <p>Esta plataforma está orientada más a infantil y primaria,
+            y nos permite animar dibujos sencillos que realizamos con
+            nuestros alumnos. El enlace para poder acceder es <a
+            href="https://sketch.metademolab.com/">este</a>.</p>
+            <p>Nosotros hemos creado la siguiente imagen que subimos al
+            modelo para poder comprobar los resultados:</p>
+            <figure>
+            <img src="img/21.png" style="width:5cm"
+            alt="Imagen creada por nosotros" />
+            <figcaption aria-hidden="true">Imagen creada por
+            nosotros</figcaption>
+            </figure>
+            <p>Nos permite así mismo <a
+            href="https://sketch.metademolab.com/share/f007a72f87b24dbd9be917d63215cf79/walk_sway">compartir</a>
+            nuestras creaciones. Podemos ver nuestro ejemplo <a
+            href="https://sketch.metademolab.com/share/f007a72f87b24dbd9be917d63215cf79/walk_sway">aquí</a>.</p>
+            <figure>
+            <img src="img/22.png" style="width:10cm"
+            alt="Ejemplo bailando" />
+            <figcaption aria-hidden="true">Ejemplo bailando</figcaption>
+            </figure>
+            <h2 data-number="4.3" id="teachablemachine"><span
+            class="header-section-number">4.3</span>
+            Teachablemachine</h2>
+            <p>Esta herramienta, como ya hemos comentado en el módulo 1,
+            nos permite entrenar a pequeña escala nuestro modelo de
+            inteligencia artificial para un propósito, por ejemplo el de
+            reconocer objetos, sonidos o posturas. Solo nos hace falta
+            una webcam para hacerlo o unas imágenes ya creadas. Podemos
+            acceder a la plataforma desde <a
+            href="https://teachablemachine.withgoogle.com/">aquí</a>.</p>
+            <figure>
+            <img src="img/24.png" style="width:10cm"
+            alt="Teachablemachine" />
+            <figcaption aria-hidden="true">Teachablemachine</figcaption>
+            </figure>
+            <p>Y creamos nuestro primer proyecto:</p>
+            <figure>
+            <img src="img/25.png" style="width:10cm"
+            alt="Modelo de imagen" />
+            <figcaption aria-hidden="true">Modelo de imagen</figcaption>
+            </figure>
+            <p>Nosotros hemos preparado un modelo para distinguir entre
+            un bolígrafo y unas tijeras, subimos las imágenes de cada
+            uno.</p>
+            <figure>
+            <img src="img/26.png" style="width:10cm"
+            alt="Modelo de imagen creado" />
+            <figcaption aria-hidden="true">Modelo de imagen
+            creado</figcaption>
+            </figure>
+            <p>Este modelo lo podemos exportar y lo podemos compartir.
+            Obviamente el modelo que he creado no es demasiado
+            interesante, pero podemos entrenar mejores modelos con
+            muchas fotografías, objetos de la clase y crear tu propio
+            reconocedor de objetos. Podéis descargar el modelo de aquí:
+            <a
+            href="https://teachablemachine.withgoogle.com/models/9oqm8e4an/">https://teachablemachine.withgoogle.com/models/9oqm8e4an/</a></p>
+            <h1 data-number="5"
+            id="inteligencia-artificial-vs-inteligencia-artificial"><span
+            class="header-section-number">5</span> Inteligencia
+            artificial vs Inteligencia artificial</h1>
+            <p>A todos nos ha surgido la duda cuando realizamos un
+            trabajo si realmente lo ha creado un alumno o ha hecho uso,
+            ya no sus padres, sino de una herramienta GPT. Existen
+            herramientas, aunque no sean fiables al 100%, para comprobar
+            si un texto ha sido creado con alguna herramienta de
+            inteligencia artificial.</p>
+            <h2 data-number="5.1" id="gptzero"><span
+            class="header-section-number">5.1</span> GPTzero</h2>
+            <p>Se trata de una herramienta bastante interesante para
+            comprobar el texto. Tenemos el enlace <a
+            href="https://gptzero.me/">aquí</a>. Si extraemos un texto
+            de cualquier periódico conocido y lo pasamos por aquí
+            podemos ver el resultado:</p>
+            <figure>
+            <img src="img/27.png"
+            alt="Ejemplo de comprobación de texto" />
+            <figcaption aria-hidden="true">Ejemplo de comprobación de
+            texto</figcaption>
+            </figure>
+            <p>De todas maneras los resultados no son 100% fiables y,
+            obviamente, existe <a
+            href="https://www.humanizeaitext.org/">humanizeaitext</a> o
+            <a href="https://quillbot.com/">Quillbot</a>, que sirve para
+            humanizar más el texto generado por una IA para que resulte
+            menos “artificial” y de esa manera sea más indetectable.</p>
+            <h2 data-number="5.2" id="quillbot"><span
+            class="header-section-number">5.2</span> Quillbot</h2>
+            <p>“Hecha la ley hecha la trampa”, también existe la
+            contrapartida de GPTZero. <a
+            href="https://quillbot.com/">Quillbot</a> es otra
+            herramienta que nos permite modificar el texto para que
+            parezca menos de una IA o simplemente un texto que tengamos
+            y queramos expresarlo de otra manera.</p>
+            <figure>
+            <img src="img/28.png" alt="Modificando texto" />
+            <figcaption aria-hidden="true">Modificando
+            texto</figcaption>
+            </figure>
+            <p>Tenemos otros herramientas para humanizar texto que harán
+            más difícil detectar si el texto ha sido creado por una IA o
+            no, recordad que siempre hay que revisar el material
+            generado puesto que pueden aparecer <em>alucinaciones</em> o
+            incluso cambiar el sentido del texto, como hemos podido ver
+            en el ejemplo. Algunos ejemplos son</p>
+            <ul>
+            <li><strong>Undetectable AI</strong> <a
+            href="https://undetectable.ai/">https://undetectable.ai/</a></li>
+            <li><strong>gpt4detector</strong> <a
+            href="https://gpt4detector.ai">https://gpt4detector.ai</a></li>
+            <li><strong>Trinka</strong> <a
+            href="https://www.trinka.ai/es/">https://www.trinka.ai/es/</a></li>
+            </ul>
+            <h1 data-number="6" id="creación-de-audio-y-video"><span
+            class="header-section-number">6</span> Creación de audio y
+            video</h1>
+            <h2 data-number="6.1" id="studio"><span
+            class="header-section-number">6.1</span> Studio</h2>
+            <p>A pesar de que también funciona con créditos y permite un
+            límite de creaciones al mes, se trata de una herramienta muy
+            potente. Nos permite crear presentaciones bastante naturales
+            con un avatar o una imagen nuestra diciendo lo que
+            escribimos.</p>
+            <figure>
+            <img src="img/29.png" style="width:10cm"
+            alt="Presentación" />
+            <figcaption aria-hidden="true">Presentación</figcaption>
+            </figure>
+            <p>Podemos acceder a la herramienta desde <a
+            href="https://studio.d-id.com/editor">aquí</a>.</p>
+            <div class="warning">
+            <p>No penséis que podéis subir la fotografía de un famoso
+            para que diga lo que nosotros queramos, la plataforma lo
+            detecta y no te deja. Si queréis hacer eso como hemos visto
+            con algunos personajes famosos hablando inglés cuando no
+            saben, debes crearte tú el modelo y es una tarea bastante
+            más compleja. Podemos asimismo usar la herramienta que
+            planteamos en el siguiente punto.</p>
+            </div>
+            <p><a href="https://www.synthesia.io/">Synthesia</a>, es
+            otra herramienta que nos permitirá igualmente crear
+            presentaciones a partir de un texto, el funcionamiento es
+            muy parecido a Studio.</p>
+            <p><a href="https://www.heygen.com/">HeyGen</a> igualmente
+            nos permite crear presentaciones a partir de texto.</p>
+            <h2 data-number="6.2" id="rask"><span
+            class="header-section-number">6.2</span> Rask</h2>
+            <p>Se trata de una herramienta que nos permite traducir un
+            video, nosotros hemos cogido un video de <a
+            href="https://www.youtube.com/shorts/6xq3ay9svha">Eugenio</a>
+            para escucharlo hablando inglés</p>
+            <figure>
+            <img src="img/30.png" style="width:10cm"
+            alt="Subiendo video" />
+            <figcaption aria-hidden="true">Subiendo video</figcaption>
+            </figure>
+            <figure>
+            <img src="img/31.png" style="width:10cm"
+            alt="Video traducido" />
+            <figcaption aria-hidden="true">Video traducido</figcaption>
+            </figure>
+            <p>El resultado es bastante sorprendente.</p>
+            <h2 data-number="6.3" id="opusclip"><span
+            class="header-section-number">6.3</span> Opusclip</h2>
+            <p>Es una herramienta que nos muestra las virtudes y los
+            defectos de la IA, nos permite subir un vídeo y nos hace una
+            explicación resumida del video. En este caso subimos un
+            video de un chiste, veremos que no es capaz de detectar la
+            ironía o las gracias del chiste (aunque sean muy malas). Y
+            se lo toma como un vídeo serio. Además le pone subtítulos y
+            lo hace de una manera bastante acertada pese a ser de
+            Chiquito de la calzada. Podemos ver el resultado:</p>
+            <figure>
+            <img src="img/32.png" style="width:10cm"
+            alt="Damos los parámetros del video" />
+            <figcaption aria-hidden="true">Damos los parámetros del
+            video</figcaption>
+            </figure>
+            <figure>
+            <img src="img/33.png" style="width:10cm"
+            alt="Video explicado" />
+            <figcaption aria-hidden="true">Video explicado</figcaption>
+            </figure>
+            <p>Podemos encontrar la herramienta <a
+            href="https://www.opus.pro/">aquí</a>.</p>
+            <p>Una herramienta similar es <a
+            href="https://www.you-tldr.com/">https://www.you-tldr.com/</a>,
+            pero esta está especializada en videos de youtube.</p>
+            <h2 data-number="6.4" id="elevenlabs"><span
+            class="header-section-number">6.4</span> ElevenLabs</h2>
+            <p>Esta herramienta igualmente nos permite convertir texto a
+            audio o un audio a otro audio dándole diferentes
+            entonaciones u otra voz.</p>
+            <figure>
+            <img src="img/34.png" style="width:10cm"
+            alt="En torno a Elevenlabs" />
+            <figcaption aria-hidden="true">En torno a
+            Elevenlabs</figcaption>
+            </figure>
+            <p>Podemos acceder a la plataforma des <a
+            href="https://elevenlabs.io/">de aquí</a>.</p>
+            <p>Esto mismo podemos encontrar en la plataforma <a
+            href="https://www.happyscribe.com/">https://www.happyscribe.com/</a>.</p>
+            <h2 data-number="6.5"
+            id="bing-copilot-complemento-suno"><span
+            class="header-section-number">6.5</span> Bing Copilot
+            (complemento Suno)</h2>
+            <p>Con el navegador Bing podemos acceder a Copilot desde el
+            botón situado a la parte superior derecha, pero Copilot
+            también tiene su <a
+            href="https://copilot.microsoft.com/">propia plataforma</a>.
+            Una de las ventajas que resultan más interesantes respecto a
+            las plataformas GPT más conocidas es el uso de complementos
+            de forma gratuita:</p>
+            <figure>
+            <img src="img/51.png" style="width:13cm"
+            alt="Complementos" />
+            <figcaption aria-hidden="true">Complementos</figcaption>
+            </figure>
+            <p>Uno de los complementos más interesantes que nos ofrece
+            Copilot es <strong>Suno</strong>, que nos permite crear una
+            canción:</p>
+            <figure>
+            <img src="img/52.png" style="width:13cm"
+            alt="Canción creada" />
+            <figcaption aria-hidden="true">Canción creada</figcaption>
+            </figure>
+            <p>Y podemos compartir el resultado que puedes escuchar <a
+            href="https://sl.bing.net/bsh2udkcyka">aquí</a>.</p>
+            <p>También podemos ir directamente a la página de <a
+            href="https://app.suno.ai/">Suno</a> y hacer nuestra
+            creación desde allí.</p>
+            <h2 data-number="6.6"
+            id="otras-aplicaciones-multimedia-de-interés"><span
+            class="header-section-number">6.6</span> Otras aplicaciones
+            multimedia de interés</h2>
+            <p>Existen muchas otras aplicaciones que merece la pena
+            nombrar:</p>
+            <ul>
+            <li>Albus en <a
+            href="https://albus.org/">https://albus.org/</a> es una
+            herramienta que compila una base de conocimientos completa
+            de Google Drive, Notion, Jira, HubSpot y 100 aplicaciones
+            más para responder las preguntas de los empleados.</li>
+            <li>GitMind en <a
+            href="https://gitmind.com/es/">https://gitmind.com/es/</a>
+            es una aplicación gratuita de mapas mentales y lluvia de
+            ideas.</li>
+            <li>Decktopus en <a
+            href="https://www.decktopus.com/">https://www.decktopus.com/</a>
+            es una plataforma de presentación que ofrece una amplia gama
+            de temas, fuentes y colores.</li>
+            <li>Tome en <a
+            href="https://beta.tome.app/">https://beta.tome.app/</a> es
+            una herramienta de creación de contenido que ayuda a crear
+            contenido de blog, correos electrónicos y redes
+            sociales.</li>
+            <li>SteveAI en <a
+            href="https://www.steve.ai/">https://www.steve.ai/</a>; Gama
+            en <a href="https://gamma.app/">https://gamma.app/</a>; Mixo
+            en <a href="https://www.mixo.io/">https://www.mixo.io/</a> y
+            SkyBox en <a
+            href="https://skybox.blockadelabs.com/">https://skybox.blockadelabs.com/</a>
+            son herramientas de creación de contenido que ayuda a crear
+            contenido para redes sociales.</li>
+            <li>Microsoft Designer en <a
+            href="https://designer.microsoft.com/">https://designer.microsoft.com/</a>
+            es una herramienta de diseño gráfico que ayuda a crear
+            diseños profesionales.</li>
+            <li><a href="https://videos.simpleshow.com">Simpleshow</a>
+            es una herramienta que nos permite crear videotutoriales
+            planteándole un prompt.</li>
+            </ul>
+            <h2 data-number="6.7" id="cuál-elegir"><span
+            class="header-section-number">6.7</span> ¿Cuál elegir?</h2>
+            <p>Hoy en día podemos encontrar el uso de la IA
+            prácticamente en cualquier herramienta o dispositivo.
+            Estamos ante una tecnología que ha tenido su boom en los
+            últimos dos años y cada vez va a existir más y más oferta de
+            este tipo de herramientas. Si el uso que le vas a dar es
+            esporádico es recomendable ir usando aquellas que son
+            gratuitas.</p>
+            <h1 data-number="7"
+            id="generación-de-materiales-didácticos"><span
+            class="header-section-number">7</span> Generación de
+            materiales didácticos</h1>
+            <p>Las siguientes herramientas nos permiten crear materiales
+            de manera rápida y sencilla ya preparados para publicar.</p>
+            <div class="warning">
+            <p>Hay que tener en cuenta que los materiales que se generan
+            están basados en otros materiales que tienen como referencia
+            la IA. Y pueden ser o no adecuados a lo que tú esperas, todo
+            aquello que cree es necesario revisarlo.</p>
+            </div>
+            <h2 data-number="7.1" id="mindsmith"><span
+            class="header-section-number">7.1</span> Mindsmith</h2>
+            <p><a href="https://www.mindsmith.ai/">Mindsmith</a> es una
+            de las plataformas existentes para crear materiales a modo
+            de presentación:</p>
+            <figure>
+            <img src="img/35.png" style="width:10cm" alt="Mindsmith" />
+            <figcaption aria-hidden="true">Mindsmith</figcaption>
+            </figure>
+            <p>Le damos un prompt para que nos genere unos materiales
+            generales. Hay que tener en cuenta todo aquello que hemos
+            visto sobre prompts: cuanto más detallado sea el prompt,
+            mejores resultados obtendremos. Además te genera un
+            cuestionario sobre la unidad creada. Os dejamos una unidad
+            de ejemplo creada con Mindsmith:</p>
+            <p><a
+            href="https://app.mindsmith.ai/learn/clrxvtgi8009ijn083uor8946">https://app.mindsmith.ai/learn/clrxvtgi8009ijn083uor8946</a></p>
+            <div class="caution">
+            <p>La plataforma nos limita a la creación de 5 unidades y
+            solo nos deja compartir dos a no ser que paguemos la
+            cuota.</p>
+            </div>
+            <h2 data-number="7.2" id="nolej"><span
+            class="header-section-number">7.2</span> Nolej</h2>
+            <p><a href="https://nolej.io/nolej-ai-5">Nolej</a> es una
+            plataforma que genera automáticamente material de curso
+            interactivo y gráfico basándose en conocimientos
+            generales.</p>
+            <figure>
+            <img src="img/39.png" alt="Generamos curso" />
+            <figcaption aria-hidden="true">Generamos curso</figcaption>
+            </figure>
+            <figure>
+            <img src="img/40.png" alt="Generando curso" />
+            <figcaption aria-hidden="true">Generando curso</figcaption>
+            </figure>
+            <p>Una de las características más interesantes es que
+            podemos subir un documento (una presentación por ejemplo) y
+            nos creará un cuestionario.</p>
+            <p>Una herramienta alternativa es la siguiente: <a
+            href="https://learningstudioai.com/">LearningStudioAI</a>
+            para generar automáticamente preguntas de opción múltiple,
+            de discusión abiertas o «interpretativas» y de debates con
+            las respuestas correspondientes, a partir de documentos
+            adjuntos.</p>
+            <h2 data-number="7.3" id="schemely"><span
+            class="header-section-number">7.3</span> Schemely</h2>
+            <p><a href="https://schemely.app/">Schemely</a> es una
+            plataforma de creación de cursos para profesores, con AI
+            generativa. Es bastante completa y nos permite enlazar la
+            planificación generada con otras herramientas para crear
+            materiales adicionales.</p>
+            <div class="info">
+            <p>Cuando nos pide el título del curso pensad que estáis
+            realizando un prompt al modelo, por lo tanto hay de detallar
+            muy bien lo que se pide.</p>
+            </div>
+            <figure>
+            <img src="img/41.png" alt="Ponemos un título en el curso" />
+            <figcaption aria-hidden="true">Ponemos un título en el
+            curso</figcaption>
+            </figure>
+            <figure>
+            <img src="img/42.png" alt="Generando curso" />
+            <figcaption aria-hidden="true">Generando curso</figcaption>
+            </figure>
+            <figure>
+            <img src="img/43.png" alt="Curso generado" />
+            <figcaption aria-hidden="true">Curso generado</figcaption>
+            </figure>
+            <p>Es interesante ver como ya nos aparecen los enlaces para
+            que nos cree con otras herramientas esa parte del curso.</p>
+            <h2 data-number="7.4" id="tutorai"><span
+            class="header-section-number">7.4</span> TutorAI</h2>
+            <p><a href="https://www.tutorai.me/">TutorAI</a> es una
+            aplicación pensada para el autoaprendizaje. Le exponemos un
+            tema y nos dará diferentes módulos para poder aprender.</p>
+            <figure>
+            <img src="img/44.png" alt="Tutor AI" />
+            <figcaption aria-hidden="true">Tutor AI</figcaption>
+            </figure>
+            <h2 data-number="7.5" id="magicschoolai"><span
+            class="header-section-number">7.5</span> MagicSchoolAi</h2>
+            <p><a href="https://www.magicschool.ai/">MagicSchoolAi</a>
+            es un conjunto de herramientas agrupadas que nos permite
+            crear materiales para el aula. Una opción interesante es la
+            de crear un cuestionario a partir de una temática. Los
+            cuestionariso de este curso están creados con esta
+            herramienta.</p>
+            <figure>
+            <img src="img/46.png" alt="Tutor AI" />
+            <figcaption aria-hidden="true">Tutor AI</figcaption>
+            </figure>
+            <figure>
+            <img src="img/45.png" alt="Tutor AI" />
+            <figcaption aria-hidden="true">Tutor AI</figcaption>
+            </figure>
+            <div class="note">
+            <p>Al igual que las otras nos da un periodo gratuito de
+            muestra. Pero posteriormente a pesar de que no se puedan
+            utilizar todas las herramientas, las que puedes utilizar son
+            de gran utilidad.</p>
+            </div>
+            <h2 data-number="7.6" id="otras-herramientas"><span
+            class="header-section-number">7.6</span> Otras
+            herramientas</h2>
+            <p>Existen multitud de herramientas. Pero todas ellas
+            parecidas para crear materiales. Os proponemos que echéis un
+            vistazo a otras herramientas como:</p>
+            <h3 data-number="7.6.1" id="quizgecko"><span
+            class="header-section-number">7.6.1</span> Quizgecko</h3>
+            <p><a href="https://quizgecko.com/">Quizgecko</a> es una
+            plataforma de creación de cuestionarios en linea que ayuda
+            nos ayuda a crear cuestionarios interactivos y atractivos
+            para los estudiantes.</p>
+            <h3 data-number="7.6.2" id="quillionz"><span
+            class="header-section-number">7.6.2</span> Quillionz</h3>
+            <p><a href="https://app.quillionz.com/">Quillionz</a> es una
+            herramienta para generar automáticamente preguntas de opción
+            múltiple, de discusión abiertas o «interpretativas» y de
+            debates a partir de documentos adjuntados. La herramienta
+            tiene una opción gratuita limitada.</p>
+            <h3 data-number="7.6.3" id="gitmind"><span
+            class="header-section-number">7.6.3</span> GitMind</h3>
+            <p><a href="https://gitmind.com/es/">GitMind</a> es una
+            aplicación gratuita de mapas mentales y lluvia de ideas.</p>
+            <h1 data-number="8"
+            id="otras-herramientas-interesantes"><span
+            class="header-section-number">8</span> Otras herramientas
+            interesantes</h1>
+            <h2 data-number="8.1" id="chatpdf"><span
+            class="header-section-number">8.1</span> ChatPDF</h2>
+            <p>Personalmente <a
+            href="https://www.chatpdf.com">ChaPDF</a> es una de las
+            aplicaciones que más uso. En este caso se puede subir un PDF
+            y “hablar” con él, puedes hacerle preguntas diversas. En
+            este caso hemos subido la normativa de cursos de CEFIRE. Las
+            respuestas que nos da no son 100% correctas, pero te puede
+            dar una idea, y lo mejor, es que te enlaza la respuesta a la
+            parte del documento donde se habla de ese tema:</p>
+            <figure>
+            <img src="img/47.png" alt="Subiendo documento PDF" />
+            <figcaption aria-hidden="true">Subiendo documento
+            PDF</figcaption>
+            </figure>
+            <figure>
+            <img src="img/48.png" alt="Después de subirlo PDF" />
+            <figcaption aria-hidden="true">Después de subirlo
+            PDF</figcaption>
+            </figure>
+            <figure>
+            <img src="img/49.png" alt="Conversando con él" />
+            <figcaption aria-hidden="true">Conversando con
+            él</figcaption>
+            </figure>
+            <h2 data-number="8.2" id="geospy"><span
+            class="header-section-number">8.2</span> Geospy</h2>
+            <p><a href="https://geospy.web.app/">Geospy</a> es una
+            herramienta que nos permite conocer el lugar de dónde es una
+            imagen. Es muy interesante porque te hace un razonamiento de
+            por qué cree que es ese lugar u otro. Muchos pensaréis que
+            utiliza los metadatos de la imagen para saberlo pero dados
+            los razonamientos que te da, te hacen dudar. Los resultados
+            suelen ser bastante certeros, pero en el ejemplo podemos ver
+            que no siempre es fiable (se trata de una fotografía de la
+            superficie de la luna):</p>
+            <figure>
+            <img src="img/50.png" alt="Geospy" />
+            <figcaption aria-hidden="true">Geospy</figcaption>
+            </figure>
+            <h2 data-number="8.3" id="gpt4all"><span
+            class="header-section-number">8.3</span> GPT4All</h2>
+            <p><a href="https://gpt4all.io/index.html">GPT4All</a> nos
+            permite tener un modelo GPT en nuestro ordenador, eso sí, no
+            esperéis tener un rendimiento como el de la plataforma de
+            ChatGPT, puesto que nuestros ordenadores no son ni de lejos
+            como los que se usan en esas plataformas.</p>
+            <h1 data-number="9"
+            id="y-si-no-encuentro-lo-que-busco"><span
+            class="header-section-number">9</span> ¿Y si no encuentro lo
+            que busco?</h1>
+            <p>Aquí hemos tratado de exponeros varias herramientas que
+            utilizan la IA, hay muchísimas, y cada vez existen más y
+            más. Existe una página que va recopilando todas y cada una
+            de ellas. Si no encuentras lo que buscas o quieres alguna
+            alternativa, se puede visitar la siguiente página. Siempre
+            habrá alguna que se adapte a lo que estás buscando.</p>
+            <p>https://theresanaiforthat.com/</p>
+            <p>Hay que tener en cuenta que el gran boom de la
+            inteligencia artificial fue en el 2022, cada vez irán
+            existiendo mejores herramientas, más accesibles y más
+            económicas o incluso gratuitas. Estas propuestas que os
+            hemos plateado es para que veáis qué es lo que nos espera en
+            los próximos años, nos vayamos acostumbrando a su uso y las
+            vayáis implementando dentro de vuestra Aula. Solo hace falta
+            que veamos cómo eran los móviles hace 10 años y como son
+            ahora…</p>
+            <p>Os dejamos para finalizar esta unidad una frase extraída
+            de un artículo que hay que plantear:</p>
+            <blockquote>
+            <p>“¿Recuerdan el popular portal ‘El rincón del vago’? Pues
+            ni en sus mejores sueños pudieron imaginar los plagiadores
+            la llegada de un instrumento tan eficaz. Fue cuestión de
+            tiempo que universidades americanas y australianas
+            prohibieran el uso de esta herramienta para lograr que sus
+            estudiantes copiasen. Dado que la historia nos enseña que la
+            evolución tecnológica es casi imposible de contener, hubo
+            visiones que preferían que se afrontara el debate de cómo
+            incorporar el uso de ChatGPT a las aulas y al aprendizaje.
+            La inteligencia artificial revolucionará, de alguna manera u
+            otra, el papel del profesor. Ahora el conocimiento ya no
+            pertenece exclusivamente al maestro, sino que está por todas
+            partes. Pero evidentemente, el docente es y seguirá siendo
+            la persona adecuada que ayude a los alumnos a
+            interpretarlo.”<a href="#fn4" class="footnote-ref"
+            id="fnref4" role="doc-noteref"><sup>4</sup></a></p>
+            </blockquote>
+            <aside id="footnotes"
+            class="footnotes footnotes-end-of-document"
+            role="doc-endnotes">
+            <hr />
+            <ol>
+            <li id="fn1"><p>cuando hablamos de gustos hablamos de la
+            manera que está entrenada la IA.<a href="#fnref1"
+            class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+            <li id="fn2"><p>No es recomendable usar la cuenta
+            corporativa. Como os hemos comentado crearos una cuenta que
+            no vayáis a usar más.<a href="#fnref2" class="footnote-back"
+            role="doc-backlink">↩︎</a></p></li>
+            <li id="fn3"><p>Una API es una abreviatura de Interfaz de
+            Programación de Aplicaciones. Es un conjunto de definiciones
+            y protocolos que se utilizan para diseñar e integrar el
+            software de las aplicaciones en las tuyas.<a href="#fnref3"
+            class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+            <li
+            id="fn4"><p>https://www.eldebate.com/educacion/20230415/chatgpt-educacion-enemigo-aliado-profesores_106508.html<a
+            href="#fnref4" class="footnote-back"
+            role="doc-backlink">↩︎</a></p></li>
+            </ol>
+            </aside>
+        </main>
+        
+
+        <!--- Modal images -->
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- The Close Button -->
+            <!--span class="close">&times;</span-->
+
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="img01">
+
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
+        </div>
+
+        <!-- End Modal Images -->
+
+        <script>
+            function ModalizeImages() {
+                // Script basat en https://www.w3schools.com/howto/howto_css_modal_images.asp
+                // PEr ampliar imatges en fer click
+
+                // Get the modal
+                var modal = document.getElementById("myModal");
+
+                var modalImg = document.getElementById("img01");
+                var captionText = document.getElementById("caption");
+
+                // Get the image and insert it inside the modal - use its "alt" text as a caption
+                //var img = document.getElementById("myImg");
+                document.querySelectorAll("img").forEach((img => {
+                        img.onclick = function() {
+                            modal.style.display = "block";
+                            modalImg.src = this.src;
+                            captionText.innerHTML = this.alt;
+                        }
+                    }))
+                    // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+
+                // When the user clicks on <span> (x), close the modal
+                //span.onclick = function() {
+                myModal.onclick = function() {
+                    modal.style.display = "none";
+                }
+
+
+            }
+
+
+            function markItem(id) {
+                // Restaurem format de tots
+                document.querySelectorAll("#TOC a").forEach(function(item) {
+                        //item.style.fontWeight = "300";
+                        item.classList.remove("navItemSelected");
+                    })
+                    //item.style.color = "#ff0000";
+
+                // Afegim format
+                let items = document.querySelectorAll("#TOC a[href='#" + id + "']");
+                items.forEach(function(item) {
+                    //item.style.fontWeight = "bolder";
+                    item.classList.add("navItemSelected");
+                })
+
+            }
+
+            var observer = new IntersectionObserver(function(entries) {
+                // isIntersecting is true when element and viewport are overlapping
+                // isIntersecting is false when element and viewport don't overlap
+                if (entries[0].isIntersecting === true) {
+                    let id = entries[0].target.id;
+                    markItem(id);
+                }
+
+            }, {
+                threshold: [0]
+            });
+
+            window.addEventListener("load", function() {
+                document.querySelectorAll("h1, h2, h3").forEach(function(item) {
+                    observer.observe(item);
+                });
+
+                document.querySelectorAll("#TOC a").forEach(function(item) {
+                    item.addEventListener("click", function(item) {
+                        markItem(item.id);
+                    })
+                })
+
+                // Fem modals totes les imatges
+                ModalizeImages();
+            })
+
+            document.querySelector("#TOC").addEventListener("click", function(event) {
+                let toc = event.target
+                if (toc.offsetWidth > 10) {
+                    toc.classList.add("minimizedToc");
+                }
+            })
+
+            document.querySelector("#TOC").addEventListener("mouseover", function(event) {
+                let toc = event.target
+                if (toc.classList.contains("minimizedToc"))
+                    toc.classList.remove("minimizedToc");
+            })
+
+
+            //item.style.color = "#ff0000";
+        </script>
+    </div>
+</body>
+
+</html>

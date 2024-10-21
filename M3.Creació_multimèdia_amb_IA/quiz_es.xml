@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+    <question type="multichoice">
+        <name>
+            <text>1. ¿Qué es un algoritmo?</text>
+        </name>
+        <questiontext format="html">
+            <text><![CDATA[<p>¿Qué es un algoritmo?</p>]]></text>
+        </questiontext>
+        <answer fraction="0">
+            <text><![CDATA[a. Un sistema que puede aprender y modificarse a sí mismo.]]></text>
+        </answer>
+        <answer fraction="100">
+            <text><![CDATA[b. Una secuencia lógica de pasos que permite solucionar un problema mediante operaciones matemáticas no-ambiguas.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[c. Una herramienta de generación de imágenes.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[d. Un buscador basado en inteligencia artificial.]]></text>
+        </answer>
+    </question>
+    <question type="multichoice">
+        <name>
+            <text>2. ¿Qué es una red neuronal?</text>
+        </name>
+        <questiontext format="html">
+            <text><![CDATA[<p>¿Qué es una red neuronal?</p>]]></text>
+        </questiontext>
+        <answer fraction="100">
+            <text><![CDATA[a. Un sistema que puede aprender y modificarse a sí mismo.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[b. Una secuencia lógica de pasos que permite solucionar un problema mediante operaciones matemáticas no-ambiguas.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[c. Una herramienta de generación de imágenes.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[d. Un buscador basado en inteligencia artificial.]]></text>
+        </answer>
+    </question>
+    <question type="multichoice">
+        <name>
+            <text>3. ¿Cuáles son los buscadores mencionados en el texto?</text>
+        </name>
+        <questiontext format="html">
+            <text><![CDATA[<p>¿Cuáles son los buscadores mencionados en el texto?</p>]]></text>
+        </questiontext>
+        <answer fraction="0">
+            <text><![CDATA[a. Google y Bing]]></text>
+        </answer>
+        <answer fraction="100">
+            <text><![CDATA[b. Perplexity y You]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[c. Flexclip y Deepai]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[d. Canva y Leonardo]]></text>
+        </answer>
+    </question>
+    <question type="multichoice">
+        <name>
+            <text>4. ¿Cuál es el propósito de Perplexity?</text>
+        </name>
+        <questiontext format="html">
+            <text><![CDATA[<p>¿Cuál es el propósito de Perplexity?</p>]]></text>
+        </questiontext>
+        <answer fraction="100">
+            <text><![CDATA[a. Facilitar la búsqueda de información en Internet.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[b. Generar videos a partir de texto.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[c. Crear imágenes a partir de texto.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[d. Traducir textos a otros idiomas.]]></text>
+        </answer>
+    </question>
+    <question type="multichoice">
+        <name>
+            <text>5. ¿Qué permite hacer Flexclip?</text>
+        </name>
+        <questiontext format="html">
+            <text><![CDATA[<p>¿Qué permite hacer Flexclip?</p>]]></text>
+        </questiontext>
+        <answer fraction="100">
+            <text><![CDATA[a. Crear y editar videos.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[b. Generar imágenes a partir de texto.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[c. Crear presentaciones de diapositivas.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[d. Traducir textos a otros idiomas.]]></text>
+        </answer>
+    </question>
+    <question type="multichoice">
+        <name>
+            <text>6. ¿Cuál es el propósito de la herramienta Leonardo?</text>
+        </name>
+        <questiontext format="html">
+            <text><![CDATA[<p>¿Cuál es el propósito de la herramienta Leonardo?</p>]]></text>
+        </questiontext>
+        <answer fraction="100">
+            <text><![CDATA[a. Generar imágenes a partir de texto.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[b. Traducir textos a otros idiomas.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[c. Crear presentaciones de diapositivas.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[d. Editar videos.]]></text>
+        </answer>
+    </question>
+    <question type="multichoice">
+        <name>
+            <text>7. ¿Qué es Mindsmith?</text>
+        </name>
+        <questiontext format="html">
+            <text><![CDATA[<p>¿Qué es Mindsmith?</p>]]></text>
+        </questiontext>
+        <answer fraction="100">
+            <text><![CDATA[a. Una plataforma para crear materiales didácticos.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[b. Un buscador basado en inteligencia artificial.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[c. Una herramienta de generación de imágenes.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[d. Un sistema de reconocimiento de voz.]]></text>
+        </answer>
+    </question>
+    <question type="multichoice">
+        <name>
+            <text>8. ¿Qué es Nolej?</text>
+        </name>
+        <questiontext format="html">
+            <text><![CDATA[<p>¿Qué es Nolej?</p>]]></text>
+        </questiontext>
+        <answer fraction="100">
+            <text><![CDATA[a. Una plataforma para crear materiales didácticos.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[b. Una herramienta de generación de imágenes.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[c. Un sistema de reconocimiento de voz.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[d. Un buscador basado en inteligencia artificial.]]></text>
+        </answer>
+    </question>
+    <question type="multichoice">
+        <name>
+            <text>9. ¿Qué es Schemely?</text>
+        </name>
+        <questiontext format="html">
+            <text><![CDATA[<p>¿Qué es Schemely?</p>]]></text>
+        </questiontext>
+        <answer fraction="100">
+            <text><![CDATA[a. Una plataforma para crear materiales didácticos.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[b. Una herramienta de generación de imágenes.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[c. Un sistema de reconocimiento de voz.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[d. Un buscador basado en inteligencia artificial.]]></text>
+        </answer>
+    </question>
+    <question type="multichoice">
+        <name>
+            <text>10. ¿Qué es TutorAI?</text>
+        </name>
+        <questiontext format="html">
+            <text><![CDATA[<p>¿Qué es TutorAI?</p>]]></text>
+        </questiontext>
+        <answer fraction="100">
+            <text><![CDATA[a. Una plataforma para crear materiales didácticos.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[b. Una herramienta de generación de imágenes.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[c. Un sistema de reconocimiento de voz.]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[d. Un buscador basado en inteligencia artificial.]]></text>
+        </answer>
+    </question>
+</quiz>
