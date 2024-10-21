@@ -20,7 +20,7 @@ toque-title: Contenidos
 # Cabeceras y pies
 header-left: 1. Introducción. Conceptos iniciales
 header-right: Curso 2024-2025
-footer-left: Red CEFIRE
+footer-left: CEFIRE FP
 footer-right: \thepage/\pageref{LastPage}
 
 # Imágenes

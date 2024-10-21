@@ -1,15 +1,16 @@
 ---
 # Información general del documento
 title: 3. Creación multimedia con IA
-lang: can
+lang: es
 page-background: img/bg.png
+colorlinks: true
 
 # Portada
 titlepage: true
 titlepage-rule-height: 2
-titlepage-rule-color: AA0000
-titlepage-texto-color: AA0000
-titlepage-background: U3.png
+titlepage-rule-color: e6e6e6
+titlepage-texto-color: e6e6e6
+titlepage-background: img/U3c.png
 
 # Tabla de contenidos
 toque: true
@@ -18,8 +19,8 @@ toque-title: Contenidos
 
 # Cabeceras y pies
 header-left: 3. Creación multimedia con IA
-header-right: Curso 2023-2024
-footer-left: CEFIRE Valencia
+header-right: Curso 2024-2025
+footer-left: CEFIRE FP
 footer-right: \thepage/\pageref{LastPage}
 
 # Imágenes
@@ -41,6 +42,8 @@ header-includes:
   \usepackage{ragged2e}
   \usepackage{multirow}
   \usepackage{xcolor}
+  \setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+
 
   ```
 pandoc-latex-environment:
@@ -67,7 +70,7 @@ pandoc-latex-environment:
 
 Este documento está sujeto a una licencia creative commons que permite su difusión y uso comercial reconociendo siempre la autoría de su creador. Este documento se encuentra para ser modificado en el siguiente repositorio de github:
 <!-- CANVIAR L'ENLLAÇ -->
-[https://github.com/arvicenteboix/AIcurscefire](https://github.com/arvicenteboix/AIcurscefire)
+[https://github.com/arvicenteboix/AIcurscefire24](https://github.com/arvicenteboix/AIcurscefire24)
 \newpage
 
 
@@ -79,6 +82,69 @@ Hasta ahora hemos visto algunas herramientas GPT, pero en la red podemos encontr
 :::warning
 Es recomendable que os creéis un correo aleatorio para poder inscribirse en cada una de las plataformas para probar así todas las herramientas sin necesidad de tener que usar vuestro correo personal. Si alguna os interesa mucho sí que lo podríais utilizar para estar informado de las novedades.
 :::
+
+# Modelos de IA
+
+En la unidad anterior hablábamos de modelos de lenguaje, en esta unidad vamos a ver diferentes herramientas que utilizan otros modelos, modelo de audio, modelo de imagen, modelo de video, etc.
+
+Nosotros nos centraremos en las aplicaciones, pero muchos de estos modelos son libres y los podemos descargar y utilizar en nuestras propias aplicaciones. Eso sí, habrá que tener en cuenta que muchos de estos modelos son muy pesados y necesitarás una gran capacidad de procesamiento.
+
+Algunas empresas[^1] hacen uso de las tarjetas gráficas para poder procesar estos modelos, por ejemplo, Tesla ha creado un superordenador llamado Cortex que es capaz de procesar 1.000 TOPS (trillions of operations per second) y que está basado en 4 tarjetas gráficas Nvidia A100. Este superordenador está pensado para procesar los datos de los coches autónomos de Tesla.
+
+[^1]: [Superordenador Tesla Inteligencia Artificial](https://www.hibridosyelectricos.com/coches/es-por-dentro-cortex-superordenador-tesla-inteligencia-artificial-y-todavia-no-esta-terminado_75720_102.html)
+
+En la próxima unidad, la más técnica, veremos cómo podemos utilizar estos modelos en nuestras aplicaciones. Eso sí, la capacidad de procesamiento no será la misma que la de Tesla.
+
+## Huggingface
+
+Antes que nada, debemos entender que en el último módulo vimos cómo funcionaba un modelo de lenguaje, pero en esta unidad veremos cómo funcionan otros modelos.
+
+Huggingface es una de las plataformas más conocidas para descargar modelos de lenguaje. Podemos acceder a la plataforma desde [aquí](https://huggingface.co/). Esta plataforma nos permite descargar los modelos y utilizarlos en nuestras aplicaciones. Además, nos permite probar los modelos en línea.
+
+:::caution
+No se trata de una plataforma gratuita, pero nos permite experimentar entre diferentes modelos y ver la gran cantidad de modelos que existen.
+:::
+
+![Huggingface](img/hugging/1.png){ width=70% }
+
+Nos logueamos con una cuenta:
+
+![Huggingface](img/hugging/2.png){ width=70% }
+
+:::tip
+Los navegadores **Firefox** o **Duckduckgo** ya nos ofrecen la posibilidad de crear correos que no necesitamos para poder acceder a las plataformas. Nos reenviarán ese correo a nuestra bandeja de entrada y cuando no queramos recibir más correos de esa plataforma, simplemente eliminamos el correo.
+:::
+
+Completamos todos los campos y ya podremos acceder a la plataforma:
+
+![Huggingface](img/hugging/4.png){ width=90% }
+
+Como podemos ver hay una gran cantidad de modelos, esto no significa que los podamos probar ya que habrá que descargarlos y probarlos en nuestro ordenador, muchos de ellos si no tienes una tarjeta gráfica de última generación no te funcionarán, además se necesitan conocimientos técnicos para poder utilizarlos.
+
+Fijémonos que cada modelo está especializado dentro de un campo y dentro de una tarea concreta.
+
+Una de las cosas que sí podemos probar son los modelos de lenguaje:
+
+![Models](img/hugging/5.png){ width=70% }
+
+En este caso hemos probado diferentes modelos que podemos ir cambiando si hacemos clic aquí:
+
+![Models](img/hugging/8.png){ width=70% }
+
+Aquí tenemos ejemplos de diferentes modelos:
+
+![Meta-Llama-3.1-70B-Instruct](img/hugging/9.png){ width=70% }
+
+![nvidia/Llama-3.1-Nemotron-70B-Instruct-HF](img/hugging/10.png){ width=70% }
+
+![mistralai/Mistral-Nemo-Instruct-2407](img/hugging/11.png){ width=70% }
+
+Como podemos ver, cada uno da una respuesta diferente en función de cómo haya sido entrenado.
+
+Por lo tanto, debemos tener dos conceptos claros:
+
+* **Modelo**: Es el conjunto de datos que se han utilizado para entrenar la IA.
+* Un modelo no tiene por qué ser un MLL, puede ser un modelo de audio, de video, etc.
 
 # Buscadores que utilizan inteligencia artificial
 
@@ -121,6 +187,10 @@ Probablemente otro chatbot como chatgpt ya nos habría dado algún ejemplo sobre
 Como veis cada IA tiene un propósito específico. Por eso es importante en que no os quedéis solo en una y que vayáis investigando diferentes versiones de todas ellas. También dependerás de las necesidades que se tenga en cada momento para utilizar una u otra.
 :::
 
+:::caution
+Tened en cuenta que la diferencia entre estas cuestiones y el momento en que escribimos es de 8 meses. Este modelo ya ha sido entrenado para dar respuestas más diversas. De todas maneras, es importante ver cómo siempre referencia las respuestas que nos da, si no las referencia, las ha generado.
+:::
+
 ## You
 
 Podemos encontrar el buscador you en la [siguiente página](https://you.com/). Al igual que Perplexity, You también es una IA centrada en la búsqueda de información, las respuestas que nos da son más naturales pero no nos da las referencias de dónde ha sacado la información. Fijémonos qué respuesta nos da a la misma cuestión plateada a Perplexity:
@@ -128,8 +198,10 @@ Podemos encontrar el buscador you en la [siguiente página](https://you.com/). A
 ![Pregunta con contexto](./img/4.png){ width=10cm }
 
 :::note
-Si analizamos la respuesta veremos que nos da un resultado bastante diferente del que esperábamos, por eso es importante leer la respuesta puesto que podemos ver que nos dice claramente *han llegado a la selectividad con la mejor nota mediana de toda la Comunidad Valenciana al 2023*. Y no está hablando concretamente de la nota media después sino de antes.
+Si analizamos la respuesta veremos que nos da un resultado bastante diferente del que esperábamos, por eso es importante leer la respuesta y las referencias de donde extrae la información.
 :::
+
+El uso de esta herramienta es totalmente gratuito pero si queremos acceder a opciones premium, así como utilizar otros modelos debemos suscribirnos.
 
 # Creación de imágenes y videos
 
@@ -150,21 +222,43 @@ Se trata de una herramienta de pago como casi todas las que vamos a ver, estas n
 :::
 
 ## Deepai
+Deepai nos permite crear imágenes, videos, música y texto. Aunque inicialmente se especializaba en la creación de imágenes, ahora ya nos permite crear videos y música. Podemos acceder a Deepai desde [aquí](https://deepai.org).
 
-Podemos acceder a Deepai desde [aquí](https://deepai.org). Se trata de un generador de imágenes. Podemos ver que como todas las IA hay que dar un contexto más amplio para tener un resultado más deseado:
+Si bajamos hacia la parte inferior de la página encontraremos muchísimas opciones. Se trata de una página con muchísimas herramientas.
+
+### Imágenes
+
+Se trata de un generador de imágenes. Podemos ver que, como todas las IA, es necesario dar un contexto más amplio para obtener un resultado más deseado:
 
 ![Prompt para generar imagen](img/7.png){ width=10cm }
 
 :::caution
-Nosotros estamos planteando un prompt en valenciano, siempre dará mejor resultado aquellos que expresamos en inglés. Generar imágenes a partir de IA es un tanto más complejo y requiere de especificar claramente lo que queremos sin dar lugar a dudas, siempre podemos modificar el prompt para ir buscando el resultado esperado. Dos cosas que hay que tener en cuenta cuando se crea un prompt de imagen es que la primera frase es más importante que la última. Fijaos cómo yo quiero que aparezcan los dos alumnos y cambio el prompt para insistir.
-Recordad que las órdenes que recibe la inteligencia artificial tienen que ser claras y directas. Olvidémonos de la educación, no es necesaria!
+Nosotros estamos planteando un prompt en valenciano, los mejores resultados siempre serán aquellos que expresemos en inglés. Generar imágenes a partir de IA es un tanto más complejo y requiere especificar claramente lo que queremos, sin dar lugar a dudas. Siempre podemos modificar el prompt para ir buscando el resultado esperado. Dos cosas que deben tener en cuenta cuando creen prompts para imagen es que la primera frase es más importante que la última. Fíjense cómo quiero que aparezcan los dos alumnos y cambio el prompt para insistirle.
+Recuerden que las órdenes que recibe la inteligencia artificial deben ser claras y directas. ¡Olvidémonos de la educación, no es necesaria!
 :::
+Esta herramienta permite crear tantas imágenes como se desee y es bastante útil si te adaptas a sus preferencias[^2].
 
-![Ejemplo cambiando un poco lo prompt](img/9.png){ width=10cm }
+[^2]: Cuando hablamos de preferencias, nos referimos a la forma en que el modelo está entrenado.
 
-Esta herramienta permite crear tantas imágenes como queramos y es bastante útil si te adaptas a sus gustos[^1]
+### Videos
 
-[^1]: cuando hablamos de gustos hablamos de la manera que está entrenada la IA.
+La versión gratuita está bastante limitada, pero aun así podemos obtener un video corto para algún montaje que necesitemos. Podemos ver un ejemplo de cómo generar un video a partir de texto:
+
+\awesomebox[violet]{2pt}{\faRobot}{violet}{\textbf{Crea una persona en una tienda de chucherías.}}
+
+[Resultado](https://deepai.org/gallery-item/915ca9c756ff484b9c6fbe04c75fdd0e/f1f9c83eef2990c1404902119d1b1e7d12fa902709_PUE2ZaA.mp4.html)
+
+![Exemplo de vídeo](img/6c.png){ width=10cm }
+
+Como podemos ver, es bastante corto.
+
+### Music
+
+De la misma manera, podemos crear un efecto sonoro que nos permita utilizarlo para montar alguna creación:
+
+[Resultado](https://deepai.org/gallery-item/74215035170747a1adff3306e1174afe/253ad71738139de3c8d4844392b02c2d932d_zKXCasB.mp3.html)
+
+![Ejemplo de música](img/6d.png){ width=10cm }
 
 
 ## Canva
@@ -177,14 +271,20 @@ Canva es una herramienta que muchos utilizamos para generar nuestras creaciones.
 Como casi todas las herramientas de IA para generar imágenes, estas tienen usos limitados, algunas de las herramientas de Canva te permiten crear 25 imágenes al mes por ejemplo.
 ::: 
 
-### Animo Style
+Vamos a ver algunas de ellas:
+
+### Anime Style
 
 Con esta App de Canva puedes crear imágenes Anime. Por ejemplo.
 
 \awesomebox[violet]{2pt}{\faRobot}{violet}{\textbf{Genera una profesora con un libro en la mano.
 Genera un profesor enfadado con uno regla numerada en la mano}}
 
-![Animo Style](img/11.png){ width=10cm }
+![Anime Style](img/11.png){ width=10cm }
+
+:::warning
+Este curso es una segunda revisión y en la revisión de los materiales hemos tratado de crear una persona enfadada y no nos muestra imágenes de ninguna persona enfadada ni de monstruos. Esto nos indica que la IA no siempre nos dará el resultado esperado, y que los modelos van cambiando en función de lo que demanda el público en general.
+:::
 
 ### DALL-E
 
@@ -209,11 +309,11 @@ Podemos acceder a Leonardo desde la [siguiente dirección](https://app.leonardo.
 
 ![Leonardo](img/15.png){ width=10cm }
 
-La funcionalidad de generación de imágenes es bastante interesante, pero la de *Realtime Canva* va a generarnos una imagen a partir de un dibujo que creemos, podemos escanearlo y subirlo o simplemente dibujarlo para que nos haga una interpretación. Se trata de un modelo que generará representaciones artísticas a partir de un concepto más sencillo. Irá generándonos la imagen a partir del dibujo que vayamos dibujando en ese momento:
+La funcionalidad de generación de imágenes  (*Image creation*) es bastante interesante y funciona igual que cualquier otra herramienta de generación de iamgen, pero la de *Realtime Canva* va a generarnos una imagen a partir de un dibujo que creemos, podemos escanearlo y subirlo o simplemente dibujarlo para que nos haga una interpretación. Se trata de un modelo que generará representaciones artísticas a partir de un concepto más sencillo. Irá generándonos la imagen a partir del dibujo que vayamos dibujando en ese momento:
 
 ![Ejemplo de Realtime Canva](img/16.png){ width=10cm }
 
-Es interesante ver que nos permite interactuar tanto en las indicaciones que le damos como texto como en el dibujo que vamos haciendo, de este modo podemos obtener una imagen más ajustada al que buscamos.
+Es interesante ver que nos permite interactuar tanto en las **indicaciones**(prompt) que le damos como texto como en el dibujo que vamos haciendo, de este modo podemos obtener una imagen más ajustada al que buscamos.
 
 :::note
 Está bastante optimizada para sacar retratos, así que no os extrañe si siempre os saca imágenes de personas de primer plano.
@@ -221,37 +321,38 @@ Está bastante optimizada para sacar retratos, así que no os extrañe si siempr
 
 Freepik es una herramienta con las mismas funcionalidades, podemos encontrarla [aquí](https://www.freepik.com/pikaso#).
 
+\awesomebox[green]{2pt}{\faMoneyBillWave}{green}{Todas las herramientas que estás viendo tienen una limitación de una serie de creaciones al día.}
+
 ## Wepik
 
-Es una herramienta con el mismo propósito que la anterior pero que también funciona por créditos y te permite generar unas 8 imágenes al mes. 
+Es una herramienta con el mismo propósito que la anterior y que integra Freepik. También funciona por créditos y te permite generar unas 8 imágenes al mes.
 
-![Wepik](img/17.png)  
+![Wepik](img/17.png){ width=70% }
 
-Aquí tendríamos un ejemplo de la herramienta de generación de imágenes con Wepik. 
+Aquí tendríamos un ejemplo de la herramienta de generación de imágenes con [Wepik](https://wepik.com/es/).
 
-![Ejemplo de Wepik](img/18.png)
+![Ejemplo de Wepik](img/18.png){ width=70% }
 
 ## Bing Copilot
 
-Hemos estado hablando hasta ahora de Bing Copilot como un modelo de lenguaje pero este también trae incorporada la tecnología DALL-E y podemos generar imágenes desde el mismo Chat de Bing Copilot. Este te lleva a la página [https://www.bing.com/images/create?](https://www.bing.com/images/create?) para que te des de alta y ya puedes crear imágenes. Es recomendable tener una cuenta de Outlook[^2] para darse de alta.
+Hemos estado hablando hasta ahora de Bing Copilot como un modelo de lenguaje pero este también trae incorporada la tecnología DALL-E y podemos generar imágenes desde el mismo Chat de Bing Copilot. Este te lleva a la página [https://www.bing.com/images/create?](https://www.bing.com/images/create?) para que te des de alta y ya puedes crear imágenes. Es recomendable tener una cuenta de Outlook[^3] para darse de alta.
 
-[^2]: No es recomendable usar la cuenta corporativa. Como os hemos comentado crearos una cuenta que no vayáis a usar más.
+[^3]: No es recomendable usar la cuenta corporativa. Como os hemos comentado crearos una cuenta que no vayáis a usar más.
 
 \awesomebox[violet]{2pt}{\faRobot}{violet}{\textbf{Genera una imagen anime de una persona ingeniera que está ante un rack de red y esté quitando un cable de un switch}}
 
-![Ejemplo de Bing Copilot](img/19.png)
+![Ejemplo de Bing Copilot](img/19.png){ width=70% }
 
 ## ¿Qué herramienta escojo?
 
-OpenAI (ChatGPT) y Bard (nombrado recientemente como Gemini) también tienen la tecnología DALL-E implementada en sus chats, aunque OpenAI es de pago, pero la tendencia es que cada vez más y más plataformas implementen estos sistemas de generación de imágenes, los resultados de algunos de ellos pueden ser mejor que otros, siempre dependerá de tu manera de generar el prompt.
+OpenAI (ChatGPT) y Bard también tienen la tecnología DALL-E implementada en sus chats i la tendencia es que cada vez más y más plataformas implementen estos sistemas de generación de imágenes (hace 6 meses hacía falta una susvripción para generar imágenes en chatGPT), los resultados de algunos de ellos pueden ser mejor que otros, siempre dependerá de tu manera de generar el prompt.
 
 :::caution
-La IA no ha venido para crearnos todo, sino que nosotros tenemos que saber qué preguntamos y cómo podemos orientarla para sacar los resultados esperados.
+La IA no ha venido para crearnos todo lo que queramos, sino que nosotros tenemos que saber qué preguntamos y cómo podemos orientarla para sacar los resultados esperados.
 :::
 
 Obviamente hay muchas otras opciones interesantes que os invitamos a utilizar como:
 
-* [OpenAI](https://openai.com/dall-e-2/): De pago
 * [Lexica](https://lexica.arte/)
 * [lipDrop](https://clipdrop.co)
  
@@ -261,9 +362,9 @@ Hay muchísimas herramientas que nos permiten ver las posibilidades de la inteli
 
 ## Replicate
 
-Replicate es una plataforma que te permite utilizar su API[^3] para tus aplicaciones (evidentemente con un coste), te da diferentes modelos de ejemplos, para reconocimiento de imágenes, estilizarlas, crear imágenes más realistas, pero introduce conceptos muy interesantes como el de *negative prompt* que es aquello que no queremos que aparezca en nuestra creación.
+Replicate es una plataforma que te permite utilizar su API[^4] para tus aplicaciones (evidentemente con un coste), te da diferentes modelos de ejemplos, para reconocimiento de imágenes, estilizarlas, crear imágenes más realistas, pero introduce conceptos muy interesantes como el de *negative prompt* que es aquello que no queremos que aparezca en nuestra creación.
 
-[^3]: Una API es una abreviatura de Interfaz de Programación de Aplicaciones. Es un conjunto de definiciones y protocolos que se utilizan para diseñar e integrar el software de las aplicaciones en las tuyas.
+[^4]: Una API es una abreviatura de Interfaz de Programación de Aplicaciones. Es un conjunto de definiciones y protocolos que se utilizan para diseñar e integrar el software de las aplicaciones en las tuyas.
 
 Podemos ir a la página de replicate [aquí](https://replicate.com), vamos a probar uno de los modelos como por ejemplo este:
 
@@ -271,7 +372,7 @@ Podemos ir a la página de replicate [aquí](https://replicate.com), vamos a pro
 
 Este modelo nos permite reconocer fotografías a partir de un esbozo creado por nosotros y crear uno más estilizado, nos permite modificar diferentes parámetros para ver el resultado.
 
-![Ejemplo de modelo](img/20.png)
+![Ejemplo de modelo](img/20.png){ width=70% }
 
 :::caution
 El modelo de ejemplo es bastante rápido, pero los otros modelo de ejemplo pueden tardar mucho tiempo para realizar lo que estamos pidiendo. Aun así es una herramienta para entender diferentes conceptos nuevos de la IA, desde los más simples hasta los más avanzados. Si lo utilizáis mucho también os dirá que habéis llegado al límite, pero si cambiáis de navegador podéis continuar, también podéis borrar los datos del navegador para continuar.
@@ -313,20 +414,19 @@ A todos nos ha surgido la duda cuando realizamos un trabajo si realmente lo ha c
 
 Se trata de una herramienta bastante interesante para comprobar el texto. Tenemos el enlace [aquí](https://gptzero.me/). Si extraemos un texto de cualquier periódico conocido y lo pasamos por aquí podemos ver el resultado:
 
-![Ejemplo de comprobación de texto](img/27.png)
+![Ejemplo de comprobación de texto](img/27.png){ width=70% }
 
 De todas maneras los resultados no son 100% fiables y, obviamente, existe [humanizeaitext](https://www.humanizeaitext.org/) o [Quillbot](https://quillbot.com/), que sirve para humanizar más el texto generado por una IA para que resulte menos "artificial" y de esa manera sea más indetectable.
 
 ## Quillbot
 
-"Hecha la ley hecha la trampa", también existe la contrapartida de GPTZero. [Quillbot](https://quillbot.com/) es otra herramienta que nos permite modificar el texto para que parezca menos de una IA o simplemente un texto que tengamos y queramos expresarlo de otra manera.
+"Hecha la ley hecha la trampa", también existe la contrapartida de GPTZero. [Quillbot](https://quillbot.com/) es otra herramienta que nos permite modificar el texto para que parezca menos de una IA (en parafrasetjar textos) o simplemente un texto que tengamos y queramos expresarlo de otra manera.
 
-![Modificando texto](img/28.png)
+![Modificando texto](img/28.png){ width=70% }
 
 Tenemos otros herramientas para humanizar texto que harán más difícil detectar si el texto ha sido creado por una IA o no, recordad que siempre hay que revisar el material generado puesto que pueden aparecer *alucinaciones* o incluso cambiar el sentido del texto, como hemos podido ver en el ejemplo. Algunos ejemplos son
 
 * **Undetectable AI** [https://undetectable.ai/](https://undetectable.ai/)
-* **gpt4detector** [https://gpt4detector.ai](https://gpt4detector.ai)
 * **Trinka** [https://www.trinka.ai/es/](https://www.trinka.ai/es/)
 
 # Creación de audio y video
@@ -334,6 +434,8 @@ Tenemos otros herramientas para humanizar texto que harán más difícil detecta
 ## Studio
 
 A pesar de que también funciona con créditos y permite un límite de creaciones al mes, se trata de una herramienta muy potente. Nos permite crear presentaciones bastante naturales con un avatar o una imagen nuestra diciendo lo que escribimos.
+
+Si vamos a "Create a video", elegimos un avatar, le damos el texto que queremos que diga y podemos configurar la voz, el tono, la velocidad, etc. Podemos ver un ejemplo:
 
 ![Presentación](img/29.png){ width=10cm }
 
@@ -359,6 +461,8 @@ El resultado es bastante sorprendente.
 
 ## Opusclip
 
+Opus Clip en [https://www.opus.pro/](https://www.opus.pro/) es una herramienta de creación de clips cortos impulsada por IA que transforma vídeos largos en clips cortos y virales optimizados para diversas plataformas de redes sociales.
+
 Es una herramienta que nos muestra las virtudes y los defectos de la IA, nos permite subir un vídeo y nos hace una explicación resumida del video. En este caso subimos un video de un chiste, veremos que no es capaz de detectar la ironía o las gracias del chiste (aunque sean muy malas). Y se lo toma como un vídeo serio. Además le pone subtítulos y lo hace de una manera bastante acertada pese a ser de Chiquito de la calzada. Podemos ver el resultado:
 
 ![Damos los parámetros del video](img/32.png){ width=10cm }
@@ -379,19 +483,27 @@ Podemos acceder a la plataforma des [de aquí](https://elevenlabs.io/).
 
 Esto mismo podemos encontrar en la plataforma [https://www.happyscribe.com/](https://www.happyscribe.com/).
 
-## Bing Copilot (complemento Suno)
+## Suno
 
-Con el navegador Bing podemos acceder a Copilot desde el botón situado a la parte superior derecha, pero Copilot también tiene su [propia plataforma](https://copilot.microsoft.com/). Una de las ventajas que resultan más interesantes respecto a las plataformas GPT más conocidas es el uso de complementos de forma gratuita:
+Suno es una aplicación que nos permite crear canciones a partir de texto. Podemos acceder a la plataforma desde [aquí](https://app.suno.ai/).
 
-![Complementos](img/51.png){ width=13cm }
-
-Uno de los complementos más interesantes que nos ofrece Copilot es **Suno**, que nos permite crear una canción:
+![Plataforma Suno](img/suno.png){ width=13cm }
 
 ![Canción creada](img/52.png){ width=13cm }
 
-Y podemos compartir el resultado que puedes escuchar [aquí](https://sl.bing.net/bsh2udkcyka).
+Y podemos compartir el resultado que puedes escuchar [aquí](https://www.bing.com/th?&id=OIG2.v_b2ad70d7f1ba4d45bbc4e1763d0207a7&w=0&h=0&c=7&pid=1.7&rs=1).
 
-También podemos ir directamente a la página de [Suno](https://app.suno.ai/) y hacer nuestra creación desde allí.
+Otra canción creada con Suno la puedes escuchar [aquí](https://suno.com/song/f7a79b40-29bf-4259-aad0-36d41d614e32).
+
+La plataforma Suno es una herramienta muy potente para crear canciones a partir de texto, y las canciones son bastante resultonas. Te recomendamos que escuches las canciones creadas para ver el resultado.
+
+## Microsoft Designer
+
+Microsoft Designer en [https://designer.microsoft.com/](https://designer.microsoft.com/) es una herramienta de diseño gráfico que ayuda a crear diseños profesionales.
+
+![Microsoft Designer](img/53.png){ width=10cm }
+
+Si solo queremos dedicarnos a diseñar imágenes, podemos utilizar esta herramienta, pero Bing Copilot también nos permite crear imágenes a partir de texto sin necesidad de acceder aquí.
 
 ## Otras aplicaciones multimedia de interés
 
@@ -400,9 +512,8 @@ Existen muchas otras aplicaciones que merece la pena nombrar:
 - Albus en [https://albus.org/](https://albus.org/) es una herramienta que compila una base de conocimientos completa de Google Drive, Notion, Jira, HubSpot y 100 aplicaciones más para responder las preguntas de los empleados.
 - GitMind en [https://gitmind.com/es/](https://gitmind.com/es/) es una aplicación gratuita de mapas mentales y lluvia de ideas.
 - Decktopus en [https://www.decktopus.com/](https://www.decktopus.com/) es una plataforma de presentación que ofrece una amplia gama de temas, fuentes y colores.
-- Tome en [https://beta.tome.app/](https://beta.tome.app/) es una herramienta de creación de contenido que ayuda a crear contenido de blog, correos electrónicos y redes sociales.
+- Tome en [https://tome.app/](https://tome.app/) es una herramienta de creación de contenido que ayuda a crear contenido de blog, correos electrónicos y redes sociales.
 - SteveAI en [https://www.steve.ai/](https://www.steve.ai/); Gama en [https://gamma.app/](https://gamma.app/); Mixo en [https://www.mixo.io/](https://www.mixo.io/) y SkyBox en [https://skybox.blockadelabs.com/](https://skybox.blockadelabs.com/) son herramientas de creación de contenido que ayuda a crear contenido para redes sociales.
-- Microsoft Designer en [https://designer.microsoft.com/](https://designer.microsoft.com/) es una herramienta de diseño gráfico que ayuda a crear diseños profesionales.
 - [Simpleshow](https://videos.simpleshow.com) es una herramienta que nos permite crear videotutoriales planteándole un prompt.
 
 ## ¿Cuál elegir?
@@ -431,13 +542,19 @@ Le damos un prompt para que nos genere unos materiales generales. Hay que tener 
 La plataforma nos limita a la creación de 5 unidades y solo nos deja compartir dos a no ser que paguemos la cuota.
 :::
 
+El soporte para el valenciano no es muy bueno, se ha intentado hacer una unidad con un prompt en valenciano y este ha sido el resultado:
+
+\awesomebox[violet]{2pt}{\faRobot}{violet}{\textbf{Genera una unitat sobre la cel·lula i les seues parts, l'unitat ha de tenir imatges que identifiquen cadascuna de les parts i el nivel ha de ser de 2n de batxillerat.}\hfill \break
+[https://app.mindsmith.ai/learn/cm2jfg66c00br1448is1kay0q](https://app.mindsmith.ai/learn/cm2jfg66c00br1448is1kay0q)
+}
+
 ## Nolej
 
 [Nolej](https://nolej.io/nolej-ai-5) es una plataforma que genera automáticamente material de curso interactivo y gráfico basándose en conocimientos generales.
 
-![Generamos curso](img/39.png)
+![Generamos curso](img/39.png){ width=70% }
 
-![Generando curso](img/40.png)
+![Generando curso](img/40.png){ width=70% }
 
 Una de las características más interesantes es que podemos subir un documento (una presentación por ejemplo) y nos creará un cuestionario.
 
@@ -451,11 +568,11 @@ Una herramienta alternativa es la siguiente: [LearningStudioAI](https://learning
 Cuando nos pide el título del curso pensad que estáis realizando un prompt al modelo, por lo tanto hay de detallar muy bien lo que se pide.
 :::
 
-![Ponemos un título en el curso](img/41.png)
+![Ponemos un título en el curso](img/41.png){ width=70% }
 
-![Generando curso](img/42.png)
+![Generando curso](img/42.png){ width=70% }
 
-![Curso generado](img/43.png)
+![Curso generado](img/43.png){ width=70% }
 
 Es interesante ver como ya nos aparecen los enlaces para que nos cree con otras herramientas esa parte del curso.
 
@@ -463,19 +580,29 @@ Es interesante ver como ya nos aparecen los enlaces para que nos cree con otras 
 
 [TutorAI](https://www.tutorai.me/) es una aplicación pensada para el autoaprendizaje. Le exponemos un tema y nos dará diferentes módulos para poder aprender.
 
-![Tutor AI](img/44.png)
+![Tutor AI](img/44.png){ width=70% }
 
 ## MagicSchoolAi
 
+\awesomebox[red]{2pt}{\faMedal}{red}{Esta plataforma, sin duda, es una de las más completas. Nos permite crear materiales de todo tipo, desde cuestionarios hasta presentaciones. Podríamos hacer un curso solo con esta herramienta.}
+
 [MagicSchoolAi](https://www.magicschool.ai/) es un conjunto de herramientas agrupadas que nos permite crear materiales para el aula. Una opción interesante es la de crear un cuestionario a partir de una temática. Los cuestionariso de este curso están creados con esta herramienta.
 
-![Tutor AI](img/46.png)
+![Tutor AI](img/46.png){ width=70% }
 
-![Tutor AI](img/45.png)
+![Tutor AI](img/45.png){ width=70% }
 
 :::note
 Al igual que las otras nos da un periodo gratuito de muestra. Pero posteriormente a pesar de que no se puedan utilizar todas las herramientas, las que puedes utilizar son de gran utilidad.
 :::
+
+Entre las herramientas más destacadas podemos encontrar:
+
+* Generador de cuestionarios (dando los apuntes)
+* Generador de presentaciones
+* Generador de imágenes con texto
+* Cuestionarios para video de YouTube
+* etc...
 
 ## Otras herramientas
 
@@ -499,17 +626,17 @@ Existen multitud de herramientas. Pero todas ellas parecidas para crear material
 
 Personalmente [ChaPDF](https://www.chatpdf.com) es una de las aplicaciones que más uso. En este caso se puede subir un PDF y "hablar" con él, puedes hacerle preguntas diversas. En este caso hemos subido la normativa de cursos de CEFIRE. Las respuestas que nos da no son 100% correctas, pero te puede dar una idea, y lo mejor, es que te enlaza la respuesta a la parte del documento donde se habla de ese tema:
 
-![Subiendo documento PDF](img/47.png)
+![Subiendo documento PDF](img/47.png){ width=70% }
 
-![Después de subirlo PDF](img/48.png)
+![Después de subirlo PDF](img/48.png){ width=70% }
 
-![Conversando con él](img/49.png)
+![Conversando con él](img/49.png){ width=70% }
 
 ## Geospy
 
 [Geospy](https://geospy.web.app/) es una herramienta que nos permite conocer el lugar de dónde es una imagen. Es muy interesante porque te hace un razonamiento de por qué cree que es ese lugar u otro. Muchos pensaréis que utiliza los metadatos de la imagen para saberlo pero dados los razonamientos que te da, te hacen dudar. Los resultados suelen ser bastante certeros, pero en el ejemplo podemos ver que no siempre es fiable (se trata de una fotografía de la superficie de la luna):
 
-![Geospy](img/50.png)
+![Geospy](img/50.png){ width=70% }
 
 ## GPT4All
 
@@ -527,6 +654,6 @@ Os dejamos para finalizar esta unidad una frase extraída de un artículo que ha
 
 > “¿Recuerdan el popular portal 'El rincón del vago'? Pues ni en sus mejores sueños pudieron imaginar los plagiadores la llegada de un instrumento tan eficaz. Fue cuestión de tiempo que universidades americanas y australianas prohibieran el uso de esta herramienta para lograr que sus estudiantes copiasen.
 Dado que la historia nos enseña que la evolución tecnológica es casi imposible de contener, hubo visiones que preferían que se afrontara el debate de cómo incorporar el uso de ChatGPT a las aulas y al aprendizaje.
-La inteligencia artificial revolucionará, de alguna manera u otra, el papel del profesor. Ahora el conocimiento ya no pertenece exclusivamente al maestro, sino que está por todas partes. Pero evidentemente, el docente es y seguirá siendo la persona adecuada que ayude a los alumnos a interpretarlo."[^4]
+La inteligencia artificial revolucionará, de alguna manera u otra, el papel del profesor. Ahora el conocimiento ya no pertenece exclusivamente al maestro, sino que está por todas partes. Pero evidentemente, el docente es y seguirá siendo la persona adecuada que ayude a los alumnos a interpretarlo."[^5]
 
-[^4]: https://www.eldebate.com/educacion/20230415/chatgpt-educacion-enemigo-aliado-profesores_106508.html
+[^5]: https://www.eldebate.com/educacion/20230415/chatgpt-educacion-enemigo-aliado-profesores_106508.html
