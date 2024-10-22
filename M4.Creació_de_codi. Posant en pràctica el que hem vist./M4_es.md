@@ -101,7 +101,7 @@ Para crear un programa con python tenemos que pegar el código en un archivo de 
 
 Plantearemos un prompt como este:
 
-\awesomebox[violet]{2pt}{\faRobot}{violet}{\textbf{Eres un programador experimentado que le gusta documentar su código y trabaja con linux. Nuestra vida depende de realizar un programa con python que abrirá una ventana que nos mostrará lo que hay en la cámara web de nuestro ordenador. Este programa detectará cuándo nuestra cara sonríe y cuándo está triste y mostrará un mensaje en la pantalla que se refrescará cada segundo mostrando el texto triste o alegre}}
+\awesomebox[violet]{2pt}{\faRobot}{violet}{\textbf{Eres un programador experimentado que le gusta documentar su código y trabaja con Linux. Nuestra vida depende de realizar un programa con python que abrirá una ventana que nos mostrará lo que hay en la cámara web de nuestro ordenador. Este programa detectará cuándo nuestra cara sonríe y cuándo está triste y mostrará un mensaje en la pantalla que se refrescará cada segundo mostrando el texto triste o alegre}}
 
 Copiaremos y pegaremos lo que nos dice exactamente, puesto que se trata de una respuesta bastante larga:
 
@@ -203,11 +203,11 @@ La creación de un videojuego lleva muchas veces, años, y para juegos sencillos
 
 Puede parecer una tarea sencilla tal y como voy a planteároslo, pero el *prompt* que he creado para que la IA me cree el videojuego he tenido que modificarlo un poco (y después he modificado un poco el código, aunque el primer resultado es bastante bueno) para que me funcione correctamente. Además como hemos comentado es importante conocer un poco (aunque sea muy poco) lo que estamos tratando con la IA para poder perfilar mejor el prompt. Y no hablo de saber programar, sino de conocer aspectos sobre la creación de videojuegos[^1].
 
-[^1] Si preguntamos en clase seguro que muchos saben más que nosotros.
+[^1]: Si preguntamos en clase seguro que muchos saben más que nosotros.
 
 La plataforma que hemos utilizado es Bing Copilot con su modo más preciso y el prompt planteado ha sido el siguiente:
 
-\awesomebox[violet]{2pt}{\faRobot}{violet}{Crea un juego con la biblioteca Pygame para python que tenga una pantalla estática con una plataforma del 20% del total de la ventana que pueda desplazar a la izquierda o la derecha con el teclado de manera suave y rápida. La velocidad de la bola será constante de 1 y que se actualice la función que mueve la bola cada 0.3 segundos y cuando la bola choque con los extremos de la pantalla rebotará con un ángulo de 45° en la dirección que lleva, si la bola choca contra la plataforma rebotará, si rebota en la mitad derecha de la plataforma se irá hacia la derecha con un ángulo de 45° hacia arriba y si rebota en la mitad izquierda de la plataforma se  irá hacia la izquierda con un ángulo de 45° hacia arriba. Al comienzo habrá una bola encima de la tabla sin mover y cuando se pulse la tecla espacio la bola empezará a moverse hacia arriba. Escríbeme el código solamente, sin comentarios y de la manera más resumida posible. No quiero que me escribas ninguna explicación, solo quiero el código y sin comentarios.}
+\awesomebox[violet]{2pt}{\faRobot}{violet}{Crea un juego con la biblioteca Pygame para python que tenga una pantalla estática con una plataforma del 20 por ciento del total de la ventana que pueda desplazar a la izquierda o la derecha con el teclado de manera suave y rápida. La velocidad de la bola será constante de 1 y que se actualice la función que mueve la bola cada 0.3 segundos y cuando la bola choque con los extremos de la pantalla rebotará con un ángulo de 45° en la dirección que lleva, si la bola choca contra la plataforma rebotará, si rebota en la mitad derecha de la plataforma se irá hacia la derecha con un ángulo de 45° hacia arriba y si rebota en la mitad izquierda de la plataforma se  irá hacia la izquierda con un ángulo de 45° hacia arriba. Al comienzo habrá una bola encima de la tabla sin mover y cuando se pulse la tecla espacio la bola empezará a moverse hacia arriba. Escríbeme el código solamente, sin comentarios y de la manera más resumida posible. No quiero que me escribas ninguna explicación, solo quiero el código y sin comentarios.}
 
 La respuesta tal cual ha sido:
 
@@ -373,7 +373,7 @@ Y ya veamos la pantalla en grande, es importante que polsem aquí para que detec
 ![Pantalla principal](img/28.png){ width=70% }
 
 :::warning
-El código generado por Copiloto ha funcionado mucho mejor, a Replit hemos cambiado los siguientes valores para que funcionara mucho más rápidamente. Pero podemos copiar el código de Copiloto y pegarlo aquí para que funciono correctamente.
+El código generado por Copilot ha funcionado mucho mejor, a Replit hemos cambiado los siguientes valores para que funcionara mucho más rápidamente. Pero podemos copiar el código de Copilot y pegarlo aquí para que funciono correctamente.
 baile_speed = 20
 platform_speed = 20
 time.sleep(0.1)
@@ -391,7 +391,7 @@ Podéis ver el resultado [aquí](https://replit.com/join/ovvzfszftt-alviboigva)
 No hay que saber programar para utilizar la plataforma sino saber escribir prompts correctamente, podemos pensar que esta plataforma sirve solo para programadores, pero no es así. Puesto que fijaos la estructura del prompt, hay que saber explicar bien el que volamos. Y esto ayuda a desarrollar el pensamiento computacional
 :::
 
-\awesomebox[black]{2pt}{\faCode}{black}{Como docentes podemos hacer uso de github Copiloto que tendréis que solicitar a la plataforma de GitHub y que os permitirá modificar código en tiempo real y se integra muy bien dentro de Visual Studio Code.}
+\awesomebox[black]{2pt}{\faCode}{black}{Como docentes podemos hacer uso de github Copilot que tendréis que solicitar a la plataforma de GitHub y que os permitirá modificar código en tiempo real y se integra muy bien dentro de Visual Studio Code.}
 
 # Creamos una unidad en Aulas
 
@@ -422,7 +422,7 @@ El curso tarda un poco  crea-se. Así que no os preocupáis.
 
 Y añadimos una sección.
 
-\awesomebox[violet]{2pt}{\faRobot}{violet}{crea una división en html un titul que diga La célula y la fuente sea de color blanco y que tenga un fondo con las esquines redondejades que ocupo el 100 de su sección y el fondo sea a múltiples bandas alternas inclinadas 45 grados con los colores 4C4B16  y un color un poco menos oscuro. Es importante que el estilo esté todo contenido dentro de la misma división. Quiero que muestras solo la parte del cuerpo.}
+\awesomebox[violet]{2pt}{\faRobot}{violet}{crea una división en html un titul que diga La célula y la fuente sea de color blanco y que tenga un fondo con las esquines redondejades que ocupo el 100 de su sección y el fondo sea a múltiples bandas alternas inclinadas 45 grados con los colores 4C4B16 y un color un poco menos oscuro. Es importante que el estilo esté todo contenido dentro de la misma división. Quiero que muestras solo la parte del cuerpo.}
 
 El resultado ha sido lo siguiente:
 
@@ -448,7 +448,7 @@ El reusultat se vería de este modo:
 
 Podemos crear títulos más pequeños modificando un poco el prompt:
 
-\awesomebox[violet]{2pt}{\faRobot}{violet}{\textbf{Crea una división en html un título pequeño que diga "Contenidos" y esté lineat a la izquierda, la fuente del título sea de color blanco y que tenga un fondo con las esquines redondejades que ocupo el 100% de su sección y el fondo sea a múltiples bandas alternas inclinadas 45 grados con los colores #898121  y un color un poco menos oscuro, la altura de todo el contenido no tiene que ser demasiado grande. Es importante que el estilo esté todo contenido dentro de la misma división. Quiero que muestras solo la parte del cuerpo.}}
+\awesomebox[violet]{2pt}{\faRobot}{violet}{Crea una división en html un título pequeño que diga Contenidos y esté alineado a la izquierda, la fuente del título sea de color blanco y que tenga un fondo con las esquinas redondeadas que ocupe el 100 por cien de su sección y el fondo sea a múltiples bandas alternas inclinadas 45 grados con los colores #898121  y un color un poco menos oscuro, la altura de todo el contenido no tiene que ser demasiado grande. Es importante que el estilo esté todo contenido dentro de la misma división. Quiero que muestres solo la parte del cuerpo.}
 
 El resultado ha sido lo siguiente:
 
@@ -491,7 +491,7 @@ Y el resultado que tenemos es el siguiente:
 En este caso no podemos subir la web que hemos creado con mindsmith por las características de la plataforma, pero podemos subir nuestros propios apuntes.
 :::
 
-Pero a nosotros ente interesa que estas cuestiones estén en Aulas... Así que copiaremos el resultado y utilizaremos Copiloto:
+Pero a nosotros ente interesa que estas cuestiones estén en Aulas... Así que copiaremos el resultado y utilizaremos Copilot:
 
 \awesomebox[violet]{2pt}{\faRobot}{violet}{Crea un código xml para poder importar como cuestionario de moodle utilizant las siguientes cuestiones:\newline 
 La célula y sus partes\newline
@@ -630,7 +630,7 @@ Finalmente escogemos la opción "Por defecto en Cuestionario 1" y hacemos clic e
 
 ![Filtros](img/50.png){ width=90% }
 
-Cuando aplicamos filtros Seleccionamos todas las preguntas y le damos a "Afeg las preguntas seleccionadas al cuestionario":
+Cuando aplicamos filtros Seleccionamos todas las preguntas y le damos a "Añade las preguntas seleccionadas al cuestionario":
 
 ![Añadir preguntas](img/51.png){ width=90% }
 
@@ -639,7 +639,7 @@ Y ya tendremos nuestras preguntas añadidas al cuestionario:
 ![Preguntas](img/52.png){ width=90% }
 
 :::tip
-Hemos hecho este proceso muy en detalle puesto que mucha gente se lia a los qüestinaris del Moodle. Para muchos de vosotros será una tarea sencilla. También es cierto que estamos hablando de 5 cuestiones, pero si volemos hacer un cuestionario de 20 preguntas puede ahorrarnos mucho trabajo.
+Hemos hecho este proceso muy en detalle puesto que mucha gente se lia en los cuestionarios del Moodle. Para muchos de vosotros será una tarea sencilla. También es cierto que estamos hablando de 5 cuestiones, pero si queremos hacer un cuestionario de 20 preguntas puede ahorrarnos mucho trabajo.
 :::
 
 También podemos añadir:
@@ -647,17 +647,15 @@ También podemos añadir:
 \awesomebox[violet]{2pt}{\faRobot}{violet}{Crea un feedback del siguiente cuestionario de moodle: (Aquí añadimos el código de las preguntas de Moodle)
 }
 
-I la resposta serà esta amb un feedback de cada qüestió:
-
-Fixeu-vos com ens ha afegit este camp:
+I la respuesta será esta con un feedback apra cada cuestión. Fijaos cómo nos ha añadido este campo:
 
 ```xml
-      <feedback>
-        <text>Correcto! El núcleo celular es el centro de control de la célula.</text>
-      </feedback>
+<feedback>
+  <text>Correcto! El núcleo celular es el centro de control de la célula.</text>
+</feedback>
 ```
 
-Aquí tindriem la respuesta, pero tiene un problema:
+Aquí tendríamos la respuesta, pero tiene un problema:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -694,130 +692,38 @@ Aquí tindriem la respuesta, pero tiene un problema:
       </feedback>
     </answer>
   </question>
-  
-  <question type="multichoice">
-    <name>
-      <text>Qué estructura celular está involucrada principalmente en la producción de energía?</text>
-    </name>
-    <questiontext format="html">
-      <text><![CDATA[<p>Qué estructura celular está involucrada principalmente en la producción de energía?</p>]]></text>
-    </questiontext>
-    <answer fraction="0">
-      <text>Núcleo</text>
-      <feedback>
-        <text>No es correcto. El núcleo no está involucrado principalmente en la producción de energía.</text>
-      </feedback>
-    </answer>
-    <answer fraction="100">
-      <text>Mitocòndria</text>
-      <feedback>
-        <text>Correcto! La mitocòndria es la fuente principal de producción de energía en la célula.</text>
-      </feedback>
-    </answer>
-    <answer fraction="0">
-      <text>Ribosoma</text>
-      <feedback>
-        <text>Incorrecto. Los ribosomas son responsables de la síntesis de proteínas, no de la producción de energía.</text>
-      </feedback>
-    </answer>
-    <answer fraction="0">
-      <text>Retículo endoplasmático</text>
-      <feedback>
-        <text>No, el retículo endoplasmático no es principalmente responsable de la producción de energía.</text>
-      </feedback>
-    </answer>
-  </question>
-  
-  <question type="multichoice">
-    <name>
-      <text>Qué parte de la célula contiene enzimas que ayudan a la digestión de material celular?</text>
-    </name>
-    <questiontext format="html">
-      <text><![CDATA[<p>Qué parte de la célula contiene enzimas que ayudan a la digestión de material celular?</p>]]></text>
-    </questiontext>
-    <answer fraction="0">
-      <text>Aparato de Golgi</text>
-      <feedback>
-        <text>No es correcto. El Aparato de Golgi no contiene enzimas de digestión de material celular.</text>
-      </feedback>
-    </answer>
-    <answer fraction="100">
-      <text>Lisosoma</text>
-      <feedback>
-        <text>Correcto! Los lisosomas contienen enzimas que ayudan a la digestión de material celular.</text>
-      </feedback>
-    </answer>
-    <answer fraction="0">
-      <text>Cloroplasto</text>
-      <feedback>
-        <text>Incorrecto. Los cloroplastos no contienen enzimas de digestión de material celular.</text>
-      </feedback>
-    </answer>
-    <answer fraction="0">
-      <text>Centriolo</text>
-      <feedback>
-        <text>No, los centriolos no están involucrados en la digestión de material celular.</text>
-      </feedback>
-    </answer>
-  </question>
-  
-  <question type="multichoice">
-    <name>
-      <text>Cuál es el papel principal de la membrana plasmática?</text>
-    </name>
-    <questiontext format="html">
-      <text><![CDATA[<p>Cuál es el papel principal de la membrana plasmática?</p>]]></text>
-    </questiontext>
-    <answer fraction="0">
-      <text>Sintetizar lípidos</text>
-      <feedback>
-        <text>Incorrecto. La membrana plasmática no es responsable de sintetizar lípidos.</text>
-      </feedback>
-    </answer>
-    <answer fraction="0">
-      <text>Mantener el equilibrio osmótico</text>
-      <feedback>
-        <text>No es correcto. La principal función de la membrana plasmática no es mantener el equilibrio osmótico.</text>
-      </feedback>
-    </answer>
-    <answer fraction="100">
-      <text>Controlar el que entra y sale de la célula</text>
-      <feedback>
-        <text>Correcto! La función principal de la membrana plasmática es controlar el que entra y sale de la célula.</text>
-      </feedback>
-    </answer>
-    ...
+    etc...
 ```
 
-En este caso Copiloto tiene un limit de tamany de respuesta, si volguerem hacer feedback de todas las cuestiones deuriem ir de dos en dos o de tres en tres, dependiendo de la longitud de las cuestiones.
+En este caso Copilot tiene un límite de tamaño de respuesta, si quisiéramos hacer feedback de todas las preguntas deberíamos ir de dos en dos o de tres en tres, dependiendo de la longitud de las cuestiones.
 
 :::warning
 En ningún momento he revisado que las respuestas sean correctas, perfectamente podrían ser incorrectas. Así que es importante revisarlas.
 :::
 
-Finalmente para donarl-le un último toque en nuestro curso crearíamos un video.
+Finalmente para darle un último toque a nuestro curso crearíamos un video.
 
 ## Video
 
-Para crear un video podríamos utilizar la herramienta https://simpleshow.com/ que nos permite crear videos de manera sencilla y rápida. En este caso haremos un video de sobre la célula.
+Para crear un vídeo podríamos utilizar la herramienta https://simpleshow.com/ que nos permite crear videos de manera sencilla y rápida. En este caso haremos un vídeo sobre la célula.
 
 ![Simpleshow](img/53.png){ width=90% }
 
-Tenemos que dar un título a la historia y crear nuestro guion del video:
+Tenemos que dar un título a la historia y crear nuestro guión del video:
 
 ![Guion](img/56.png){ width=90% }
 
 :::tip
-Para hacer el guion hemos utiltizat Copiloto que el resultado era mucho mejor.
+Para hacer el guion hemos usado Copilot que el resultado era mucho mejor.
 :::
 
-Finalmente puedes editar el video y cambiar las imágenes que utiliza, lo cual es muy recomendable en este caso puesto que su banco de imágenes no es demasiado grande. Pero podamos comprobar el resultado aquí:
+Finalmente puedes editar el vídeo y cambiar las imágenes que utiliza, lo cual es muy recomendable en este caso puesto que su banco de imágenes no es demasiado grande. Pero podamos comprobar el resultado aquí:
 
 [https://videos.simpleshow.com/jeqommgovt](https://videos.simpleshow.com/jeqommgovt)
 
-Podríamos añadir el video en nuestro curso y ya tendríamos nuestra unidad completada.
+Podríamos añadir el vídeo en nuestro curso y ya tendríamos nuestra unidad completada.
 
-![Video](img/58.png){ width=90% }
+![Vídeo](img/58.png){ width=90% }
 
 ## Conclusión
 
