@@ -9,13 +9,13 @@ colorlinks: true
 titlepage: true
 titlepage-rule-height: 2
 titlepage-rule-color: e6e6e6
-titlepage-texto-color: e6e6e6
+titlepage-text-color: e6e6e6
 titlepage-background: img/U3c.png
 
 # Tabla de contenidos
-toque: true
-toque-own-page: true
-toque-title: Contenidos
+toc: true
+toc-own-page: true
+toc-title: Contenidos
 
 # Cabeceras y pies
 header-left: 3. Creación multimedia con IA

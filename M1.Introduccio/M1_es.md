@@ -9,13 +9,13 @@ linkcolor: blue
 titlepage: true
 titlepage-rule-height: 2
 titlepage-rule-color: AA0000
-titlepage-texto-color: AA0000
+titlepage-text-color: AA0000
 titlepage-background: U1.png
 
 # Tabla de contenidos
-toque: true
-toque-own-page: true
-toque-title: Contenidos
+toc: true
+toc-own-page: true
+toc-title: Contenidos
 
 # Cabeceras y pies
 header-left: 1. Introducción. Conceptos iniciales
@@ -84,7 +84,7 @@ Los módulos serán breves pero intensos, trataremos de ayudaros en todas las du
 
 BPerfecto, entonces. ¿Quieres hacer algún ajuste más o probar con algo específico antes de seguir adelante?}
 
-Obviamente es una respuesta muy estándar que no se nos hubiera ocurrido escribir. Pero es lo quee stá respondiendo la plataforma.
+Obviamente es una respuesta muy estándar que no se nos hubiera ocurrido escribir. Pero es lo que está respondiendo la plataforma.
 
 \awesomebox[violet]{2pt}{\faRobot}{violet}{\textbf{¿Qué debo saber sobre inteligencia artificial?}\hfill \break
 La Inteligencia Artificial (IA) es un campo fascinante que combina ciencia, tecnología y un poco de magia digital. Es la capacidad de las máquinas para aprender, razonar y tomar decisiones, a menudo inspiradas en la forma en que funciona el cerebro humano. La IA se utiliza en una amplia variedad de ámbitos, desde la salud hasta la energía renovable, para optimizar procesos, mejorar la eficiencia e incluso para cultivar tomates más sabrosos. Es una herramienta poderosa, pero también debe usarse de manera ética y responsable. ¿Te atrae saber cómo podría aplicarse en algún campo en particular?
@@ -207,7 +207,7 @@ Debemos entender que el modelo nos dará una respuesta con una probabilidad, en 
 
 ### Autodraw
 
-La función principal de AutoDraw es facilitar la creación de dibujos reconocibles incluso para aquellos que no son hábiles en el dibujo. La herramienta ofrece una variedad de iconos y formas que coinciden con el contenido aproximado del dibujo original, permitiendo a los usuarios mejorar y refinar sus creaciones de manera intuitiva.
+La función principal de *AutoDraw* es facilitar la creación de dibujos reconocibles incluso para aquellos que no son hábiles en el dibujo. La herramienta ofrece una variedad de iconos y formas que coinciden con el contenido aproximado del dibujo original, permitiendo a los usuarios mejorar y refinar sus creaciones de manera intuitiva.
 
 [https://www.autodraw.com/](https://www.autodraw.com/)
 

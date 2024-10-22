@@ -277,50 +277,49 @@ Tenéis que eliminar las citaciones que hace la IA al final del código, puesto 
 :::
 
 :::tip
-El problema que hem detectat és que la bola anava molt lentament, així que li hem demanat que la velocitat fora major. Però li hem preguntat a Copilot i ens ha arreglat el codi.
+El problema que hemos detectado es que la bola iba muy lentamente, así que le hemos pedido que la velocidad fuera mayor. Pero le hemos preguntado a Copilot y nos ha arreglado el código.
 :::
 
-## Explicació del prompt
+## Explicación del prompt
 
-Anem a fer una xicoteta explicació del prompt. Com podeu vore els prompts no solen ser "Fes-me un joc tipo Arkanoid", cal detallar clarament el que volem. I aquesta exlicació del prompt serveix per a qualsevol altre tipus de matèria.
+Vamos a hacer una pequeña explicación del prompt. Como podéis ver, los prompts no suelen ser "Hazme un juego tipo Arkanoid", hay que detallar claramente lo que queremos. Y esta explicación del prompt sirve para cualquier otro tipo de materia.
 
 :::note
-És possible que ara ja hi haja una resposta per al prompt de crear un joc tipus Arkanoid ja que està relacionat amb el prompt que he preguntat després i ja ho haja associat. A vosaltres us podria funcionar. La IA va aprenent també del que nosaltres li "ensenyem".
+Es posible que ahora ya haya una respuesta para el prompt de crear un juego tipo Arkanoid ya que está relacionado con el prompt que he preguntado después y ya lo haya asociado. A vosotros os podría funcionar. La IA va aprendiendo también de lo que nosotros le "enseñamos".
 :::
 
-El prompt que hem plantejat és:
+El prompt que hemos planteado es:
 
->Crea un joc amb la bilioteca pygame per a python que tinga una pantalla estàtica amb una plataforma del 20% del total de la finestra que puga desplaçar a l'esquerra o la dreta amb el teclat de manera suau i ràpida. La velocitat de la bola será constant de 1 i que s'actualitze la funció que mou la bola cada 0.3 segons i quan la bola xoque amb els extrems de la pantalla rebotarà amb un angle de 45º en la direcció que du, si la bola xoca contra la plataforma rebotarà, si rebota en la meitat dreta de la plataforma se n'anirà cap a la dreta amb un angle de 45º cap a dalt i si rebota en la meitat esquerra de la plataforma se n'anirà cap a l'esquerre amb un angle de 45º cap a dalt. Al començament hi haurà una bola damunt de la tabla sense moure's i quan es polse la tecla espai la bola començarà a moure's cap a dalt. Escriure-me el codi només, sense comentaris i de la manera més resumida possible. No vull que m'escrigues cap explicació, només vull el codi i sense comentaris.
+Crea un juego con la biblioteca pygame para python que tenga una pantalla estática con una plataforma del 20% del total de la ventana que pueda desplazarse a la izquierda o la derecha con el teclado de manera suave y rápida. La velocidad de la bola será constante de 1 y que se actualice la función que mueve la bola cada 0.3 segundos y cuando la bola choque con los extremos de la pantalla rebotará con un ángulo de 45º en la dirección que lleva, si la bola choca contra la plataforma rebotará, si rebota en la mitad derecha de la plataforma se irá hacia la derecha con un ángulo de 45º hacia arriba y si rebota en la mitad izquierda de la plataforma se irá hacia la izquierda con un ángulo de 45º hacia arriba. Al comienzo habrá una bola encima de la tabla sin moverse y cuando se pulse la tecla espacio la bola empezará a moverse hacia arriba. Escríbeme el código solamente, sin comentarios y de la manera más resumida posible. No quiero que me escribas ninguna explicación, solo quiero el código y sin comentarios.
+> Crea un juego con la biblioteca pygame para python
 
-> Crea un joc amb la bilioteca pygame per a python
+Debemos detallar la tecnología que queremos utilizar, aquí estamos planteando un contexto en nuestro prompt.
 
-Hem de detallar la tecnlogia que volem utiltizar, ací estem plantejant un context en el nostre prompt
+> que tenga una pantalla estática con una plataforma del 20% del total de la ventana
 
-> que tinga una pantalla estàtica amb una plataforma del 20% del total de la finestra 
+En este caso continuamos detallando el contexto, podríamos haber pedido una pantalla más pequeña pero ha supuesto una pantalla de 800x600, sí que le indicamos que la ventana tenga un tamaño determinado y queremos una plataforma que es donde rebotarán las bolas. Vean que le doy ya un valor, como no le he dado un valor a la pantalla le hablo en porcentajes.
 
-En aquest cas continuem detallant el context, podríem haver demanat una pantalla més xicoteta però ha supossat una pantalla de 800x600, si que li indiquem que la finestra tinga un tamany determinat i volem una plataforma que és on rebotaran les boles. Vegeu que li done ja un valor, com que no li he donat un valor a la pantalla li parle en percentatges.
+> que pueda desplazarse a la izquierda o la derecha con el teclado de manera suave y rápida.
 
-> que puga desplaçar a l'esquerra o la dreta amb el teclat de manera suau i ràpida. 
+Le dejamos claro que queremos manejar la plataforma con el teclado y no con el ratón, especificamos suave y rápida para que entienda que si mantenemos pulsada la tecla queremos que continúe, en este caso me ha funcionado pero con otros modelos GPT no entiende suave y rápida.
 
-Li deixem clar que volem manejar la plataforma amb el teclat i no amb el ratolí, especifiquem suau i ràpida per a que entenga que si mantenim polsat la tecla volem que continue, en aquest cas m'ha funcionat però amb altres models GPT no entén suau i ràpida* 
+> La velocidad de la bola será constante de 1 y que se actualice la función que mueve la bola cada 0.3 segundos
 
-> La velocitat de la bola será constant de 1 i que s'actualitze la funció que mou la bola cada 0.3 segons 
+Esta parte puede costar entender un poco más, el FPS es la velocidad con la que quiero que se refresque la pantalla y se lo he dicho en segundos que la IA ha interpretado 60 fps, y la velocidad 1 porque pygame solo permite valores mayores de 1.
 
-Aquesta part pot costar d'entendre un poc més, el FPS és la velocitat amb la que vull que es refresque la pantalla i li ho he dit en segons que la IA a interpretat 60 fps, i al velocitat 1 perquè pygame només permet valors majors de 1.
+> y cuando la bola choque con los extremos de la pantalla rebotará con un ángulo de 45º en la dirección que lleva
 
-> i quan la bola xoque amb els extrems de la pantalla rebotarà amb un angle de 45º en la direcció que du
+Es importante delimitar cómo rebota, aquí es cuando le damos ejemplos a la IA para que entienda que debe rebotar en una dirección diferente, sino podría quedarse rebotando de un lado a otro sin cambiar. Hay que pensar en la dinámica del juego.
 
-És important delimitar com rebota, ací és quan li donem exemples a la IA per a que entenga que ha de rebotar en una direcció diferent, sino podria quedar-se rebotant d'un costat a altre sense canviar. Cal pensar en la dinàmica del joc.
+> si la bola choca contra la plataforma rebotará, si rebota en la mitad derecha de la plataforma se irá hacia la derecha con un ángulo de 45º hacia arriba y si rebota en la mitad izquierda de la plataforma se irá hacia la izquierda con un ángulo de 45º hacia arriba.
 
->si la bola xoca contra la plataforma rebotarà, si rebota en la meitat dreta de la plataforma se n'anirà cap a la dreta amb un angle de 45º cap a dalt i si rebota en la meitat esquerra de la plataforma se n'anirà cap a l'esquerre amb un angle de 45º cap a dalt. 
+Continuamos con los ejemplos que ayudan a entender qué es lo que deseamos.
 
-Continuem amb els exemples que ajuden a entendre què és el que desitgem.
-
-> Al comienzo habrá una bola encima de la tabla sin #mover y cuando se polse la tecla espacio la bola empezará a #mover hacia arriba. 
+> Al comienzo habrá una bola encima de la tabla quieta y cuando se pulse la tecla espacio la bola empezará a #mover hacia arriba. 
 
 Hay que definir una situación inicial puesto que, como ya hemos comentado, la IA no presupone como un humano, sino especificamos algo se lo inventará y podría ser que no fuera el que deseamos. Las presuposacions que hace no son humanas.
 
-> Escribir-me el código solo, sin comentarios y de la manera más resumida posible. No quiero que me escribas ninguna explicación, solo quiero el código y sin comentarios.
+> Escríbeme el código solamente, sin comentarios y de la manera más resumida posible. No quiero que me escribas ninguna explicación, solo quiero el código y sin comentarios.
 
 Por último insistimos que solo volamos el código sin ningún tipo de explicación y sin ningún tipo de comentario al código. Los comentarios nos pueden ayudar a entender mejor el código, pero la plataforma tiene limitado el número de caracteres que nos da como respuesta, de este modo estaviem cantidad de caracteres que queremos que nos dé.
 

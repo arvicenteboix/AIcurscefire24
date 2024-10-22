@@ -9,13 +9,13 @@ linkcolor: blue
 titlepage: true
 titlepage-rule-height: 2
 titlepage-rule-color: e6e6e6
-titlepage-texto-color: e6e6e6
+titlepage-text-color: e6e6e6
 titlepage-background: img/U2c.png
 
 # Tabla de contenidos
-toque: true
-toque-own-page: true
-toque-title: Contenidos
+toc: true
+toc-own-page: true
+toc-title: Contenidos
 
 # Cabeceras y pies
 header-left: 2. Herramientas GPT
@@ -172,7 +172,7 @@ En este caso no vamos a transcribir toda la respuesta porque es más larga que l
 * Pero podemos ver que ya ha diseñado otras versiones
 * La respuesta ha sido mucho más rápida que en las otras dos.
 * Nos proporciona el icono de Google por si queremos ampliar información.
-* Podemos compartir la respuesta e incluso responder con gmail.
+* Podemos compartir la respuesta e incluso responder con Gmail.
 
 En este caso si hacemos clic sobre el icono de Google nos aparecerán los enlaces de la respuesta.
 
@@ -202,7 +202,7 @@ Como bot-base podemos escoger cualquiera de las opciones que nos presenta. Despu
 
 ![Crear bot](img/poe3.png){ width=70% }
 
-[^2]: Más adelante nos centraremos en la creación de prompts para poder definir mejor qué es lo que queremos. 
+[^2]: Más adelante nos centraremos en la creación de *prompts* para poder definir mejor qué es lo que queremos. 
 
 Una vez le damos a crear bot y le planteamos una pregunta nos da una respuesta basándose en los materiales que nosotros le hemos proporcionado:
 
@@ -212,7 +212,7 @@ De esta manera tenemos un bot entrenado para responder lo que nosotros le hemos 
 
 :::caution
 Debemos tener en cuenta que esta plataforma es de pago y que la versión gratuita tiene unas limitaciones diarias. Esto significa que si queremos utilizarla de manera continuada, será necesario que nos registremos en la versión de pago. Esto pasará en todas las plataformas. Pero cabe decir que esta es una de las pocas que nos permite crear bots.
-En siguientes unidades hablaremos de otras similares como chatpdf que nos da resultados similares. En ChatGPT a los bots se les llama GPTs y se accede a ellos con la cuenta de pago.
+En siguientes unidades hablaremos de otras similares como *chatpdf* que nos da resultados similares. En ChatGPT a los bots se les llama GPTs y se accede a ellos con la cuenta de pago.
 :::
 
 ## Otros modelos conocidos
@@ -242,11 +242,11 @@ Por eso hay que saber preguntar adecuadamente a la IA qué es lo que queremos y 
 
 Lo prompts, como ya hemos comentado, son aquellos comandos que vamos a darle a la inteligencia artificial, a partir de una cuestión o prompt esperamos tener la respuesta más parecida a la deseada. Una de las máximas que hay que aplicar en estos casos es que la cuestión tiene que ser tan clara que la IA no tenga que presuponer nada.
 
-Un ejemplo claro lo podemos tener en las tareas del día a día, si en tu casa le pides a alguien "ve a hacer la compra" es posible que ya tenga una idea de lo que tiene que hacer, donde tiene que ir a comprar y en qué ciudad, cuando puedes ir a comprar, donde encontrar la lista de la compra, el presupuesto, los objetos prioritarios, las alternativas si no hay un producto y qué manías tienen los miembros de la familia. Todas estas cosas la IA no las sabe, por lo tanto los prompts no se pueden parecer a las cuestiones que planteamos en nuestro día a día, tenemos que definir más exactamente qué es lo que queremos.
+Un ejemplo claro lo podemos tener en las tareas del día a día, si en tu casa le pides a alguien "ve a hacer la compra" es posible que ya tenga una idea de lo que tiene que hacer, donde tiene que ir a comprar y en qué ciudad, cuando puedes ir a comprar, donde encontrar la lista de la compra, el presupuesto, los objetos prioritarios, las alternativas si no hay un producto y qué manías tienen los miembros de la familia. Todas estas cosas la IA no las sabe, por lo tanto los *prompts* no se pueden parecer a las cuestiones que planteamos en nuestro día a día, tenemos que definir más exactamente qué es lo que queremos.
 
 Otra de las cuestiones que hay que tener en cuenta, y es muy importante, es que no es lo mismo preguntar de un tema que desconoces a otro que conoces, siempre podrás plantear mejor el prompt para poder obtener los mejores resultados.
 
-Aquí trataremos de dar una serie de orientaciones para plantear prompts, al final, partiendo de estas orientaciones y en función de lo que vayas a realizar acabarás creándote tu propio esquema mental para sacar los resultados que más se adaptan a tus necesidades, y estos no tienen porque ser aptos para todos.
+Aquí trataremos de dar una serie de orientaciones para plantear *prompts*, al final, partiendo de estas orientaciones y en función de lo que vayas a realizar acabarás creándote tu propio esquema mental para sacar los resultados que más se adaptan a tus necesidades, y estos no tienen porque ser aptos para todos.
 
 ## Estructuras modulares para la creación de prompts
 
@@ -257,9 +257,9 @@ La estructura de referencia que Microsoft recomienda para la creación de prompt
 - **Ejemplos**: Ejemplos concretos que ilustran lo que se quiere conseguir con la respuesta.
 - **Expectativas**: Las expectativas para la respuesta, como por ejemplo la longitud, el contenido y el tono.
 
-Las estructuras modulares son una manera eficaz de crear prompts claros y sencillos para diferentes tareas. Aquí tenemos una breve descripción de estructuras:
+Las estructuras modulares son una manera eficaz de crear *prompts* claros y sencillos para diferentes tareas. Aquí tenemos una breve descripción de estructuras:
 
-- **RTF**: RTF es una estructura modular para crear prompts de Rol, Tarea y Formato. Esta estructura es muy útil para crear prompts claros y sencillos para diferentes tareas. Aquí tenemos un ejemplo de cómo se puede utilizar la estructura RTF para crear un prompt:
+- **RTF**: RTF es una estructura modular para crear *prompts* de Rol, Tarea y Formato. Esta estructura es muy útil para crear *prompts* claros y sencillos para diferentes tareas. Aquí tenemos un ejemplo de cómo se puede utilizar la estructura RTF para crear un prompt:
 
     - **Role**: Profesor
     - **Task**: Explica como funciona el sistema solar.
@@ -271,9 +271,9 @@ Las estructuras modulares son una manera eficaz de crear prompts claros y sencil
     - **Acción**: La acción que se tiene que llevar a cabo para completar la tarea.
     - **Objetivo**: El objetivo final de la tarea.
 
-    La estructura TAG se puede utilizar para crear prompts que incluyen información sobre la tarea, la acción y el objetivo.
+    La estructura TAG se puede utilizar para crear *prompts* que incluyen información sobre la tarea, la acción y el objetivo.
 
-- **GAIDE**: La estructura GAIL (Goal, Actor, Instructions, Details, Examples) es una herramienta que se puede utilizar para crear prompts detallados y sencillos. La estructura GAIL se compone de cinco elementos:
+- **GAIDE**: La estructura GAIL (Goal, Actor, Instructions, Details, Examples) es una herramienta que se puede utilizar para crear *prompts* detallados y sencillos. La estructura GAIL se compone de cinco elementos:
 
     - **Objetivo**: El objetivo de la tarea.
     - **Usuario**: El usuario que tiene que completar la tarea.
@@ -281,7 +281,7 @@ Las estructuras modulares son una manera eficaz de crear prompts claros y sencil
     - **Detalles**: Detalles adicionales sobre la tarea.
     - **Ejemplos**: Ejemplos de como completar la tarea.
 
-    La estructura GAIL se puede utilizar para crear prompts que incluyen información detallada sobre el objetivo, el usuario, las instrucciones, los detalles y los ejemplos.
+    La estructura GAIL se puede utilizar para crear *prompts* que incluyen información detallada sobre el objetivo, el usuario, las instrucciones, los detalles y los ejemplos.
 
 ## Crea tu propia estructura que te funcione
 
@@ -307,7 +307,7 @@ Teniendo claro estos puntos ya podéis ir creando nuestros prompts. Os dejamos a
 * Específica el tipo de respuesta que estás buscando. Cómo quieres recibir la producción de salida para que sea relevante y se ajuste a tus necesidades
 * Usa comodines de formato: redacción, tabla, listado, comparativa, diálogo, gráfico…
 * Utiliza palabras clave: Actúa como... / Eres un...
-* Crea una secuencia de prompts para ir acotando y llevando la IA hacia donde tú quieres.
+* Crea una secuencia de *prompts* para ir acotando y llevando la IA hacia donde tú quieres.
 * Guía la IA para que genere contenido basado en nuestros intereses.
 * Si no estás seguro de la respuesta de la IA, pide que lo explique y argumente. Esto ayuda a comprender mejor la respuesta y a identificar cualquier sesgo o error potencial.
 * Amenaza o dale una propina a la IA. Parece mentira pero, en alguna casos, amenazándola que tu vida corre peligro o que le vas a hacer un regalo puede dar mejores resultados que si no lo haces.
