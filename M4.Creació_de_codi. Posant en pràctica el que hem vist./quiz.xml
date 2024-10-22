@@ -1,0 +1,202 @@
+<quiz>
+    <question type="multichoice">
+        <name>
+            <text>Què és necessari per crear un programa amb Python?</text>
+        </name>
+        <questiontext>
+            <text><![CDATA[<p>Què és necessari per crear un programa amb Python?</p>]]></text>
+        </questiontext>
+        <answer fraction="100">
+            <text><![CDATA[Pegar el codi en un fitxer de text (.txt)]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[Guardar-lo en un fitxer de document (.doc)]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[Guardar-lo en un fitxer de text (.odt)]]></text>
+        </answer>
+        <answer fraction="100">
+            <text><![CDATA[Cap de les anteriors]]></text>
+        </answer>
+    </question>
+    <question type="multichoice">
+        <name>
+            <text>Quina llibreria de Python es recomana utilitzar per a la detecció d'emocions a través de la càmera web?</text>
+        </name>
+        <questiontext>
+            <text><![CDATA[<p>Quina llibreria de Python es recomana utilitzar per a la detecció d'emocions a través de la càmera web?</p>]]></text>
+        </questiontext>
+        <answer fraction="100">
+            <text><![CDATA[a. OpenCV]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[b. TensorFlow]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[c. Pygame]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[d. Numpy]]></text>
+        </answer>
+    </question>
+    <question type="multichoice">
+        <name>
+            <text>Quin model de xarxa neuronal es recomana utilitzar per a la detecció d'emocions a través de les expressions facials?</text>
+        </name>
+        <questiontext>
+            <text><![CDATA[<p>Quin model de xarxa neuronal es recomana utilitzar per a la detecció d'emocions a través de les expressions facials?</p>]]></text>
+        </questiontext>
+        <answer fraction="100">
+            <text><![CDATA[a. FER]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[b. CNN]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[c. LSTM]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[d. SVM]]></text>
+        </answer>
+    </question>
+    <question type="multichoice">
+        <name>
+            <text>Com es poden detectar les cares en temps real utilitzant OpenCV?</text>
+        </name>
+        <questiontext>
+            <text><![CDATA[<p>Com es poden detectar les cares en temps real utilitzant OpenCV?</p>]]></text>
+        </questiontext>
+        <answer fraction="0">
+            <text><![CDATA[a. Utilitzant el model FER]]></text>
+        </answer>
+        <answer fraction="100">
+            <text><![CDATA[b. Utilitzant el reconeixement facial en temps real d'OpenCV]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[c. Utilitzant el model CNN]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[d. Utilitzant el model LSTM]]></text>
+        </answer>
+    </question>
+    <question type="multichoice">
+        <name>
+            <text>Quina funció d'OpenCV s'utilitza per a mostrar el resultat de la detecció d'emocions en la pantalla?</text>
+        </name>
+        <questiontext>
+            <text><![CDATA[<p>Quina funció d'OpenCV s'utilitza per a mostrar el resultat de la detecció d'emocions en la pantalla?</p>]]></text>
+        </questiontext>
+        <answer fraction="0">
+            <text><![CDATA[a. cv2.draw_bounding_boxes()]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[b. cv2.draw_emotions()]]></text>
+        </answer>
+        <answer fraction="100">
+            <text><![CDATA[c. cv2.imshow()]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[d. cv2.show_detected_faces()]]></text>
+        </answer>
+    </question>
+    <question type="multichoice">
+        <name>
+            <text>Quin és el codi correcte per a obrir la càmera web en OpenCV?</text>
+        </name>
+        <questiontext>
+            <text><![CDATA[<p>Quin és el codi correcte per a obrir la càmera web en OpenCV?</p>]]></text>
+        </questiontext>
+        <answer fraction="100">
+            <text><![CDATA[a. cap = cv2.VideoCapture(0)]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[b. cap = cv2.VideoCapture(1)]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[c. cap = cv2.VideoCapture("webcam")]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[d. cap = cv2.VideoCapture("camera")]]></text>
+        </answer>
+    </question>
+    <question type="multichoice">
+        <name>
+            <text>Quina tecla s'utilitza per a sortir del programa en OpenCV?</text>
+        </name>
+        <questiontext>
+            <text><![CDATA[<p>Quina tecla s'utilitza per a sortir del programa en OpenCV?</p>]]></text>
+        </questiontext>
+        <answer fraction="100">
+            <text><![CDATA[a. q]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[b. esc]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[c. exit]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[d. end]]></text>
+        </answer>
+    </question>
+    <question type="multichoice">
+        <name>
+            <text>Què s'ha de fer per a dibuixar un rectangle al voltant d'una cara detectada en OpenCV?</text>
+        </name>
+        <questiontext>
+            <text><![CDATA[<p>Què s'ha de fer per a dibuixar un rectangle al voltant d'una cara detectada en OpenCV?</p>]]></text>
+        </questiontext>
+        <answer fraction="0">
+            <text><![CDATA[a. Utilitzar cv2.draw_face_rectangle()]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[b. Utilitzar cv2.drawRect()]]></text>
+        </answer>
+        <answer fraction="100">
+            <text><![CDATA[c. Utilitzar cv2.rectangle()]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[d. Utilitzar cv2.draw_contour()]]></text>
+        </answer>
+    </question>
+    <question type="multichoice">
+        <name>
+            <text>Com es pot escriure text en la pantalla en OpenCV?</text>
+        </name>
+        <questiontext>
+            <text><![CDATA[<p>Com es pot escriure text en la pantalla en OpenCV?</p>]]></text>
+        </questiontext>
+        <answer fraction="100">
+            <text><![CDATA[a. Utilitzant cv2.putText()]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[b. Utilitzant cv2.drawLine()]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[c. Utilitzant cv2.writeText()]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[d. Utilitzant cv2.drawText()]]></text>
+        </answer>
+    </question>
+    <question type="multichoice">
+        <name>
+            <text>Quina és la funció correcta per a alliberar la càmera i tancar la finestra en OpenCV?</text>
+        </name>
+        <questiontext>
+            <text><![CDATA[<p>Quina és la funció correcta per a alliberar la càmera i tancar la finestra en OpenCV?</p>]]></text>
+        </questiontext>
+        <answer fraction="0">
+            <text><![CDATA[a. cap.release() i cv2.destroyWindow()]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[b. cap.close() i cv2.exit()]]></text>
+        </answer>
+        <answer fraction="100">
+            <text><![CDATA[c. cap.release() i cv2.destroyAllWindows()]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[d. cap.close() i cv2.closeWindow()]]></text>
+        </answer>
+    </question>
+</quiz>

@@ -65,7 +65,15 @@ class="toc-section-number">4</span> Creació d’imatges i vídeos</a>
 <li><a href="#flexclip" id="toc-flexclip"><span
 class="toc-section-number">4.1</span> Flexclip</a></li>
 <li><a href="#deepai" id="toc-deepai"><span
-class="toc-section-number">4.2</span> Deepai</a></li>
+class="toc-section-number">4.2</span> Deepai</a>
+<ul>
+<li><a href="#images" id="toc-images"><span
+class="toc-section-number">4.2.1</span> Images</a></li>
+<li><a href="#vídeos" id="toc-vídeos"><span
+class="toc-section-number">4.2.2</span> Vídeos</a></li>
+<li><a href="#music" id="toc-music"><span
+class="toc-section-number">4.2.3</span> Music</a></li>
+</ul></li>
 <li><a href="#canva" id="toc-canva"><span
 class="toc-section-number">4.3</span> Canva</a>
 <ul>
@@ -113,16 +121,16 @@ class="toc-section-number">6.2</span> Rask</a></li>
 class="toc-section-number">6.3</span> Opusclip</a></li>
 <li><a href="#elevenlabs" id="toc-elevenlabs"><span
 class="toc-section-number">6.4</span> ElevenLabs</a></li>
-<li><a href="#bing-copilot-complement-suno"
-id="toc-bing-copilot-complement-suno"><span
-class="toc-section-number">6.5</span> Bing Copilot (complement
-Suno)</a></li>
+<li><a href="#suno" id="toc-suno"><span
+class="toc-section-number">6.5</span> Suno</a></li>
+<li><a href="#microsoft-designer" id="toc-microsoft-designer"><span
+class="toc-section-number">6.6</span> Microsoft Designer</a></li>
 <li><a href="#altres-aplicacions-multimèdia-dinterès"
 id="toc-altres-aplicacions-multimèdia-dinterès"><span
-class="toc-section-number">6.6</span> Altres aplicacions multimèdia
+class="toc-section-number">6.7</span> Altres aplicacions multimèdia
 d’interès</a></li>
 <li><a href="#quina-triar" id="toc-quina-triar"><span
-class="toc-section-number">6.7</span> Quina triar?</a></li>
+class="toc-section-number">6.8</span> Quina triar?</a></li>
 </ul></li>
 <li><a href="#generació-de-materials-didàctics"
 id="toc-generació-de-materials-didàctics"><span
@@ -223,6 +231,9 @@ busque.</a></li>
             de Tesla.</p>
             <h2 data-number="2.1" id="huggingface"><span
             class="header-section-number">2.1</span> Huggingface</h2>
+            <p>Abans que res hem d’enetendre que en el darrer mòdul
+            vegerem com funcionava un model de llenguatge, però en esta
+            unitat veurem com funcionen altres models.</p>
             <p>Huggingface és una de les plataformes més conegudes per a
             descarregar models de llenguatge. Podem accedir a la
             plataforma des <a href="https://huggingface.co/">d’ací</a>.
@@ -231,8 +242,85 @@ busque.</a></li>
             provar els models en línia.</p>
             <div class="caution">
             <p>No es tracta d’una plataforma gratuïta, però ens permet
-            al menys fer algunes proves.</p>
+            experimentar entre diferents models i veure la gran
+            quantitat de models que existeixen.</p>
             </div>
+            <figure>
+            <img src="img/hugging/1.png" style="width:70.0%"
+            alt="Huggingface" />
+            <figcaption aria-hidden="true">Huggingface</figcaption>
+            </figure>
+            <p>Ens logem amb un compte:</p>
+            <figure>
+            <img src="img/hugging/2.png" style="width:70.0%"
+            alt="Huggingface" />
+            <figcaption aria-hidden="true">Huggingface</figcaption>
+            </figure>
+            <div class="tip">
+            <p>Els navegador <strong>Firefox</strong> o
+            <strong>Duckduckgo</strong> ja ens ofereix la possibilitat
+            de crear correus que no necessitem per a poder accedir a les
+            plataformes. Ens reenviaran eixe correu a la nostra bústia i
+            quan no vullguem rebre més correus d’eixa plataforma,
+            simplement eliminem el correu.</p>
+            </div>
+            <p>Completem tots els camps i ja podrem accedir a la
+            plataforma:</p>
+            <figure>
+            <img src="img/hugging/4.png" style="width:90.0%"
+            alt="Huggingface" />
+            <figcaption aria-hidden="true">Huggingface</figcaption>
+            </figure>
+            <p>Com podem veure, hi ha una gran quantitat de models, això
+            no significa que els podem provar, ja que caldrà
+            baixar-se’ls i provar-los en el nostre ordinador, molts
+            d’ells, sinó teniu una targeta gràfica d’última generació no
+            vos funcionaran, a més calen coneixements tècnics per a
+            poder-los utilitzar.</p>
+            <p>Fixem-nos que cada model està especialitzat dins d’un
+            camp i dins d’una tasca concreta.</p>
+            <p>Una de les coses que sí que podem probar són els models
+            de llenguatge:</p>
+            <figure>
+            <img src="img/hugging/5.png" style="width:70.0%"
+            alt="Models" />
+            <figcaption aria-hidden="true">Models</figcaption>
+            </figure>
+            <p>En este cas hem provat differents models que podem anar
+            canviant si fem clic ací:</p>
+            <figure>
+            <img src="img/hugging/8.png" style="width:70.0%"
+            alt="Models" />
+            <figcaption aria-hidden="true">Models</figcaption>
+            </figure>
+            <p>Ací tenim exemples de diferents models:</p>
+            <figure>
+            <img src="img/hugging/9.png" style="width:70.0%"
+            alt="Meta-Llama-3.1-70B-Instruct" />
+            <figcaption
+            aria-hidden="true">Meta-Llama-3.1-70B-Instruct</figcaption>
+            </figure>
+            <figure>
+            <img src="img/hugging/10.png" style="width:70.0%"
+            alt="nvidia/Llama-3.1-Nemotron-70B-Instruct-HF" />
+            <figcaption
+            aria-hidden="true">nvidia/Llama-3.1-Nemotron-70B-Instruct-HF</figcaption>
+            </figure>
+            <figure>
+            <img src="img/hugging/11.png" style="width:70.0%"
+            alt="mistralai/Mistral-Nemo-Instruct-2407" />
+            <figcaption
+            aria-hidden="true">mistralai/Mistral-Nemo-Instruct-2407</figcaption>
+            </figure>
+            <p>Com podem veure, cadascún dóna una resposta diferent en
+            funció de com haja sigut entrenat.</p>
+            <p>Per tant, hem de tenir dos conceptes clars:</p>
+            <ul>
+            <li><strong>Model</strong>: És el conjunt de dades que s’han
+            utilitzat per a entrenar la IA.</li>
+            <li>Un model no té perquè ser un MLL, pot ser un model
+            d’àudio, de vídeo, etc.</li>
+            </ul>
             <h1 data-number="3"
             id="cercadors-que-utilitzen-intelligència-artificial"><span
             class="header-section-number">3</span> Cercadors que
@@ -301,6 +389,14 @@ busque.</a></li>
             dependrà de les necessitats que tinguen en cada moment per a
             utilitzar-ne una o altra.</p>
             </div>
+            <div class="caution">
+            <p>Penseu que la diferència entre les aquestes qüestions i
+            el moment en que escrivim són de 8 mesos. Aquest model ja ha
+            sigut entrenat per a donar respostes més diverses. De tota
+            maneta és importantn veure com sempre referencia les
+            respostes que ens dona, sinó les referencia, les ha
+            generades.</p>
+            </div>
             <h2 data-number="3.2" id="you"><span
             class="header-section-number">3.2</span> You</h2>
             <p>Podem trobar el cercador You a la pàgina:</p>
@@ -319,12 +415,12 @@ busque.</a></li>
             <div class="note">
             <p>Si analitzem la resposta veurem que ens dona un resultat
             bastant diferent del que esperàvem, per això és important
-            llegir la resposta ja que podem veure que ens diu clarament
-            <em>han arribat a la selectivitat amb la millor nota mitjana
-            de tota la Comunitat Valenciana al 2023</em>. I no està
-            parlant concretament de la nota mitjana després sinó
-            d’abans.</p>
+            llegir la resposta i les referències d’on extrau la
+            informació.</p>
             </div>
+            <p>L’ús d’esta ferramenta és totalement gratuït però si
+            volem accedir a opcions premium, així com utilitzar altres
+            models hem de subscriure’ns.</p>
             <h1 data-number="4" id="creació-dimatges-i-vídeos"><span
             class="header-section-number">4</span> Creació d’imatges i
             vídeos</h1>
@@ -360,11 +456,19 @@ busque.</a></li>
             </div>
             <h2 data-number="4.2" id="deepai"><span
             class="header-section-number">4.2</span> Deepai</h2>
-            <p>Podem accedir a deepai des <a
-            href="https://deepai.org">d’ací</a>. Es tracta d’un
-            generador d’imatges. Podem veure que com totes les IA cal
-            donar un context més ample per a tindre un resultat més
-            desitjat:</p>
+            <p>Deepai ens permet crear imatges, video, música i text.
+            Tot i que en un principi s’especialitzava en la creació
+            d’imatges, ara ja ens permet crear vídeos i música. Podem
+            accedir a deepai des <a
+            href="https://deepai.org">d’ací</a>.</p>
+            <p>Si baixem cap a la part inferior de la pàgina trobarem
+            moltíssimes opcions. Es tracta d’una pàgina amb moltíssimes
+            ferramentes.</p>
+            <h3 data-number="4.2.1" id="images"><span
+            class="header-section-number">4.2.1</span> Images</h3>
+            <p>Es tracta d’un generador d’imatges. Podem veure que com
+            totes les IA cal donar un context més ample per a tindre un
+            resultat més desitjat:</p>
             <figure>
             <img src="img/7.png" style="width:10cm"
             alt="Prompt per a generar imatge" />
@@ -385,16 +489,36 @@ busque.</a></li>
             intel·ligència artificial han de ser clares i directes.
             Oblidem-nos de l’educació, no és necessària!</p>
             </div>
-            <figure>
-            <img src="img/9.png" style="width:10cm"
-            alt="Exemple canviant un poc el prompt" />
-            <figcaption aria-hidden="true">Exemple canviant un poc el
-            prompt</figcaption>
-            </figure>
             <p>Aquesta ferramenta permet crear tantes imatges com
             vullguen i és bastant útil si t’adaptes als seus gustos<a
             href="#fn2" class="footnote-ref" id="fnref2"
             role="doc-noteref"><sup>2</sup></a></p>
+            <h3 data-number="4.2.2" id="vídeos"><span
+            class="header-section-number">4.2.2</span> Vídeos</h3>
+            <p>LA versió gratuïta està bastant limitada, però i això
+            podem traure un vídeo curt per a algun muntatge que ens faça
+            falta. Podem veure un exemple de com generar un vídeo a
+            partir de text:</p>
+            <p><a
+            href="https://deepai.org/gallery-item/915ca9c756ff484b9c6fbe04c75fdd0e/f1f9c83eef2990c1404902119d1b1e7d12fa902709_PUE2ZaA.mp4.html">Resultat</a></p>
+            <figure>
+            <img src="img/6c.png" style="width:10cm"
+            alt="Exemple de vídeo" />
+            <figcaption aria-hidden="true">Exemple de vídeo</figcaption>
+            </figure>
+            <p>Com podem veure el vídeo és batant curt.</p>
+            <h3 data-number="4.2.3" id="music"><span
+            class="header-section-number">4.2.3</span> Music</h3>
+            <p>De la mateixa manera podem crear un efecte sonor que ens
+            permeta utilitzar-lo per a muntar alguna creació:</p>
+            <p><a
+            href="https://deepai.org/gallery-item/74215035170747a1adff3306e1174afe/253ad71738139de3c8d4844392b02c2d932d_zKXCasB.mp3.html">Resultat</a></p>
+            <figure>
+            <img src="img/6d.png" style="width:10cm"
+            alt="Exemple de música" />
+            <figcaption aria-hidden="true">Exemple de
+            música</figcaption>
+            </figure>
             <h2 data-number="4.3" id="canva"><span
             class="header-section-number">4.3</span> Canva</h2>
             <p>Canva és una ferramenta que molts utilitzem per a generar
@@ -413,6 +537,7 @@ busque.</a></li>
             ferramentes de Canva et permeten crear 25 imatges al mes per
             exemple.</p>
             </div>
+            <p>Anem a veure algunes d’elles:</p>
             <h3 data-number="4.3.1" id="anime-style"><span
             class="header-section-number">4.3.1</span> Anime Style</h3>
             <p>Amb aquesta App de Canva pots crear imatges anime. us
@@ -422,6 +547,14 @@ busque.</a></li>
             alt="Anime Style" />
             <figcaption aria-hidden="true">Anime Style</figcaption>
             </figure>
+            <div class="warning">
+            <p>Aqeust curs és una segona revisió i en la revisió dels
+            materials hem tractat de crear una persona enfadada i no ens
+            mostra imatges de cap persona enfadada ni de monstres. Això
+            ens indica que la IA no sempre ens donarà el resultat
+            esperat, i que els models van canviant-lo en funció del que
+            demana el públic en general.</p>
+            </div>
             <h3 data-number="4.3.2" id="dall-e"><span
             class="header-section-number">4.3.2</span> DALL-E</h3>
             <p>La tecnologia DALL-E ens permet crear imatges a partir de
@@ -459,14 +592,15 @@ busque.</a></li>
             <img src="img/15.png" style="width:10cm" alt="Leonardo" />
             <figcaption aria-hidden="true">Leonardo</figcaption>
             </figure>
-            <p>La funcionalitat de generació d’imatges és bastant
-            interessant, pero la de realtime Canva va a generar-nos una
-            imatge a partir d’un dibuix que creem, podem escanejar-lo i
-            pujar-lo o simplement dibuixar-lo per a que ens faja una
-            interpretació. Es tracta d’un model que generarà
-            representacions artístiques a partir d’un concepte més
-            senzill. Anirà generant-nos la imatge a partir del dibuix
-            que anem fent:</p>
+            <p>La funcionalitat de generació d’imatges (<em>Image
+            creation</em>) és bastant interessant i funciona de la
+            mateixa manera que amb altre generador d’imatges, per` la de
+            realtime Canva va a generar-nos una imatge a partir d’un
+            dibuix que creem, podem escanejar-lo i pujar-lo o simplement
+            dibuixar-lo per a que ens faja una interpretació. Es tracta
+            d’un model que generarà representacions artístiques a partir
+            d’un concepte més senzill. Anirà generant-nos la imatge a
+            partir del dibuix que anem fent:</p>
             <figure>
             <img src="img/16.png" style="width:10cm"
             alt="Exemple de realtime Canva" />
@@ -474,29 +608,30 @@ busque.</a></li>
             Canva</figcaption>
             </figure>
             <p>Fixeu-se que ens permet interactuar tant en les
-            indicacions que li donem com a text com el que anem
-            dibuixant, d’aquesta manera podem obtindre una imatge més
-            ajustada al que busquem.</p>
+            <strong>indicacions</strong>(prompt) que li donem com a text
+            com el que anem dibuixant, d’aquesta manera podem obtindre
+            una imatge més ajustada al que busquem.</p>
             <div class="note">
             <p>Està bastant optimitzada per a traure retrats, així que
             no us estranye si sempre crea imatges de persones de primer
             plànol.</p>
             </div>
-            <p>una ferramenta semblant a esta la tenim amb <a
+            <p>Una ferramenta semblant a esta la tenim amb <a
             href="https://www.freepik.com/pikaso#">https://www.freepik.com/pikaso#</a></p>
             <h2 data-number="4.5" id="wepik"><span
             class="header-section-number">4.5</span> Wepik</h2>
-            <p>És una ferramenta amb el mateix propòsit que l’anterior
-            però que també funciona per crèdits i et permet generar unes
-            8 imatges al mes.</p>
+            <p>És una ferramenta amb el mateix propòsit que l’anterior i
+            que integra freepik, també funciona per crèdits i et permet
+            generar unes 8 imatges al mes.</p>
             <figure>
-            <img src="img/17.png" alt="Wepik" />
+            <img src="img/17.png" style="width:70.0%" alt="Wepik" />
             <figcaption aria-hidden="true">Wepik</figcaption>
             </figure>
             <p>Ací tindríem un exemple de la ferramenta de generació
-            d’imatges amb wepik.</p>
+            d’imatges amb <a href="https://wepik.com/es/">wepik</a>.</p>
             <figure>
-            <img src="img/18.png" alt="Exemple de wepik" />
+            <img src="img/18.png" style="width:70.0%"
+            alt="Exemple de wepik" />
             <figcaption aria-hidden="true">Exemple de wepik</figcaption>
             </figure>
             <h2 data-number="4.6" id="bing-copilot"><span
@@ -512,20 +647,21 @@ busque.</a></li>
             role="doc-noteref"><sup>3</sup></a> per a donar-se
             d’alta.</p>
             <figure>
-            <img src="img/19.png" alt="Exemple de Bing copilot" />
+            <img src="img/19.png" style="width:70.0%"
+            alt="Exemple de Bing copilot" />
             <figcaption aria-hidden="true">Exemple de Bing
             copilot</figcaption>
             </figure>
             <h2 data-number="4.7" id="quina-escollisc"><span
             class="header-section-number">4.7</span> Quina
             escollisc</h2>
-            <p>OpenAI (ChatGPT) i Gemini (anomenat anteriorment Bard)
-            també tenen la tecnologia implementada als seus chats,
-            encara que OpenAI és de pagament, però la tendència és que
-            cada vegada més i més plataformes implementen aquest
-            sistemes de generació d’imatges, els resultats d’alguns
-            d’ells poden ser millor que d’altres, sempre dependrà de la
-            teua manera de generar el prompt.</p>
+            <p>OpenAI (ChatGPT) i Gemini també tenen la tecnologia
+            implementada als seus chats i la tendència és que cada
+            vegada més i més plataformes implementen aquest sistemes de
+            generació d’imatges (fa 6 mesos calia una subscripció de
+            pagament per a generar imatges en ChatGPT), els resultats
+            d’alguns d’ells poden ser millor que d’altres, sempre
+            dependrà de la teua manera de generar el prompt.</p>
             <div class="caution">
             <p>La IA no ha vingut per a crear-nos-ho tot sinó que
             nosaltres hem de saber que preguntem i com podem orientar-la
@@ -533,8 +669,6 @@ busque.</a></li>
             </div>
             <p>Òbviament hi han moltes altres com:</p>
             <ul>
-            <li><a href="https://openai.com/dall-e-2/">OpenAI</a>: De
-            pagament</li>
             <li><a href="https://lexica.art/">Lexica</a></li>
             <li><a href="https://clipdrop.co">lipDrop</a></li>
             </ul>
@@ -565,7 +699,8 @@ busque.</a></li>
             a més permet modificar diferents paràmetres per veure el
             resultat.</p>
             <figure>
-            <img src="img/20.png" alt="Exemple de model" />
+            <img src="img/20.png" style="width:70.0%"
+            alt="Exemple de model" />
             <figcaption aria-hidden="true">Exemple de model</figcaption>
             </figure>
             <div class="caution">
@@ -656,7 +791,7 @@ busque.</a></li>
             extraguem un text de qualsevol periòdic conegut i el passem
             per ací podem veure el resultat:</p>
             <figure>
-            <img src="img/27.png"
+            <img src="img/27.png" style="width:70.0%"
             alt="Exemple de comprovació de text" />
             <figcaption aria-hidden="true">Exemple de comprovació de
             text</figcaption>
@@ -672,10 +807,11 @@ busque.</a></li>
             contrapartida de GPTZero. <a
             href="https://quillbot.com/">Quillbot</a> és una altra eina
             que ens permet modificar el text perquè parega menys d’una
-            IA o simplement un text que vulguem expressar d’una altra
-            manera.</p>
+            IA (en reescriure textos) o simplement un text que vulguem
+            expressar d’una altra manera.</p>
             <figure>
-            <img src="img/28.png" alt="Modificant text" />
+            <img src="img/28.png" style="width:70.0%"
+            alt="Modificant text" />
             <figcaption aria-hidden="true">Modificant text</figcaption>
             </figure>
             <p>Tenim altres ferramentes per a humanitzar text que faran
@@ -687,8 +823,6 @@ busque.</a></li>
             <ul>
             <li><strong>Undetectable AI</strong> <a
             href="https://undetectable.ai/">https://undetectable.ai/</a></li>
-            <li><strong>gpt4detector</strong> <a
-            href="https://gpt4detector.ai">https://gpt4detector.ai</a></li>
             <li><strong>Trinka</strong> <a
             href="https://www.trinka.ai/es/">https://www.trinka.ai/es/</a></li>
             </ul>
@@ -701,6 +835,9 @@ busque.</a></li>
             creacions al mes, es tracta d’una ferramenta molt potent.
             Ens permet crear presentacions bastant naturals amb un
             avatar o una imatge nostra dient el que escrivim.</p>
+            <p>Si anem a “Create a video”, escollim un avatar, li donem
+            el text que volem que diga i podem configurar la veu, el to,
+            la velocitat, etc. Podem veure un exemple:</p>
             <figure>
             <img src="img/29.png" style="width:10cm"
             alt="Presentació" />
@@ -741,6 +878,11 @@ busque.</a></li>
             <p>La veritat és que el resultat és bastant sorprenent.</p>
             <h2 data-number="6.3" id="opusclip"><span
             class="header-section-number">6.3</span> Opusclip</h2>
+            <p>Opus Clip en <a
+            href="https://www.opus.pro/">https://www.opus.pro/</a> és
+            una eina de creació de clips curts impulsada per IA que
+            transforma vídeos llargs en clips curts i virals optimitzats
+            per a diverses plataformes de xarxes socials.</p>
             <p>És una ferramenta que ens mostra les virtuts i les faltes
             de la IA, ens permet pujar un vídeo i fer-nos una explicació
             resumida del vídeo. En aquest cas pugem un vídeo d’un acudit
@@ -780,35 +922,49 @@ busque.</a></li>
             href="https://elevenlabs.io/">d’ací</a>.</p>
             <p>El mateix podem trobar a la plataforma <a
             href="https://www.happyscribe.com/">https://www.happyscribe.com/</a>.</p>
-            <h2 data-number="6.5"
-            id="bing-copilot-complement-suno"><span
-            class="header-section-number">6.5</span> Bing Copilot
-            (complement Suno)</h2>
-            <p>Amb el navegador Bing podem accedir a Copilot desde el
-            botó situat a la part superior dreta, però Copilot també té
-            la seua <a href="https://copilot.microsoft.com/">pròpia
-            plataforma</a>. Un dels avantatges que resulten més
-            interessants respecte a les plataformes GPT més conegudes és
-            l’ús de complements de manera gratuïta:</p>
+            <h2 data-number="6.5" id="suno"><span
+            class="header-section-number">6.5</span> Suno</h2>
+            <p>Suno és una aplicació que ens permet crear cançons a
+            partir de text. Podem accedir a la plataforma des <a
+            href="https://app.suno.ai/">d’ací</a>.</p>
             <figure>
-            <img src="img/51.png" style="width:13cm"
-            alt="Complements" />
-            <figcaption aria-hidden="true">Complements</figcaption>
+            <img src="img/suno.png" style="width:13cm"
+            alt="Plataforma Suno" />
+            <figcaption aria-hidden="true">Plataforma Suno</figcaption>
             </figure>
-            <p>Un dels complements interesants que ens oferix Copilot és
-            <strong>Suno</strong>, que ens permet crear una cançó:</p>
             <figure>
             <img src="img/52.png" style="width:13cm"
             alt="Cançó creada" />
             <figcaption aria-hidden="true">Cançó creada</figcaption>
             </figure>
             <p>I podem compartir el resultat que pots escoltar <a
-            href="https://sl.bing.net/bsh2UdKCYKa">ací</a>.</p>
-            <p>També podem anar directament a la pàgina de <a
-            href="https://app.suno.ai/">Suno</a>.</p>
-            <h2 data-number="6.6"
+            href="https://www.bing.com/th?&amp;id=OIG2.v_b2ad70d7f1ba4d45bbc4e1763d0207a7&amp;w=0&amp;h=0&amp;c=7&amp;pid=1.7&amp;rs=1">ací</a>.</p>
+            <p>ALtra cançó creada amb Suno la pots escoltar <a
+            href="https://suno.com/song/f7a79b40-29bf-4259-aad0-36d41d614e32">ací</a></p>
+            <p>La plataforma Suno és una eina molt potent per a crear
+            cançons a partir de text, i les cançons són bastant
+            resultones. Vos recomanem que escolteu les cançons craedes
+            per a veure el resultat.</p>
+            <h2 data-number="6.6" id="microsoft-designer"><span
+            class="header-section-number">6.6</span> Microsoft
+            Designer</h2>
+            <p>Microsoft Designer en <a
+            href="https://designer.microsoft.com/">https://designer.microsoft.com/</a>
+            és una eina de disseny gràfic impulsada per IA que ajuda a
+            crear dissenys professionals.</p>
+            <figure>
+            <img src="img/53.png" style="width:10cm"
+            alt="Microsoft Designer" />
+            <figcaption aria-hidden="true">Microsoft
+            Designer</figcaption>
+            </figure>
+            <p>Si només volem dedicar-nos a estar dissenyant imatges
+            podem utilitzar aquesta ferramenta, però Bing Copilot també
+            ens permet crear imatges a partir de text sense necessitat
+            d’accedir ací.</p>
+            <h2 data-number="6.7"
             id="altres-aplicacions-multimèdia-dinterès"><span
-            class="header-section-number">6.6</span> Altres aplicacions
+            class="header-section-number">6.7</span> Altres aplicacions
             multimèdia d’interès</h2>
             <p>Existeixen altres aplicacions que paga la pena
             nombrar:</p>
@@ -827,32 +983,23 @@ busque.</a></li>
             href="https://www.decktopus.com/">https://www.decktopus.com/</a>
             és una plataforma de presentació impulsada per IA que
             ofereix una àmplia gamma de temes, fonts i colors.</li>
-            <li>Opus Clip en <a
-            href="https://www.opus.pro/">https://www.opus.pro/</a> és
-            una eina de creació de clips curts impulsada per IA que
-            transforma vídeos llargs en clips curts i virals optimitzats
-            per a diverses plataformes de xarxes socials.</li>
             <li>Tome en <a
-            href="https://beta.tome.app/">https://beta.tome.app/</a>;
-            SteveAI en <a
-            href="https://www.steve.ai/">https://www.steve.ai/</a>; Gama
-            en <a href="https://gamma.app/">https://gamma.app/</a>; Mixo
-            en <a href="https://www.mixo.io/">https://www.mixo.io/</a>;
-            SkyBox en <a
+            href="https://tome.app/">https://tome.app/</a>; SteveAI en
+            <a href="https://www.steve.ai/">https://www.steve.ai/</a>;
+            Gama en <a href="https://gamma.app/">https://gamma.app/</a>;
+            Mixo en <a
+            href="https://www.mixo.io/">https://www.mixo.io/</a>; SkyBox
+            en <a
             href="https://skybox.blockadelabs.com/">https://skybox.blockadelabs.com/</a>
             són eines que ajuden a crear contingut de blog, correus
             electrònics i xarxes socials.</li>
-            <li>Microsoft Designer en <a
-            href="https://designer.microsoft.com/">https://designer.microsoft.com/</a>
-            és una eina de disseny gràfic impulsada per IA que ajuda a
-            crear dissenys professionals.</li>
             <li><a href="https://videos.simpleshow.com">Simpleshow</a>
             és una eina que ens permet crear videotutorials
             plantejant-li un prompt. Aquesta l’hem utilitzada al mòdul
             I.</li>
             </ul>
-            <h2 data-number="6.7" id="quina-triar"><span
-            class="header-section-number">6.7</span> Quina triar?</h2>
+            <h2 data-number="6.8" id="quina-triar"><span
+            class="header-section-number">6.8</span> Quina triar?</h2>
             <p>Hui en dia podem trobar l’ús de la IA pràcticament en
             qualsevol eina o dispositiu. Estem davant d’una tecnologia
             que ha tingut el seu boom en els últims dos anys i cada
@@ -893,6 +1040,9 @@ busque.</a></li>
             només ens deixa compartir dos a no ser que paguem la
             quota.</p>
             </div>
+            <p>El suport per al valencià no és massa bo, s’ha intentat
+            fer una unitat amb un prompt en valencià i este ha sigut el
+            resultat:</p>
             <h2 data-number="7.2" id="nolej"><span
             class="header-section-number">7.2</span> Nolej</h2>
             <p><a href="https://nolej.io/nolej-ai-5">Nolej</a> és una
@@ -900,13 +1050,14 @@ busque.</a></li>
             automàticament material de curs interactiu i gràfic de
             coneixement global.</p>
             <figure>
-            <img src="img/39.png"
+            <img src="img/39.png" style="width:70.0%"
             alt="Generem curs i pujem la presentació" />
             <figcaption aria-hidden="true">Generem curs i pujem la
             presentació</figcaption>
             </figure>
             <figure>
-            <img src="img/40.png" alt="Generant curs" />
+            <img src="img/40.png" style="width:70.0%"
+            alt="Generant curs" />
             <figcaption aria-hidden="true">Generant curs</figcaption>
             </figure>
             <p>Una de les característiques més interessants és que podem
@@ -931,16 +1082,19 @@ busque.</a></li>
             detallistes al respecte.</p>
             </div>
             <figure>
-            <img src="img/41.png" alt="Posem un títol al curs" />
+            <img src="img/41.png" style="width:70.0%"
+            alt="Posem un títol al curs" />
             <figcaption aria-hidden="true">Posem un títol al
             curs</figcaption>
             </figure>
             <figure>
-            <img src="img/42.png" alt="Generant curs" />
+            <img src="img/42.png" style="width:70.0%"
+            alt="Generant curs" />
             <figcaption aria-hidden="true">Generant curs</figcaption>
             </figure>
             <figure>
-            <img src="img/43.png" alt="Curs generat" />
+            <img src="img/43.png" style="width:70.0%"
+            alt="Curs generat" />
             <figcaption aria-hidden="true">Curs generat</figcaption>
             </figure>
             <p>És interessant veure com ja ens apareixen els enllaços
@@ -952,7 +1106,7 @@ busque.</a></li>
             aplicació pensada per a l’autoaprenentatge. Li exposem un
             tema i ens donarà diferents mòduls per a poder aprendre.</p>
             <figure>
-            <img src="img/44.png" alt="Tutor AI" />
+            <img src="img/44.png" style="width:70.0%" alt="Tutor AI" />
             <figcaption aria-hidden="true">Tutor AI</figcaption>
             </figure>
             <h2 data-number="7.5" id="magicschoolai"><span
@@ -963,11 +1117,11 @@ busque.</a></li>
             un qüestionari a partir d’una temàtica. El qüestionaris
             d’aquest curs estan creats amb aquesta ferramenta.</p>
             <figure>
-            <img src="img/46.png" alt="Tutor AI" />
+            <img src="img/46.png" style="width:70.0%" alt="Tutor AI" />
             <figcaption aria-hidden="true">Tutor AI</figcaption>
             </figure>
             <figure>
-            <img src="img/45.png" alt="Tutor AI" />
+            <img src="img/45.png" style="width:70.0%" alt="Tutor AI" />
             <figcaption aria-hidden="true">Tutor AI</figcaption>
             </figure>
             <div class="note">
@@ -976,6 +1130,14 @@ busque.</a></li>
             totes les ferramentes, les que pots utilitzat són de gran
             utilitat.</p>
             </div>
+            <p>Entre les ferramentes més destacades podem trobar:</p>
+            <ul>
+            <li>Generador Cuestionaris (donant els apunts)</li>
+            <li>Generador de Presentacions</li>
+            <li>Generador d’Imatges amb text</li>
+            <li>Qüestionaris per a video de Youtube</li>
+            <li>etc…</li>
+            </ul>
             <h2 data-number="7.6" id="altres-ferramentes"><span
             class="header-section-number">7.6</span> Altres
             ferramentes</h2>
@@ -1015,17 +1177,20 @@ busque.</a></li>
             donar una idea i, el millor, és que t’enllaça la resposta a
             la part del document on es parla d’eixe tema:</p>
             <figure>
-            <img src="img/47.png" alt="Pujant document PDF" />
+            <img src="img/47.png" style="width:70.0%"
+            alt="Pujant document PDF" />
             <figcaption aria-hidden="true">Pujant document
             PDF</figcaption>
             </figure>
             <figure>
-            <img src="img/47.png" alt="Després de pujar-lo PDF" />
+            <img src="img/47.png" style="width:70.0%"
+            alt="Després de pujar-lo PDF" />
             <figcaption aria-hidden="true">Després de pujar-lo
             PDF</figcaption>
             </figure>
             <figure>
-            <img src="img/48.png" alt="Conversant amb ell" />
+            <img src="img/48.png" style="width:70.0%"
+            alt="Conversant amb ell" />
             <figcaption aria-hidden="true">Conversant amb
             ell</figcaption>
             </figure>
@@ -1041,7 +1206,7 @@ busque.</a></li>
             fiable (es tracta d’una fotografia de la superficie de la
             lluna):</p>
             <figure>
-            <img src="img/50.png" alt="Geospy" />
+            <img src="img/50.png" style="width:70.0%" alt="Geospy" />
             <figcaption aria-hidden="true">Geospy</figcaption>
             </figure>
             <h2 data-number="8.3" id="gpt4all"><span
@@ -1096,11 +1261,12 @@ busque.</a></li>
             role="doc-endnotes">
             <hr />
             <ol>
-            <li id="fn1"><p>quan parlem de gustos parlem de la manera
-            que està entrenada la IA.<a href="#fnref1"
+            <li id="fn1"><p><a
+            href="https://www.hibridosyelectricos.com/coches/es-por-dentro-cortex-superordenador-tesla-inteligencia-artificial-y-todavia-no-esta-terminado_75720_102.html">Superordenador
+            Tesla Inteligencia Artificial</a><a href="#fnref1"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
             <li id="fn2"><p>quan parlem de gustos parlem de la manera
-            que està entrenada la IA.<a href="#fnref2"
+            que està entrenat el model.<a href="#fnref2"
             class="footnote-back" role="doc-backlink">↩︎</a></p></li>
             <li id="fn3"><p>No és recomanable usar el compte corporatiu.
             Com us hem comentat, creeu-vos un compte que no aneu a

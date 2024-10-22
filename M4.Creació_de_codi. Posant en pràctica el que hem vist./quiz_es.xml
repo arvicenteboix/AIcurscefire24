@@ -1,0 +1,202 @@
+<quiz>
+    <question type="multichoice">
+        <name>
+            <text>¿Qué es necesario para crear un programa con Python?</text>
+        </name>
+        <questiontext>
+            <text><![CDATA[<p>¿Qué es necesario para crear un programa con Python?</p>]]></text>
+        </questiontext>
+        <answer fraction="100">
+            <text><![CDATA[Pegar el código en un archivo de texto (.txt)]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[Guardarlo en un archivo de documento (.doc)]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[Guardarlo en un archivo de texto (.odt)]]></text>
+        </answer>
+        <answer fraction="100">
+            <text><![CDATA[Ninguna de las anteriores]]></text>
+        </answer>
+    </question>
+    <question type="multichoice">
+        <name>
+            <text>¿Qué librería de Python se recomienda utilizar para la detección de emociones a través de la cámara web?</text>
+        </name>
+        <questiontext>
+            <text><![CDATA[<p>¿Qué librería de Python se recomienda utilizar para la detección de emociones a través de la cámara web?</p>]]></text>
+        </questiontext>
+        <answer fraction="100">
+            <text><![CDATA[a. OpenCV]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[b. TensorFlow]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[c. Pygame]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[d. Numpy]]></text>
+        </answer>
+    </question>
+    <question type="multichoice">
+        <name>
+            <text>¿Qué modelo de red neuronal se recomienda utilizar para la detección de emociones a través de las expresiones faciales?</text>
+        </name>
+        <questiontext>
+            <text><![CDATA[<p>¿Qué modelo de red neuronal se recomienda utilizar para la detección de emociones a través de las expresiones faciales?</p>]]></text>
+        </questiontext>
+        <answer fraction="100">
+            <text><![CDATA[a. FER]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[b. CNN]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[c. LSTM]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[d. SVM]]></text>
+        </answer>
+    </question>
+    <question type="multichoice">
+        <name>
+            <text>¿Cómo se pueden detectar las caras en tiempo real utilizando OpenCV?</text>
+        </name>
+        <questiontext>
+            <text><![CDATA[<p>¿Cómo se pueden detectar las caras en tiempo real utilizando OpenCV?</p>]]></text>
+        </questiontext>
+        <answer fraction="0">
+            <text><![CDATA[a. Utilizando el modelo FER]]></text>
+        </answer>
+        <answer fraction="100">
+            <text><![CDATA[b. Utilizando el reconocimiento facial en tiempo real de OpenCV]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[c. Utilizando el modelo CNN]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[d. Utilizando el modelo LSTM]]></text>
+        </answer>
+    </question>
+    <question type="multichoice">
+        <name>
+            <text>¿Qué función de OpenCV se utiliza para mostrar el resultado de la detección de emociones en la pantalla?</text>
+        </name>
+        <questiontext>
+            <text><![CDATA[<p>¿Qué función de OpenCV se utiliza para mostrar el resultado de la detección de emociones en la pantalla?</p>]]></text>
+        </questiontext>
+        <answer fraction="0">
+            <text><![CDATA[a. cv2.draw_bounding_boxes()]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[b. cv2.draw_emotions()]]></text>
+        </answer>
+        <answer fraction="100">
+            <text><![CDATA[c. cv2.imshow()]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[d. cv2.show_detected_faces()]]></text>
+        </answer>
+    </question>
+    <question type="multichoice">
+        <name>
+            <text>¿Cuál es el código correcto para abrir la cámara web en OpenCV?</text>
+        </name>
+        <questiontext>
+            <text><![CDATA[<p>¿Cuál es el código correcto para abrir la cámara web en OpenCV?</p>]]></text>
+        </questiontext>
+        <answer fraction="100">
+            <text><![CDATA[a. cap = cv2.VideoCapture(0)]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[b. cap = cv2.VideoCapture(1)]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[c. cap = cv2.VideoCapture("webcam")]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[d. cap = cv2.VideoCapture("camera")]]></text>
+        </answer>
+    </question>
+    <question type="multichoice">
+        <name>
+            <text>¿Qué tecla se utiliza para salir del programa en OpenCV?</text>
+        </name>
+        <questiontext>
+            <text><![CDATA[<p>¿Qué tecla se utiliza para salir del programa en OpenCV?</p>]]></text>
+        </questiontext>
+        <answer fraction="100">
+            <text><![CDATA[a. q]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[b. esc]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[c. exit]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[d. end]]></text>
+        </answer>
+    </question>
+    <question type="multichoice">
+        <name>
+            <text>¿Qué se debe hacer para dibujar un rectángulo alrededor de una cara detectada en OpenCV?</text>
+        </name>
+        <questiontext>
+            <text><![CDATA[<p>¿Qué se debe hacer para dibujar un rectángulo alrededor de una cara detectada en OpenCV?</p>]]></text>
+        </questiontext>
+        <answer fraction="0">
+            <text><![CDATA[a. Utilizar cv2.draw_face_rectangle()]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[b. Utilizar cv2.drawRect()]]></text>
+        </answer>
+        <answer fraction="100">
+            <text><![CDATA[c. Utilizar cv2.rectangle()]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[d. Utilizar cv2.draw_contour()]]></text>
+        </answer>
+    </question>
+    <question type="multichoice">
+        <name>
+            <text>¿Cómo se puede escribir texto en la pantalla en OpenCV?</text>
+        </name>
+        <questiontext>
+            <text><![CDATA[<p>¿Cómo se puede escribir texto en la pantalla en OpenCV?</p>]]></text>
+        </questiontext>
+        <answer fraction="100">
+            <text><![CDATA[a. Utilizando cv2.putText()]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[b. Utilizando cv2.drawLine()]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[c. Utilizando cv2.writeText()]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[d. Utilizando cv2.drawText()]]></text>
+        </answer>
+    </question>
+    <question type="multichoice">
+        <name>
+            <text>¿Cuál es la función correcta para liberar la cámara y cerrar la ventana en OpenCV?</text>
+        </name>
+        <questiontext>
+            <text><![CDATA[<p>¿Cuál es la función correcta para liberar la cámara y cerrar la ventana en OpenCV?</p>]]></text>
+        </questiontext>
+        <answer fraction="0">
+            <text><![CDATA[a. cap.release() y cv2.destroyWindow()]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[b. cap.close() y cv2.exit()]]></text>
+        </answer>
+        <answer fraction="100">
+            <text><![CDATA[c. cap.release() y cv2.destroyAllWindows()]]></text>
+        </answer>
+        <answer fraction="0">
+            <text><![CDATA[d. cap.close() y cv2.closeWindow()]]></text>
+        </answer>
+    </question>
+</quiz>

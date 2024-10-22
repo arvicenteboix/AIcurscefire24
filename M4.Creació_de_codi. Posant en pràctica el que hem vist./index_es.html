@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ca" xml:lang="ca" >
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="generator" content="pandoc" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />        <title>4. Creació de codi. Programes i webs</title>
+    <style>
+        code{white-space: pre-wrap;}
+        span.smallcaps{font-variant: small-caps;}
+        div.columns{display: flex; gap: min(4vw, 1.5em);}
+        div.column{flex: auto; overflow-x: auto;}
+        div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+        /* The extra [class] is a hack that increases specificity enough to
+           override a similar rule in reveal.js */
+        ul.task-list[class]{list-style: none;}
+        ul.task-list li input[type="checkbox"] {
+          font-size: inherit;
+          width: 0.8em;
+          margin: 0 0.8em 0.2em -1.6em;
+          vertical-align: middle;
+        }
+        .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+        /* CSS for syntax highlighting */
+        pre > code.sourceCode { white-space: pre; position: relative; }
+        pre > code.sourceCode > span { line-height: 1.25; }
+        pre > code.sourceCode > span:empty { height: 1.2em; }
+        .sourceCode { overflow: visible; }
+        code.sourceCode > span { color: inherit; text-decoration: inherit; }
+        div.sourceCode { margin: 1em 0; }
+        pre.sourceCode { margin: 0; }
+        @media screen {
+        div.sourceCode { overflow: auto; }
+        }
+        @media print {
+        pre > code.sourceCode { white-space: pre-wrap; }
+        pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+        }
+        pre.numberSource code
+          { counter-reset: source-line 0; }
+        pre.numberSource code > span
+          { position: relative; left: -4em; counter-increment: source-line; }
+        pre.numberSource code > span > a:first-child::before
+          { content: counter(source-line);
+            position: relative; left: -1em; text-align: right; vertical-align: baseline;
+            border: none; display: inline-block;
+            -webkit-touch-callout: none; -webkit-user-select: none;
+            -khtml-user-select: none; -moz-user-select: none;
+            -ms-user-select: none; user-select: none;
+            padding: 0 4px; width: 4em;
+            color: #aaaaaa;
+          }
+        pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+        div.sourceCode
+          {   }
+        @media screen {
+        pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+        }
+        code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+        code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+        code span.at { color: #7d9029; } /* Attribute */
+        code span.bn { color: #40a070; } /* BaseN */
+        code span.bu { color: #008000; } /* BuiltIn */
+        code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+        code span.ch { color: #4070a0; } /* Char */
+        code span.cn { color: #880000; } /* Constant */
+        code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+        code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+        code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+        code span.dt { color: #902000; } /* DataType */
+        code span.dv { color: #40a070; } /* DecVal */
+        code span.er { color: #ff0000; font-weight: bold; } /* Error */
+        code span.ex { } /* Extension */
+        code span.fl { color: #40a070; } /* Float */
+        code span.fu { color: #06287e; } /* Function */
+        code span.im { color: #008000; font-weight: bold; } /* Import */
+        code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+        code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+        code span.op { color: #666666; } /* Operator */
+        code span.ot { color: #007020; } /* Other */
+        code span.pp { color: #bc7a00; } /* Preprocessor */
+        code span.sc { color: #4070a0; } /* SpecialChar */
+        code span.ss { color: #bb6688; } /* SpecialString */
+        code span.st { color: #4070a0; } /* String */
+        code span.va { color: #19177c; } /* Variable */
+        code span.vs { color: #4070a0; } /* VerbatimString */
+        code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    </style>
+        <link rel="stylesheet" href="aqua.css" />  
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+    <![endif]-->
+      
+</head>
+
+<body>
+    <div id="content">
+                 <header id="title-block-header">
+            <h1 class="title">4. Creació de codi. Programes i webs</h1>
+            <!---->
+            <!--  -->
+                    </header>
+                 <nav id="TOC" role="doc-toc">
+            <div class="navContainer">
+                                <h2 id="toc-title">Continguts</h2>
+                 <ul>
+<li><a href="#introducció" id="toc-introducció"><span
+class="toc-section-number">1</span> Introducció</a></li>
+<li><a href="#objectiu" id="toc-objectiu"><span
+class="toc-section-number">2</span> Objectiu</a></li>
+<li><a href="#realització" id="toc-realització"><span
+class="toc-section-number">3</span> Realització</a></li>
+<li><a href="#anem-a-crear-un-joc-amb-python-també"
+id="toc-anem-a-crear-un-joc-amb-python-també"><span
+class="toc-section-number">4</span> Anem a crear un joc amb python
+també</a>
+<ul>
+<li><a href="#explicació-del-prompt"
+id="toc-explicació-del-prompt"><span
+class="toc-section-number">4.1</span> Explicació del prompt</a></li>
+</ul></li>
+<li><a href="#creació-de-pàgines-web"
+id="toc-creació-de-pàgines-web"><span
+class="toc-section-number">5</span> Creació de pàgines web</a>
+<ul>
+<li><a href="#pineapple" id="toc-pineapple"><span
+class="toc-section-number">5.1</span> Pineapple</a></li>
+<li><a href="#hocoos" id="toc-hocoos"><span
+class="toc-section-number">5.2</span> Hocoos</a></li>
+<li><a href="#mixo" id="toc-mixo"><span
+class="toc-section-number">5.3</span> Mixo</a></li>
+<li><a href="#chatgpt-o-copilot" id="toc-chatgpt-o-copilot"><span
+class="toc-section-number">5.4</span> ChatGPT o Copilot</a></li>
+<li><a href="#conclusions" id="toc-conclusions"><span
+class="toc-section-number">5.5</span> Conclusions</a></li>
+</ul></li>
+<li><a href="#més-possibilitats" id="toc-més-possibilitats"><span
+class="toc-section-number">6</span> Més possibilitats</a></li>
+</ul>
+            </div>
+        </nav>
+                <main>
+            <!-- \awesomebox[violet]{2pt}{\faRocket}{violet}{Lorem ipsum…} -->
+            <!-- \awesomebox[violet]{2pt}{\faRobot}{violet}{Lorem ipsum…} -->
+            <!-- IMATGE ![Pregunta inicial](./img/proxi/5b.png) -->
+            <!-- \textbf{greatest} -->
+            <!-- \awesomebox[violet]{2pt}{\faRobot}{violet}{\textbf{greatest}} -->
+            <p><img src="img/cc.png" height="50" /></p>
+            <p>Aquest document està subjecte a una llicència creative
+            commons que permet la seua difusió i ús comercial
+            reconeixent sempre l’autoria del seu creador. Aquest
+            document es troba per a ser modificat al següent repositori
+            de github: <!-- CANVIAR L'ENLLAÇ --> <a
+            href="https://github.com/arvicenteboix/AIcurscefire">https://github.com/arvicenteboix/AIcurscefire</a>
+            </p>
+            <h1 data-number="1" id="introducció"><span
+            class="header-section-number">1</span> Introducció</h1>
+            <p>En aquesta unitat el primer que anem a demanar-vos és que
+            no vos poseu nerviosos ni vos desespereu, però quan parlem
+            d’intel·ligència artificial hem de parlar de una de les
+            seues principals funcions i que veritablement està
+            revolucionant molts aspectes de la vida professional de
+            molts treballadors.</p>
+            <p>Estem parlant de la creació de codi. En aquest cas anem a
+            realitzar un aplicació amb un llenguatge de programació molt
+            conegut com és Python, i no, no cal que sapigueu programar,
+            no cal que entengueu el que diu, però seguint les
+            instruccions que ens anirà donant la plataforma farem una
+            aplicació.</p>
+            <h1 data-number="2" id="objectiu"><span
+            class="header-section-number">2</span> Objectiu</h1>
+            <p>El nostre objectiu va a ser crear una aplicació que
+            active la càmera web del nostre ordinador i active si estem
+            somriguen o estem tristos.</p>
+            <p>Per a realitzat aquesta aplicació hem de conèixer en quin
+            sistema operatiu anem a crear-lo ja que no només ens farà
+            falta el codi sino com executar-lo. Per a aquest fi
+            utilitzarem únicament Bing Copilot ja que és la que, en
+            principi funciona millor per a programar.</p>
+            <div class="important">
+            <p>Cal dir que no obtindrem un resultat que s’ajuste al 100%
+            de allò que nosaltres esperem. Hem de realitzar sempre una
+            comprovació del codi i modificar els aspectes que volem
+            adaptar. Si no sabem programar hem de conformar-nos amb allò
+            que ens done o, és un bon punt per a aprendre a programar ja
+            que la millor manera d’aprendre és a base d’exemples que ens
+            anirà donant l’IA.</p>
+            </div>
+            <div class="tip">
+            <p>Existeix una opció de pagament (gratuïta per a docents)
+            anomenada GitHub Copilot que ens permet modificar codi
+            específic sobre l’editor de text Visual Studio Code. En
+            moltes de les formacions que s’estan oferint s’explica
+            aquesta opció. Però està pensada més per a programadors.</p>
+            </div>
+            <h1 data-number="3" id="realització"><span
+            class="header-section-number">3</span> Realització</h1>
+            <p>Per a crear un programa amb python hem de pegar el codi a
+            una arxiu de text (.txt, no val ni .doc ni .odt) i
+            guardar-lo amb extensió .py.</p>
+            <p>Plantejarem un prompt com aquest:</p>
+            <p>Copiem i peguen el que ens diu exactament ja que és
+            tracta d’una resposta bastant llarga:</p>
+            <p>Hola! Com que vols fer un programa que detecti emocions a
+            través de la càmera web del teu ordinador, et recomano que
+            utilitzis la llibreria <strong>OpenCV</strong> per a Python.
+            Aquesta llibreria és una eina de codi obert que es pot
+            utilitzar per a la visió per computador i el processament
+            d’imatges. Per a la detecció d’emocions, pots utilitzar el
+            reconeixement facial en temps real amb
+            <strong>OpenCV</strong>. Això implica la detecció de cares i
+            la identificació de les emocions a través de les expressions
+            facials.</p>
+            <p>Per a la detecció d’emocions, et recomano que utilitzis
+            el model <strong>FER+</strong> (Face Expression Recognition
+            Plus) que és un model de xarxa neuronal que es pot entrenar
+            per a la detecció d’emocions a través de les expressions
+            facials. Aquest model es pot utilitzar amb
+            <strong>OpenCV</strong> per a la detecció d’emocions en
+            temps real.</p>
+            <p>A continuació, et proporciono un exemple de codi que
+            utilitza <strong>OpenCV</strong> i <strong>FER+</strong> per
+            a la detecció d’emocions a través de la càmera web del teu
+            ordinador:</p>
+            <div class="sourceCode" id="cb1"><pre
+            class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> cv2</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> fer <span class="im">import</span> FER</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>cap <span class="op">=</span> cv2.VideoCapture(<span class="dv">0</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>detector <span class="op">=</span> FER(mtcnn<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> <span class="va">True</span>:</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    ret, frame <span class="op">=</span> cap.read()</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> ret:</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">break</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Detect faces in the frame</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    faces <span class="op">=</span> detector.detect_emotions(frame)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Draw bounding boxes and labels of detected faces</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> face <span class="kw">in</span> faces:</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        x, y, w, h <span class="op">=</span> face[<span class="st">&quot;box&quot;</span>]</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>        emotions <span class="op">=</span> face[<span class="st">&quot;emotions&quot;</span>]</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>        emotion <span class="op">=</span> <span class="bu">max</span>(emotions, key<span class="op">=</span>emotions.get)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>        cv2.rectangle(frame, (x, y), (x <span class="op">+</span> w, y <span class="op">+</span> h), (<span class="dv">0</span>, <span class="dv">255</span>, <span class="dv">0</span>), <span class="dv">2</span>)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>        cv2.putText(frame, emotion, (x, y <span class="op">-</span> <span class="dv">10</span>), cv2.FONT_HERSHEY_SIMPLEX, <span class="fl">0.9</span>, (<span class="dv">0</span>, <span class="dv">255</span>, <span class="dv">0</span>), <span class="dv">2</span>)</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Display the resulting frame</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    cv2.imshow(<span class="st">&quot;Emotion Detection&quot;</span>, frame)</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Exit if the user presses &#39;q&#39;</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> cv2.waitKey(<span class="dv">1</span>) <span class="op">&amp;</span> <span class="bn">0xFF</span> <span class="op">==</span> <span class="bu">ord</span>(<span class="st">&quot;q&quot;</span>):</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>        <span class="cf">break</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Release the capture and destroy the window</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>cap.release()</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>cv2.destroyAllWindows()</span></code></pre></div>
+            <p>Aquest codi obre la càmera web del teu ordinador i
+            detecta les cares en temps real. A continuació, utilitza el
+            model <strong>FER+</strong> per a la detecció d’emocions a
+            través de les expressions facials. El codi dibuixa quadres
+            delimitadors i etiquetes de les cares detectades i mostra el
+            text “alegre” o “trist” a la pantalla, depenent de l’emoció
+            detectada.</p>
+            <p>Espero que això t’ajudi a començar a desenvolupar el teu
+            programa! Si tens alguna pregunta més, no dubtis a
+            preguntar-me.</p>
+            <p>Origen: Conversación con Bing, 29/1/2024</p>
+            <ol class="example" type="1">
+            <li>Facial Emotion Recognition In Real-Time - LearnOpenCV.
+            https://learnopencv.com/facial-emotion-recognition/.</li>
+            <li>facial-emotion-recognition · GitHub Topics · GitHub.
+            https://github.com/topics/facial-emotion-recognition?l=python.</li>
+            <li>Emotion Detection using Python - Geeky Humans.
+            https://geekyhumans.com/emotion-detection-using-python-and-deepface/.</li>
+            <li>ajitharunai/Facial-Emotion-Recognition-with-OpenCV-and-Deepface.
+            https://github.com/ajitharunai/Facial-Emotion-Recognition-with-OpenCV-and-Deepface/.</li>
+            <li>Real-time Facial Emotion Recognition using OpenCV and
+            Deepface.
+            https://github.com/SaeedTaghavi/Facial-Emotion-Recognition-with-OpenCV-and-Deepface/blob/main/README.md.</li>
+            </ol>
+            <p>Nosaltres només volem el codi, així que el copiem i
+            peguem en un arxiu de text anomenat camera.py i executem a
+            la terminal:</p>
+            <pre><code>python camera.py</code></pre>
+            <p>Però ens dona un error i no funciona. Així que recorrem a
+            Bing Copilot per veure que ens diu:</p>
+            <figure>
+            <img src="img/0.png" height="50"
+            alt="Resposta de Copilot" />
+            <figcaption aria-hidden="true">Resposta de
+            Copilot</figcaption>
+            </figure>
+            <p>Així, executem el que ens diu la IA i tornem a
+            executar:</p>
+            <div class="sourceCode" id="cb3"><pre
+            class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>python camera.py</span></code></pre></div>
+            <p>I aquest és el resultat:</p>
+            <figure>
+            <img src="img/1.png" height="50" alt="Aplicació" />
+            <figcaption aria-hidden="true">Aplicació</figcaption>
+            </figure>
+            <figure>
+            <img src="img/2.png" height="50" alt="Aplicació" />
+            <figcaption aria-hidden="true">Aplicació</figcaption>
+            </figure>
+            <figure>
+            <img src="img/3.png" height="50" alt="Aplicació" />
+            <figcaption aria-hidden="true">Aplicació</figcaption>
+            </figure>
+            <figure>
+            <img src="img/4.png" height="50" alt="Aplicació" />
+            <figcaption aria-hidden="true">Aplicació</figcaption>
+            </figure>
+            <div class="info">
+            <p>En el nostre cas hem utilitzat un Sistema Operatiu basat
+            en linux com LliureX, però cada sistema operatiu tindrà la
+            seua complexitat. LliureX destaca perquè simplifica molt les
+            tasques de configuració.</p>
+            </div>
+            <h1 data-number="4"
+            id="anem-a-crear-un-joc-amb-python-també"><span
+            class="header-section-number">4</span> Anem a crear un joc
+            amb python també</h1>
+            <p>Crear un joc no és una tasca senzilla i anem a utilitzar
+            una biblioteca de python anomenada <em>Pygame</em> que és
+            molt senzilla d’utilitzar. Personalment no l’he utilitzada
+            mai. Però podrem veure que no només hi ha que realitzar un
+            comandament per a realitzar el joc sinó que hi haurà que
+            anar donant-li instruccions per a que vaja canviant les
+            coses que no entén del que nosaltres volem.</p>
+            <div class="caution">
+            <p>La creació d’un videojoc comporta moltes vegades anys, i
+            jocs senzills potser no anys però mesos dedicats en
+            exclusiva, així que no esperem traure una meravella de joc
+            amb un dia, així i tot els resultats són bastant
+            sorprenents.</p>
+            </div>
+            <p>Pot semblar una tasca senzilla tal i com vaig a
+            plantejar-vos-ho, però el prompt que he creat per a que la
+            IA em cree el videojoc he tingut que modificant-lo un poc (i
+            després he modificat un poc el codi) per a que em funcione
+            correctament. A més com hem comentat sempre és important
+            conèixer un poc (encara que siga molt poc) de què estem
+            tractant amb la IA per a poder perfilar millor el prompt<a
+            href="#fn1" class="footnote-ref" id="fnref1"
+            role="doc-noteref"><sup>1</sup></a>.</p>
+            <p><a href="#fn2" class="footnote-ref" id="fnref2"
+            role="doc-noteref"><sup>2</sup></a> Si preguntem en classe
+            segur que molts saben més que nosaltres.</p>
+            <p>La plataforma que hem utilitzat és Bing Copilot amb el
+            seu mode més precís i el prompt plantejat ha sigut el
+            següent:</p>
+            <p>awesomebox[violet]{2pt}{Crea un joc amb la biblioteca
+            Pygame per a python que tinga una pantalla estàtica amb una
+            plataforma del 20% del total de la finestra que puga
+            desplaçar a l’esquerra o la dreta amb el teclat de manera
+            suau i ràpida. La velocitat de la bola serà constant de 1 i
+            que s’actualitze la funció que mou la bola cada 0.3 segons i
+            quan la bola xoque amb els extrems de la pantalla rebotarà
+            amb un angle de 45º en la direcció que du, si la bola xoca
+            contra la plataforma rebotarà, si rebota en la meitat dreta
+            de la plataforma se n’anirà cap a la dreta amb un angle de
+            45º cap a dalt i si rebota en la meitat esquerra de la
+            plataforma se n’anirà cap a l’esquerre amb un angle de 45º
+            cap a dalt. Al començament hi haurà una bola damunt de la
+            tabla sense moure’s i quan es polse la tecla espai la bola
+            començarà a moure’s cap a dalt. Escriure-me el codi només,
+            sense comentaris i de la manera més resumida possible. No
+            vull que m’escrigues cap explicació, només vull el codi i
+            sense comentaris.}</p>
+            <p>La resposta tal cual ha sigut:</p>
+            <figure>
+            <img src="img/8.png" alt="Resposta de Copilot" />
+            <figcaption aria-hidden="true">Resposta de
+            Copilot</figcaption>
+            </figure>
+            <p>Vos transcribim el codi ací</p>
+            <div class="sourceCode" id="cb4"><pre
+            class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pygame</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>pygame.init()</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>WIDTH, HEIGHT <span class="op">=</span> <span class="dv">800</span>, <span class="dv">600</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>BALL_RADIUS <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>PADDLE_WIDTH <span class="op">=</span> WIDTH <span class="op">*</span> <span class="fl">0.2</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>PADDLE_HEIGHT <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>BALL_SPEED <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>PADDLE_SPEED <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>FPS <span class="op">=</span> <span class="dv">60</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>ANGLE <span class="op">=</span> <span class="dv">45</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>win <span class="op">=</span> pygame.display.set_mode((WIDTH, HEIGHT))</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>clock <span class="op">=</span> pygame.time.Clock()</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Ball:</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.x <span class="op">=</span> WIDTH <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.y <span class="op">=</span> HEIGHT <span class="op">-</span> PADDLE_HEIGHT <span class="op">-</span> BALL_RADIUS</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.speed <span class="op">=</span> BALL_SPEED</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.angle <span class="op">=</span> math.radians(<span class="op">-</span>ANGLE)</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> move(<span class="va">self</span>):</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.x <span class="op">+=</span> <span class="va">self</span>.speed <span class="op">*</span> math.cos(<span class="va">self</span>.angle)</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.y <span class="op">+=</span> <span class="va">self</span>.speed <span class="op">*</span> math.sin(<span class="va">self</span>.angle)</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> draw(<span class="va">self</span>):</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>        pygame.draw.circle(win, (<span class="dv">255</span>, <span class="dv">255</span>, <span class="dv">255</span>), (<span class="bu">int</span>(<span class="va">self</span>.x), <span class="bu">int</span>(<span class="va">self</span>.y)), BALL_RADIUS)</span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Paddle:</span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>):</span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.x <span class="op">=</span> WIDTH <span class="op">/</span> <span class="dv">2</span> <span class="op">-</span> PADDLE_WIDTH <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.y <span class="op">=</span> HEIGHT <span class="op">-</span> PADDLE_HEIGHT</span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.speed <span class="op">=</span> PADDLE_SPEED</span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> move(<span class="va">self</span>, key):</span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> key[pygame.K_LEFT] <span class="kw">and</span> <span class="va">self</span>.x <span class="op">-</span> <span class="va">self</span>.speed <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.x <span class="op">-=</span> <span class="va">self</span>.speed</span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> key[pygame.K_RIGHT] <span class="kw">and</span> <span class="va">self</span>.x <span class="op">+</span> <span class="va">self</span>.speed <span class="op">&lt;</span> WIDTH <span class="op">-</span> PADDLE_WIDTH:</span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>            <span class="va">self</span>.x <span class="op">+=</span> <span class="va">self</span>.speed</span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> draw(<span class="va">self</span>):</span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a>        pygame.draw.rect(win, (<span class="dv">255</span>, <span class="dv">255</span>, <span class="dv">255</span>), pygame.Rect(<span class="va">self</span>.x, <span class="va">self</span>.y, PADDLE_WIDTH, PADDLE_HEIGHT))</span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> main():</span>
+<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a>    run <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a>    ball <span class="op">=</span> Ball()</span>
+<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a>    paddle <span class="op">=</span> Paddle()</span>
+<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a>    space_pressed <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> run:</span>
+<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a>        clock.tick(FPS)</span>
+<span id="cb4-55"><a href="#cb4-55" aria-hidden="true" tabindex="-1"></a>        key <span class="op">=</span> pygame.key.get_pressed()</span>
+<span id="cb4-56"><a href="#cb4-56" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> event <span class="kw">in</span> pygame.event.get():</span>
+<span id="cb4-57"><a href="#cb4-57" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> event.<span class="bu">type</span> <span class="op">==</span> pygame.QUIT:</span>
+<span id="cb4-58"><a href="#cb4-58" aria-hidden="true" tabindex="-1"></a>                run <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb4-59"><a href="#cb4-59" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> event.<span class="bu">type</span> <span class="op">==</span> pygame.KEYDOWN <span class="kw">and</span> event.key <span class="op">==</span> pygame.K_SPACE:</span>
+<span id="cb4-60"><a href="#cb4-60" aria-hidden="true" tabindex="-1"></a>                space_pressed <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb4-61"><a href="#cb4-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-62"><a href="#cb4-62" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> space_pressed:</span>
+<span id="cb4-63"><a href="#cb4-63" aria-hidden="true" tabindex="-1"></a>            ball.move()</span>
+<span id="cb4-64"><a href="#cb4-64" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> ball.y <span class="op">-</span> BALL_RADIUS <span class="op">&lt;</span> <span class="dv">0</span> <span class="kw">or</span> (ball.y <span class="op">+</span> BALL_RADIUS <span class="op">&gt;</span> paddle.y <span class="kw">and</span> paddle.x <span class="op">&lt;</span> ball.x <span class="op">&lt;</span> paddle.x <span class="op">+</span> PADDLE_WIDTH):</span>
+<span id="cb4-65"><a href="#cb4-65" aria-hidden="true" tabindex="-1"></a>                ball.angle <span class="op">=</span> <span class="op">-</span>ball.angle</span>
+<span id="cb4-66"><a href="#cb4-66" aria-hidden="true" tabindex="-1"></a>            <span class="cf">elif</span> ball.x <span class="op">-</span> BALL_RADIUS <span class="op">&lt;</span> <span class="dv">0</span> <span class="kw">or</span> ball.x <span class="op">+</span> BALL_RADIUS <span class="op">&gt;</span> WIDTH:</span>
+<span id="cb4-67"><a href="#cb4-67" aria-hidden="true" tabindex="-1"></a>                ball.angle <span class="op">=</span> math.pi <span class="op">-</span> ball.angle</span>
+<span id="cb4-68"><a href="#cb4-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-69"><a href="#cb4-69" aria-hidden="true" tabindex="-1"></a>        paddle.move(key)</span>
+<span id="cb4-70"><a href="#cb4-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-71"><a href="#cb4-71" aria-hidden="true" tabindex="-1"></a>        win.fill((<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>))</span>
+<span id="cb4-72"><a href="#cb4-72" aria-hidden="true" tabindex="-1"></a>        ball.draw()</span>
+<span id="cb4-73"><a href="#cb4-73" aria-hidden="true" tabindex="-1"></a>        paddle.draw()</span>
+<span id="cb4-74"><a href="#cb4-74" aria-hidden="true" tabindex="-1"></a>        pygame.display.update()</span>
+<span id="cb4-75"><a href="#cb4-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-76"><a href="#cb4-76" aria-hidden="true" tabindex="-1"></a>    pygame.quit()</span>
+<span id="cb4-77"><a href="#cb4-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-78"><a href="#cb4-78" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">&quot;__main__&quot;</span>:</span>
+<span id="cb4-79"><a href="#cb4-79" aria-hidden="true" tabindex="-1"></a>    main()</span></code></pre></div>
+            <p>Aquest és el codi generat i el resultat ha sigut el
+            següent:</p>
+            <figure>
+            <img src="img/7.png" alt="Joc plantejat" />
+            <figcaption aria-hidden="true">Joc plantejat</figcaption>
+            </figure>
+            <p>El problema que hem detectat és que la bola anava molt
+            lentament, en este cas nosaltres hem decidit canviat la tasa
+            de refrescament de la pantalla que al prompt ho hem deixat
+            com a: <em>i que s’actualitze la funció que mou la bola cada
+            0.3 segons</em>, i finalment li hem donat un valor de
+            120.</p>
+            <p>Però li hem preguntat a Copilot i la resposta ha sigut
+            igualment vàlida o inclús més lògica:</p>
+            <figure>
+            <img src="img/9.png" alt="Canvi de velocitat" />
+            <figcaption aria-hidden="true">Canvi de
+            velocitat</figcaption>
+            </figure>
+            <div class="tip">
+            <p>Hem canviat el valor de BALL_SPEED a 5 i el joc ha
+            millorat bastant</p>
+            </div>
+            <h2 data-number="4.1" id="explicació-del-prompt"><span
+            class="header-section-number">4.1</span> Explicació del
+            prompt</h2>
+            <p>Anem a fer una xicoteta explicació del prompt. Com podeu
+            vore els prompts no solen ser “Fes-me un joc tipo
+            <em>Arkanoid</em>”, cal detallar clarament el que volem.</p>
+            <div class="note">
+            <p>És possible que ara ja hi haja una resposta per al prompt
+            de crear un joc tipus Arkanoid ja que està relacionat amb el
+            prompt que he preguntat després i ja ho haja associat. A
+            vosaltres us podria funcionar. La IA va aprenent també del
+            que nosaltres li “ensenyem”.</p>
+            </div>
+            <p>El prompt que hem plantejat és:</p>
+            <blockquote>
+            <p>Crea un joc amb la bilioteca pygame per a python que
+            tinga una pantalla estàtica amb una plataforma del 20% del
+            total de la finestra que puga desplaçar a l’esquerra o la
+            dreta amb el teclat de manera suau i ràpida. La velocitat de
+            la bola será constant de 1 i que s’actualitze la funció que
+            mou la bola cada 0.3 segons i quan la bola xoque amb els
+            extrems de la pantalla rebotarà amb un angle de 45º en la
+            direcció que du, si la bola xoca contra la plataforma
+            rebotarà, si rebota en la meitat dreta de la plataforma se
+            n’anirà cap a la dreta amb un angle de 45º cap a dalt i si
+            rebota en la meitat esquerra de la plataforma se n’anirà cap
+            a l’esquerre amb un angle de 45º cap a dalt. Al començament
+            hi haurà una bola damunt de la tabla sense moure’s i quan es
+            polse la tecla espai la bola començarà a moure’s cap a dalt.
+            Escriure-me el codi només, sense comentaris i de la manera
+            més resumida possible. No vull que m’escrigues cap
+            explicació, només vull el codi i sense comentaris.</p>
+            </blockquote>
+            <blockquote>
+            <p>Crea un joc amb la bilioteca pygame per a python</p>
+            </blockquote>
+            <p>Hem de detallar la tecnlogia que volem utiltizar, ací
+            estem plantejant un context en el nostre prompt</p>
+            <blockquote>
+            <p>que tinga una pantalla estàtica amb una plataforma del
+            20% del total de la finestra</p>
+            </blockquote>
+            <p>En aquest cas continuem detallant el context, podríem
+            haver demanat una pantalla més xicoteta però ha supossat una
+            pantalla de 800x600, si que li indiquem que la finestra
+            tinga un tamany determinat i volem una plataforma que és on
+            rebotaran les boles. Vegeu que li done ja un valor, com que
+            no li he donat un valor a la pantalla li parle en
+            percentatges.</p>
+            <blockquote>
+            <p>que puga desplaçar a l’esquerra o la dreta amb el teclat
+            de manera suau i ràpida.</p>
+            </blockquote>
+            <p>Li deixem clar que volem manejar la plataforma amb el
+            teclat i no amb el ratolí, especifiquem suau i ràpida per a
+            que entenga que si mantenim polsat la tecla volem que
+            continue, en aquest cas m’ha funcionat però amb altres
+            models GPT no entén <em>suau i ràpida</em></p>
+            <blockquote>
+            <p>La velocitat de la bola será constant de 1 i que
+            s’actualitze la funció que mou la bola cada 0.3 segons</p>
+            </blockquote>
+            <p>Aquesta part pot costar d’entendre un poc més, el FPS és
+            la velocitat amb la que vull que es refresque la pantalla i
+            li ho he dit en segons que la IA a interpretat 60 fps, i al
+            velocitat 1 perquè pygame només permet valors majors de
+            1.</p>
+            <blockquote>
+            <p>i quan la bola xoque amb els extrems de la pantalla
+            rebotarà amb un angle de 45º en la direcció que du</p>
+            </blockquote>
+            <p>És important delimitar com rebota, ací és quan li donem
+            exemples a la IA per a que entenga que ha de rebotar en una
+            direcció diferent, sino podria quedar-se rebotant d’un
+            costat a altre sense canviar. Cal pensar en la dinàmica del
+            joc.</p>
+            <blockquote>
+            <p>si la bola xoca contra la plataforma rebotarà, si rebota
+            en la meitat dreta de la plataforma se n’anirà cap a la
+            dreta amb un angle de 45º cap a dalt i si rebota en la
+            meitat esquerra de la plataforma se n’anirà cap a l’esquerre
+            amb un angle de 45º cap a dalt.</p>
+            </blockquote>
+            <p>Continuem amb els exemples que ajuden a entendre què és
+            el que desitgem.</p>
+            <blockquote>
+            <p>Al començament hi haurà una bola damunt de la tabla sense
+            moure’s i quan es polse la tecla espai la bola començarà a
+            moure’s cap a dalt.</p>
+            </blockquote>
+            <p>Cal definir una situació inicial ja que, com ja hem
+            comentat, la IA no pressuposa com un humà, sino especifiquem
+            alguna cosa s’ho inventarà i podria ser que no fos el que
+            desitgem. Les presuposacions que fa no són humanes.</p>
+            <blockquote>
+            <p>Escriure-me el codi només, sense comentaris i de la
+            manera més resumida possible. No vull que m’escrigues cap
+            explicació, només vull el codi i sense comentaris.</p>
+            </blockquote>
+            <p>Per últim insistim que només volem el codi sense cap
+            tipus d’explicació i sense cap tipus de comentari al codi.
+            Els comentaris ens poden ajudar a entendre millor el codi,
+            però la plataforma té limitat el número de caràcters que ens
+            dona com a resposta, d’aquesta manera estaviem quantitat de
+            caràcters que volem que ens done.</p>
+            <div class="important">
+            <p>Insistim que la plataforma té limitat el nombre de
+            caràcters que ens dóna com a resposta, per això insistim que
+            no ens done comentaris addicionals, perquè es centre
+            únicament en el codi que és el que volem</p>
+            </div>
+            <div class="warning">
+            <p>Creant aquest prompt, en una de les proves la IA em va
+            contestar:</p>
+            <figure>
+            <img src="img/10.png" alt="La IA fent amics" />
+            <figcaption aria-hidden="true">La IA fent amics</figcaption>
+            </figure>
+            <p>Així que no sempre obtindrem els resultats esperats i
+            caldrà anar modificant variables fins que ens done el
+            resultat esperat.</p>
+            </div>
+            <p>No penseu que aquest prompt ha sorgit màgicament del meu
+            cap, cal anar analitzant les respostes que va donant per
+            anar creant el prompt, són diversos intents modificant
+            l’ordre de les frases del prompt i preguntant per separat
+            per analitzar les respostes i poder perfilar més el
+            resultat.</p>
+            <h1 data-number="5" id="creació-de-pàgines-web"><span
+            class="header-section-number">5</span> Creació de pàgines
+            web</h1>
+            <p>Pera crear pàgines web de manera ràpida i senzilla
+            igualment podem recòrrer a les plataformes GPT, però com hem
+            vist aquestes tenem una limitació de caràcters de resposta i
+            et limita a una pàgina. Pots anar preguntat-li que et vaja
+            generant cadascun dels fitxers que necessites.</p>
+            <h2 data-number="5.1" id="pineapple"><span
+            class="header-section-number">5.1</span> Pineapple</h2>
+            <p>Amb <a
+            href="https://www.pineapplebuilder.com/">Pineapple</a> pots
+            crea una pàgina web en qüestió de minuts. Només entres a la
+            pàgina ja ens preguntarà què volem fer:</p>
+            <figure>
+            <img src="img/11.png" alt="Pineapple" />
+            <figcaption aria-hidden="true">Pineapple</figcaption>
+            </figure>
+            <p>De primeres ja ens pegunta pel <em>Bussiness details</em>
+            que és l’objectiu de la pàgina web i per el <em>target
+            audience</em>, a qui va dirigida. Ens dona una proposta per
+            a cada temàtica i li donem a generar la pàgina.</p>
+            <figure>
+            <img src="img/12.png" alt="Pas 1" />
+            <figcaption aria-hidden="true">Pas 1</figcaption>
+            </figure>
+            <p>Ara tindrem que escollir els colors i un poc la temàtica,
+            o podem deixar el que ens proposse…</p>
+            <figure>
+            <img src="img/13.png" alt="Pas 2" />
+            <figcaption aria-hidden="true">Pas 2</figcaption>
+            </figure>
+            <p>Li donem a <em>Save</em> i, com no, ens demanarà que ens
+            inscribim i ja ens demane el nom de la “companyia”, i el
+            logo.</p>
+            <figure>
+            <img src="img/14.png" alt="Pas 3" />
+            <figcaption aria-hidden="true">Pas 3</figcaption>
+            </figure>
+            <p>I ja finalment ens apereixerà un editor per a editar la
+            nostra pàgina, però ja tenim un esquelet creat:</p>
+            <figure>
+            <img src="img/15.png" alt="Pas 4" />
+            <figcaption aria-hidden="true">Pas 4</figcaption>
+            </figure>
+            <p>En el nostre cas li donem directament a publicar i ja la
+            podem <a
+            href="https://sailfish_rose_453.pineapplebuilder.com/">veure</a></p>
+            <div class="info">
+            <p>El gran desavantatge que té aquesta ferramenta és que
+            només ens crea la pàgina dins del domini que ella ens dona.
+            Els programadors sempre podran fer un:</p>
+            <pre><code>wget -r [nom de la pàgina]</code></pre>
+            <p>En la terminal de linux i podran utilitzar el codi.
+            Encara que ve comprimit. Però és una bona opció per a
+            experimentar</p>
+            </div>
+            <h2 data-number="5.2" id="hocoos"><span
+            class="header-section-number">5.2</span> Hocoos</h2>
+            <p><a href="https://magic.hocoos.com">Hocoos</a> és una
+            plataforma on amb 7 pases que ens anirà preguntant podrem
+            crear la nostra pàgina</p>
+            <figure>
+            <img src="img/16.png" alt="Temàtica" />
+            <figcaption aria-hidden="true">Temàtica</figcaption>
+            </figure>
+            <p>Anirem responent a totes les qüestions que ens va
+            plantejant</p>
+            <figure>
+            <img src="img/19.png" alt="Temàtica" />
+            <figcaption aria-hidden="true">Temàtica</figcaption>
+            </figure>
+            <p>I finalment escollirem una de les propostes creades,
+            escollirem la paleta de colors i començarà la creació de la
+            web i la podrem <a href="https://tiana431.hocoos.com">trobar
+            ací</a>.</p>
+            <p>Igualment, no podem accedir al codi, però si tenim un
+            domini<a href="#fn3" class="footnote-ref" id="fnref3"
+            role="doc-noteref"><sup>3</sup></a> comprat podrem accedir
+            al nostre arxiu de configuració del DNS per a que apunte a
+            la nostra pàgina. El problema d’això és que podriem dir que
+            cal tenir certs coneixements d’informàtica per a poder
+            realitzar-ho.</p>
+            <h2 data-number="5.3" id="mixo"><span
+            class="header-section-number">5.3</span> Mixo</h2>
+            <p><a href="https://app.mixo.io">Mixo</a> directament ens
+            planteja un prompt i una qüestió i amb només això ja et crea
+            una pàgina. En l´ultim pas ja et demana que
+            t’inscrigues.</p>
+            <figure>
+            <img src="img/20.png" alt="Mixo" />
+            <figcaption aria-hidden="true">Mixo</figcaption>
+            </figure>
+            <p>El resultat podem trobar-lo <a
+            href="https://www.mixo.io/site/tecno-educa-12onu">ací</a></p>
+            <div class="info">
+            <p>El pla gratuït només et deixa publicar una única pàgina i
+            està bastant limitat</p>
+            </div>
+            <h2 data-number="5.4" id="chatgpt-o-copilot"><span
+            class="header-section-number">5.4</span> ChatGPT o
+            Copilot</h2>
+            <p>El resultat que ens dona és un xicotet tutorial de com
+            crear una pàgina web, pel que caldrà insistir-li.</p>
+            <p>Finalment el resultat, tot i que no és del tot, el que
+            ens esperavem és bastant acceptable:</p>
+            <div class="sourceCode" id="cb6"><pre
+            class="sourceCode html"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">html</span><span class="ot"> lang</span><span class="op">=</span><span class="st">&quot;ca&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> charset</span><span class="op">=</span><span class="st">&quot;UTF-8&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">title</span><span class="dt">&gt;</span>Pàgina d&#39;enllaç<span class="dt">&lt;/</span><span class="kw">title</span><span class="dt">&gt;</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">link</span><span class="ot"> rel</span><span class="op">=</span><span class="st">&quot;stylesheet&quot;</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">style</span><span class="dt">&gt;</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    footer {</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">position</span>: <span class="dv">fixed</span><span class="op">;</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">left</span>: <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">bottom</span>: <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">width</span>: <span class="dv">100</span><span class="dt">%</span><span class="op">;</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background-color</span>: <span class="cn">#0072c6</span><span class="op">;</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span>: <span class="cn">#fff</span><span class="op">;</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">text-align</span>: <span class="dv">center</span><span class="op">;</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>  <span class="kw">padding</span>: <span class="dv">20</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>    body {</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>      <span class="kw">font-family</span>: Arial<span class="op">,</span> <span class="dv">sans-serif</span><span class="op">;</span></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>      <span class="kw">margin</span>: <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>      <span class="kw">padding</span>: <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>      <span class="kw">background-color</span>: <span class="cn">#d1e0e0</span><span class="op">;</span></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>    header {</span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>      <span class="kw">background-color</span>: <span class="cn">#0072c6</span><span class="op">;</span></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>      <span class="kw">color</span>: <span class="cn">#fff</span><span class="op">;</span></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>      <span class="kw">padding</span>: <span class="dv">20</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>      <span class="kw">text-align</span>: <span class="dv">center</span><span class="op">;</span></span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>    h1 {</span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>      <span class="kw">font-size</span>: <span class="dv">36</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>      <span class="kw">margin</span>: <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.container</span> {</span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a>      <span class="kw">max-width</span>: <span class="dv">800</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a>      <span class="kw">margin</span>: <span class="dv">0</span> <span class="bu">auto</span><span class="op">;</span></span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a>      <span class="kw">padding</span>: <span class="dv">20</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a>      <span class="kw">display</span>: <span class="dv">flex</span><span class="op">;</span></span>
+<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a>      <span class="kw">flex-direction</span>: <span class="dv">column</span><span class="op">;</span></span>
+<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a>      <span class="kw">justify-content</span>: <span class="dv">center</span><span class="op">;</span></span>
+<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a>      <span class="kw">align-items</span>: <span class="dv">center</span><span class="op">;</span></span>
+<span id="cb6-42"><a href="#cb6-42" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb6-43"><a href="#cb6-43" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.button-container</span> {</span>
+<span id="cb6-44"><a href="#cb6-44" aria-hidden="true" tabindex="-1"></a>      <span class="kw">display</span>: <span class="dv">flex</span><span class="op">;</span></span>
+<span id="cb6-45"><a href="#cb6-45" aria-hidden="true" tabindex="-1"></a>      <span class="kw">flex-direction</span>: <span class="dv">column</span><span class="op">;</span></span>
+<span id="cb6-46"><a href="#cb6-46" aria-hidden="true" tabindex="-1"></a>      <span class="kw">justify-content</span>: <span class="dv">center</span><span class="op">;</span></span>
+<span id="cb6-47"><a href="#cb6-47" aria-hidden="true" tabindex="-1"></a>      <span class="kw">align-items</span>: <span class="dv">center</span><span class="op">;</span></span>
+<span id="cb6-48"><a href="#cb6-48" aria-hidden="true" tabindex="-1"></a>      <span class="kw">margin-top</span>: <span class="dv">50</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb6-49"><a href="#cb6-49" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb6-50"><a href="#cb6-50" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.button</span> {</span>
+<span id="cb6-51"><a href="#cb6-51" aria-hidden="true" tabindex="-1"></a>      <span class="kw">display</span>: <span class="dv">flex</span><span class="op">;</span></span>
+<span id="cb6-52"><a href="#cb6-52" aria-hidden="true" tabindex="-1"></a>      <span class="kw">flex-direction</span>: <span class="dv">column</span><span class="op">;</span></span>
+<span id="cb6-53"><a href="#cb6-53" aria-hidden="true" tabindex="-1"></a>      <span class="kw">align-items</span>: <span class="dv">center</span><span class="op">;</span></span>
+<span id="cb6-54"><a href="#cb6-54" aria-hidden="true" tabindex="-1"></a>      <span class="kw">margin</span>: <span class="dv">10</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb6-55"><a href="#cb6-55" aria-hidden="true" tabindex="-1"></a>      <span class="kw">padding</span>: <span class="dv">10</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb6-56"><a href="#cb6-56" aria-hidden="true" tabindex="-1"></a>      <span class="kw">background-color</span>: <span class="cn">#4CAF50</span><span class="op">;</span></span>
+<span id="cb6-57"><a href="#cb6-57" aria-hidden="true" tabindex="-1"></a>      <span class="kw">color</span>: <span class="cn">white</span><span class="op">;</span></span>
+<span id="cb6-58"><a href="#cb6-58" aria-hidden="true" tabindex="-1"></a>      <span class="kw">border</span>: <span class="dv">none</span><span class="op">;</span></span>
+<span id="cb6-59"><a href="#cb6-59" aria-hidden="true" tabindex="-1"></a>      <span class="kw">border-radius</span>: <span class="dv">5</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb6-60"><a href="#cb6-60" aria-hidden="true" tabindex="-1"></a>      <span class="kw">transition</span>: transform <span class="dv">0.3</span><span class="dt">s</span> <span class="dv">ease-in-out</span><span class="op">;</span></span>
+<span id="cb6-61"><a href="#cb6-61" aria-hidden="true" tabindex="-1"></a>      <span class="kw">width</span>: <span class="dv">100</span><span class="dt">%</span><span class="op">;</span></span>
+<span id="cb6-62"><a href="#cb6-62" aria-hidden="true" tabindex="-1"></a>      <span class="kw">max-width</span>: <span class="dv">400</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb6-63"><a href="#cb6-63" aria-hidden="true" tabindex="-1"></a>      <span class="kw">text-align</span>: <span class="dv">center</span><span class="op">;</span></span>
+<span id="cb6-64"><a href="#cb6-64" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb6-65"><a href="#cb6-65" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.button</span><span class="in">:hover</span> {</span>
+<span id="cb6-66"><a href="#cb6-66" aria-hidden="true" tabindex="-1"></a>      <span class="kw">transform</span>: <span class="fu">rotate(</span><span class="dv">360</span><span class="dt">deg</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb6-67"><a href="#cb6-67" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb6-68"><a href="#cb6-68" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.button</span> i {</span>
+<span id="cb6-69"><a href="#cb6-69" aria-hidden="true" tabindex="-1"></a>      <span class="kw">font-size</span>: <span class="dv">48</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb6-70"><a href="#cb6-70" aria-hidden="true" tabindex="-1"></a>      <span class="kw">margin-bottom</span>: <span class="dv">10</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb6-71"><a href="#cb6-71" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb6-72"><a href="#cb6-72" aria-hidden="true" tabindex="-1"></a>    <span class="fu">.button</span> span {</span>
+<span id="cb6-73"><a href="#cb6-73" aria-hidden="true" tabindex="-1"></a>      <span class="kw">font-size</span>: <span class="dv">24</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb6-74"><a href="#cb6-74" aria-hidden="true" tabindex="-1"></a>      <span class="kw">text-align</span>: <span class="dv">center</span><span class="op">;</span></span>
+<span id="cb6-75"><a href="#cb6-75" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb6-76"><a href="#cb6-76" aria-hidden="true" tabindex="-1"></a>    footer {</span>
+<span id="cb6-77"><a href="#cb6-77" aria-hidden="true" tabindex="-1"></a>      <span class="kw">background-color</span>: <span class="cn">#0072c6</span><span class="op">;</span></span>
+<span id="cb6-78"><a href="#cb6-78" aria-hidden="true" tabindex="-1"></a>      <span class="kw">color</span>: <span class="cn">#fff</span><span class="op">;</span></span>
+<span id="cb6-79"><a href="#cb6-79" aria-hidden="true" tabindex="-1"></a>      <span class="kw">padding</span>: <span class="dv">20</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb6-80"><a href="#cb6-80" aria-hidden="true" tabindex="-1"></a>      <span class="kw">text-align</span>: <span class="dv">center</span><span class="op">;</span></span>
+<span id="cb6-81"><a href="#cb6-81" aria-hidden="true" tabindex="-1"></a>      <span class="kw">margin-top</span>: <span class="dv">50</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb6-82"><a href="#cb6-82" aria-hidden="true" tabindex="-1"></a>      <span class="kw">width</span>: <span class="dv">100</span><span class="dt">%</span><span class="op">;</span></span>
+<span id="cb6-83"><a href="#cb6-83" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb6-84"><a href="#cb6-84" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">style</span><span class="dt">&gt;</span></span>
+<span id="cb6-85"><a href="#cb6-85" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb6-86"><a href="#cb6-86" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb6-87"><a href="#cb6-87" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">header</span><span class="dt">&gt;</span></span>
+<span id="cb6-88"><a href="#cb6-88" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">h1</span><span class="dt">&gt;</span>Pàgina d&#39;enllaç<span class="dt">&lt;/</span><span class="kw">h1</span><span class="dt">&gt;</span></span>
+<span id="cb6-89"><a href="#cb6-89" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">header</span><span class="dt">&gt;</span></span>
+<span id="cb6-90"><a href="#cb6-90" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;container&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb6-91"><a href="#cb6-91" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;button-container&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb6-92"><a href="#cb6-92" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;https://portal.edu.gva.es/cefirevalencia/es/inicio/&quot;</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;button&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb6-93"><a href="#cb6-93" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;fas fa-university&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span></span>
+<span id="cb6-94"><a href="#cb6-94" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">span</span><span class="dt">&gt;</span>Cefire de Valencia<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb6-95"><a href="#cb6-95" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
+<span id="cb6-96"><a href="#cb6-96" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;https://aules.edu.gva.es/formaciodelprofessorat/login/index.php&quot;</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;button&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb6-97"><a href="#cb6-97" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;fas fa-chalkboard-teacher&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span></span>
+<span id="cb6-98"><a href="#cb6-98" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">span</span><span class="dt">&gt;</span>Aules<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb6-99"><a href="#cb6-99" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
+<span id="cb6-100"><a href="#cb6-100" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;https://cefire.eu/guacamole&quot;</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;button&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb6-101"><a href="#cb6-101" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">i</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;fas fa-book&quot;</span><span class="dt">&gt;&lt;/</span><span class="kw">i</span><span class="dt">&gt;</span></span>
+<span id="cb6-102"><a href="#cb6-102" aria-hidden="true" tabindex="-1"></a>        <span class="dt">&lt;</span><span class="kw">span</span><span class="dt">&gt;</span>Guacomole<span class="dt">&lt;/</span><span class="kw">span</span><span class="dt">&gt;</span></span>
+<span id="cb6-103"><a href="#cb6-103" aria-hidden="true" tabindex="-1"></a>      <span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;</span></span>
+<span id="cb6-104"><a href="#cb6-104" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb6-105"><a href="#cb6-105" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span>
+<span id="cb6-106"><a href="#cb6-106" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">footer</span><span class="dt">&gt;</span></span>
+<span id="cb6-107"><a href="#cb6-107" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">p</span><span class="dt">&gt;</span>Creat amb tecnologia Copilot per al curs del cefire. Contacte: <span class="dt">&lt;</span><span class="kw">a</span><span class="ot"> href</span><span class="op">=</span><span class="st">&quot;mailto: ar.vicenteboix@edu.gva.es&quot;</span><span class="ot"> class</span><span class="op">=</span><span class="st">&quot;href&quot;</span><span class="dt">&gt;</span>Alfredo Vicente<span class="dt">&lt;/</span><span class="kw">a</span><span class="dt">&gt;&lt;/</span><span class="kw">p</span><span class="dt">&gt;</span></span>
+<span id="cb6-108"><a href="#cb6-108" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">footer</span><span class="dt">&gt;</span></span>
+<span id="cb6-109"><a href="#cb6-109" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb6-110"><a href="#cb6-110" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code></pre></div>
+            <p>Que hem pujat al nostre <a
+            href="htps://cefire.eu">servidor que tenim de proves</a> per
+            a que ho vegeu.</p>
+            <h2 data-number="5.5" id="conclusions"><span
+            class="header-section-number">5.5</span> Conclusions</h2>
+            <p>Eixisteixen multituds d’aplicacions per crear webs
+            estàtiques, però tal vegada no marquen la diferència
+            respecte a crear la teua propia pàgina partint d’un
+            plantilla i crear-la poc a poc. Però sempre és més
+            interessant tenir algun coneixement de progrmació web per a
+            dirigir les qüestions per a situacions més concretes sobre
+            què és le que volem anar modificant.</p>
+            <h1 data-number="6" id="més-possibilitats"><span
+            class="header-section-number">6</span> Més
+            possibilitats</h1>
+            <p>Les possibilitats per a programar en qualsevol framework
+            són infinites i poden tindre un professor les 24h disponible
+            per anar preguntant allò que necessitem, però cal saber què
+            preguntar. Es podria haver utilitzat una plataforma
+            professional com Unity que caldria instal·lar i programar
+            amb ella és més complexe ja que no és només codi. Així i tot
+            hi han molts exemples en la xarxa de crear un joc amb Unity
+            però cal anar preguntant poc a poc i dient “I ara que
+            faig?”.</p>
+            <p>L’única limitació que tenim és el temps que podem
+            dedicar-li.</p>
+            <aside id="footnotes"
+            class="footnotes footnotes-end-of-document"
+            role="doc-endnotes">
+            <hr />
+            <ol>
+            <li id="fn1"><p>Un domini és el nom que escrivim en el
+            navegador, per exemple www.microsoft.com<a href="#fnref1"
+            class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+            <li id="fn2"><p>Un domini és el nom que escrivim en el
+            navegador, per exemple www.microsoft.com<a href="#fnref2"
+            class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+            <li id="fn3"><p>Un domini és el nom que escrivim en el
+            navegador, per exemple www.microsoft.com<a href="#fnref3"
+            class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+            </ol>
+            </aside>
+        </main>
+        
+
+        <!--- Modal images -->
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- The Close Button -->
+            <!--span class="close">&times;</span-->
+
+            <!-- Modal Content (The Image) -->
+            <img class="modal-content" id="img01">
+
+            <!-- Modal Caption (Image Text) -->
+            <div id="caption"></div>
+        </div>
+
+        <!-- End Modal Images -->
+
+        <script>
+            function ModalizeImages() {
+                // Script basat en https://www.w3schools.com/howto/howto_css_modal_images.asp
+                // PEr ampliar imatges en fer click
+
+                // Get the modal
+                var modal = document.getElementById("myModal");
+
+                var modalImg = document.getElementById("img01");
+                var captionText = document.getElementById("caption");
+
+                // Get the image and insert it inside the modal - use its "alt" text as a caption
+                //var img = document.getElementById("myImg");
+                document.querySelectorAll("img").forEach((img => {
+                        img.onclick = function() {
+                            modal.style.display = "block";
+                            modalImg.src = this.src;
+                            captionText.innerHTML = this.alt;
+                        }
+                    }))
+                    // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+
+                // When the user clicks on <span> (x), close the modal
+                //span.onclick = function() {
+                myModal.onclick = function() {
+                    modal.style.display = "none";
+                }
+
+
+            }
+
+
+            function markItem(id) {
+                // Restaurem format de tots
+                document.querySelectorAll("#TOC a").forEach(function(item) {
+                        //item.style.fontWeight = "300";
+                        item.classList.remove("navItemSelected");
+                    })
+                    //item.style.color = "#ff0000";
+
+                // Afegim format
+                let items = document.querySelectorAll("#TOC a[href='#" + id + "']");
+                items.forEach(function(item) {
+                    //item.style.fontWeight = "bolder";
+                    item.classList.add("navItemSelected");
+                })
+
+            }
+
+            var observer = new IntersectionObserver(function(entries) {
+                // isIntersecting is true when element and viewport are overlapping
+                // isIntersecting is false when element and viewport don't overlap
+                if (entries[0].isIntersecting === true) {
+                    let id = entries[0].target.id;
+                    markItem(id);
+                }
+
+            }, {
+                threshold: [0]
+            });
+
+            window.addEventListener("load", function() {
+                document.querySelectorAll("h1, h2, h3").forEach(function(item) {
+                    observer.observe(item);
+                });
+
+                document.querySelectorAll("#TOC a").forEach(function(item) {
+                    item.addEventListener("click", function(item) {
+                        markItem(item.id);
+                    })
+                })
+
+                // Fem modals totes les imatges
+                ModalizeImages();
+            })
+
+            document.querySelector("#TOC").addEventListener("click", function(event) {
+                let toc = event.target
+                if (toc.offsetWidth > 10) {
+                    toc.classList.add("minimizedToc");
+                }
+            })
+
+            document.querySelector("#TOC").addEventListener("mouseover", function(event) {
+                let toc = event.target
+                if (toc.classList.contains("minimizedToc"))
+                    toc.classList.remove("minimizedToc");
+            })
+
+
+            //item.style.color = "#ff0000";
+        </script>
+    </div>
+</body>
+
+</html>
