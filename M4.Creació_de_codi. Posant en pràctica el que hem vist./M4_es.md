@@ -9,7 +9,7 @@ linkcolor: blue
 titlepage: true
 titlepage-rule-height: 3
 titlepage-rule-color: e6e6e6
-titlepage-texto-color: e6e6e6
+titlepage-text-color: e6e6e6
 titlepage-background: img/U4c.png
 
 # Tabla de contenidos
@@ -63,7 +63,7 @@ pandoc-latex-environment:
 
 <!-- \awesomebox[violet]{2pt}{\faRobot}{violet}{\textbf{greatest}\hfill \break} -->
 
-\vspace{\fill}
+\vspace*{\fill}
 
 ![](img/cc.png){ height=50px }
 
@@ -167,7 +167,7 @@ python camera.py
 
 Pero nos da un error y no funciona. Así que recurrimos a Bing Copilot para ver que nos dice:
 
-![Respuesta de Copilot](img/0.png){ width=70% }{ height=50px }
+![Respuesta de Copilot](img/0.png){ width=70% }
 
 Así, ejecutamos lo que nos dice la IA y volvemos a ejecutar:
 
@@ -176,13 +176,13 @@ python camera.py
 ```
 Y este es el resultado:
 
-![Aplicación](img/1.png){ width=70% }{ height=50px }
+![Aplicación](img/1.png){ width=70% }
 
-![Aplicación](img/2.png){ width=70% }{ height=50px }
+![Aplicación](img/2.png){ width=70% }
 
-![Aplicación](img/3.png){ width=70% }{ height=50px }
+![Aplicación](img/3.png){ width=70% }
 
-![Aplicación](img/4.png){ width=70% }{ height=50px }
+![Aplicación](img/4.png){ width=70% }
 
 :::info
 En nuestro caso hemos usado un Sistema Operativo basado en linux como LliureX, pero cada sistema operativo tendrá su complejidad. LliureX destaca porque simplifica mucho las tareas de configuración.
