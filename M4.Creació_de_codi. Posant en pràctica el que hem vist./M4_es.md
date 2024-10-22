@@ -1,25 +1,26 @@
 ---
 # Información general del documento
-title: 4. Creación de código. Programas y webs
-lang: can
+title: 4. Creación de código.
+lang: es
 page-background: img/bg.png
+linkcolor: blue
 
 # Portada
 titlepage: true
-titlepage-rule-height: 2
-titlepage-rule-color: AA0000
-titlepage-texto-color: AA0000
+titlepage-rule-height: 3
+titlepage-rule-color: e6e6e6
+titlepage-texto-color: e6e6e6
 titlepage-background: img/U4c.png
 
 # Tabla de contenidos
-toque: true
-toque-own-page: true
-toque-title: Contenidos
+toc: true
+toc-own-page: true
+toc-title: Contenidos
 
 # Cabeceras y pies
 header-left: 4. Creación de código. 
-header-right: Curso 2023-2024
-footer-left: CEFIRE Valencia
+header-right: Curso 2024-2025
+footer-left: CEFIRE FP
 footer-right: \thepage/\pageref{LastPage}
 
 # Imágenes
@@ -56,7 +57,7 @@ pandoc-latex-environment:
 
 <!-- \awesomebox[violet]{2pt}{\faRobot}{violet}{Lorem ipsum…} -->
 
-<!-- IMATGE ![Pregunta inicial](./img/proxi/5b.png) -->
+<!-- IMATGE ![Pregunta inicial](./img/proxi/5b.png){ width=70% } -->
 
 <!-- \textbf{greatest} -->
 
@@ -166,7 +167,7 @@ python camera.py
 
 Pero nos da un error y no funciona. Así que recurrimos a Bing Copilot para ver que nos dice:
 
-![Respuesta de Copilot](img/0.png){ height=50px }
+![Respuesta de Copilot](img/0.png){ width=70% }{ height=50px }
 
 Así, ejecutamos lo que nos dice la IA y volvemos a ejecutar:
 
@@ -175,13 +176,13 @@ python camera.py
 ```
 Y este es el resultado:
 
-![Aplicación](img/1.png){ height=50px }
+![Aplicación](img/1.png){ width=70% }{ height=50px }
 
-![Aplicación](img/2.png){ height=50px }
+![Aplicación](img/2.png){ width=70% }{ height=50px }
 
-![Aplicación](img/3.png){ height=50px }
+![Aplicación](img/3.png){ width=70% }{ height=50px }
 
-![Aplicación](img/4.png){ height=50px }
+![Aplicación](img/4.png){ width=70% }{ height=50px }
 
 :::info
 En nuestro caso hemos usado un Sistema Operativo basado en linux como LliureX, pero cada sistema operativo tendrá su complejidad. LliureX destaca porque simplifica mucho las tareas de configuración.
@@ -206,366 +207,619 @@ Puede parecer una tarea sencilla tal y como voy a planteároslo, pero el *prompt
 
 La plataforma que hemos utilizado es Bing Copilot con su modo más preciso y el prompt planteado ha sido el siguiente:
 
-awesomebox[violet]{2pt}{\textbf{Crea un juego con la biblioteca Pygame para python que tenga una pantalla estática con una plataforma del 20% del total de la ventana que pueda desplazar a la izquierda o la derecha con el teclado de manera suave y rápida. La velocidad de la bola será constante de 1 y que se actualice la función que mueve la bola cada 0.3 segundos y cuando la bola choque con los extremos de la pantalla rebotará con un ángulo de 45° en la dirección que lleva, si la bola choca contra la plataforma rebotará, si rebota en la mitad derecha de la plataforma se irá hacia la derecha con un ángulo de 45° hacia arriba y si rebota en la mitad izquierda de la plataforma se  irá hacia la izquierda con un ángulo de 45° hacia arriba. Al comienzo habrá una bola encima de la tabla sin mover y cuando se pulse la tecla espacio la bola empezará a moverse hacia arriba. Escríbeme el código solamente, sin comentarios y de la manera más resumida posible. No quiero que me escribas ninguna explicación, solo quiero el código y sin comentarios.}}
+\awesomebox[violet]{2pt}{\faRobot}{violet}{Crea un juego con la biblioteca Pygame para python que tenga una pantalla estática con una plataforma del 20% del total de la ventana que pueda desplazar a la izquierda o la derecha con el teclado de manera suave y rápida. La velocidad de la bola será constante de 1 y que se actualice la función que mueve la bola cada 0.3 segundos y cuando la bola choque con los extremos de la pantalla rebotará con un ángulo de 45° en la dirección que lleva, si la bola choca contra la plataforma rebotará, si rebota en la mitad derecha de la plataforma se irá hacia la derecha con un ángulo de 45° hacia arriba y si rebota en la mitad izquierda de la plataforma se  irá hacia la izquierda con un ángulo de 45° hacia arriba. Al comienzo habrá una bola encima de la tabla sin mover y cuando se pulse la tecla espacio la bola empezará a moverse hacia arriba. Escríbeme el código solamente, sin comentarios y de la manera más resumida posible. No quiero que me escribas ninguna explicación, solo quiero el código y sin comentarios.}
 
 La respuesta tal cual ha sido:
 
-![Respuesta de Copilot](img/8.png)
+![Respuesta de Copilot](img/8.png){ width=70% }
 
 Os transcribimos el código aquí
 
 ```python
-importe pygame
-importe math
+import pygame
+import sys
 
 pygame.init()
-
-WIDTH, HEIGHT = 800, 600
-BAILE_RADIUS = 10
-PADDLE_WIDTH = WIDTH * 0.2
-PADDLE_HEIGHT = 10
-BAILE_SPEED = 1
-PADDLE_SPEED = 2
-FPS = 60
-ÁNGULO = 45
-
-win = pygame.display.siete_modo((WIDTH, HEIGHT))
+screen = pygame.display.set_mode((800, 600))
 clock = pygame.time.Clock()
 
-class Baile:
-    def __init__(self):
-        self.x = WIDTH / 2
-        self.y = HEIGHT - PADDLE_HEIGHT - BAILE_RADIUS
-        self.speed = BAILE_SPEED
-        self.ángulo = math.radianes(-ÁNGULO)
+ball = pygame.Rect(400, 570, 10, 10)
+paddle = pygame.Rect(350, 580, 100, 10)
+ball_speed = [3, -3]
+paddle_speed = 10
+moving = False
 
-    def move(self):
-        self.x += self.speed * math.cuerpo(self.ángulo)
-        self.y += self.speed * math.sin(self.ángulo)
+while True:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
+            sys.exit()
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_SPACE:
+                moving = True
 
-    def draw(self):
-        pygame.draw.circle(win, (255, 255, 255), (int(self.x), int(self.y)), BAILE_RADIUS)
+    keys = pygame.key.get_pressed()
+    if keys[pygame.K_LEFT] and paddle.left > 0:
+        paddle.move_ip(-paddle_speed, 0)
+    if keys[pygame.K_RIGHT] and paddle.right < 800:
+        paddle.move_ip(paddle_speed, 0)
 
-class Paddle:
-    def __init__(self):
-        self.x = WIDTH / 2 - PADDLE_WIDTH / 2
-        self.y = HEIGHT - PADDLE_HEIGHT
-        self.speed = PADDLE_SPEED
+    if moving:
+        ball.move_ip(ball_speed[0], ball_speed[1])
 
-    def move(self, key):
-        if key[pygame.K_LEFT] and self.x - self.speed > 0:
-            self.x -= self.speed
-        if key[pygame.K_RIGHT] and self.x + self.speed < WIDTH - PADDLE_WIDTH:
-            self.x += self.speed
+        if ball.left <= 0 or ball.right >= 800:
+            ball_speed[0] = -ball_speed[0]
+        if ball.top <= 0:
+            ball_speed[1] = -ball_speed[1]
+        if ball.colliderect(paddle):
+            if ball.centerx < paddle.centerx:
+                ball_speed = [-3, -3]
+            else:
+                ball_speed = [3, -3]
 
-    def draw(self):
-        pygame.draw.rect(win, (255, 255, 255), pygame.Rect(self.x, self.y, PADDLE_WIDTH, PADDLE_HEIGHT))
+        if ball.bottom >= 600:
+            ball.topleft = (400, 570)
+            moving = False
 
-def main():
-    run = True
-    baile = Baile()
-    paddle = Paddle()
-    space_pressed = False
-
-    while run:
-        clock.tick(FPS)
-        key = pygame.key.get_pressed()
-        for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                run = False
-            if event.type == pygame.KEYDOWN and event.key == pygame.K_SPACE:
-                space_pressed = True
-
-        if space_pressed:
-            baile.move()
-            if baile.y - BAILE_RADIUS < 0 oro (baile.y + BAILE_RADIUS > paddle.y and paddle.x < baile.x < paddle.x + PADDLE_WIDTH):
-                baile.ángulo = -baile.ángulo
-            elif baile.x - BAILE_RADIUS < 0 oro baile.x + BAILE_RADIUS > WIDTH:
-                baile.ángulo = math.pino - baile.ángulo
-
-        paddle.move(key)
-
-        win.hijo((0, 0, 0))
-        baile.draw()
-        paddle.draw()
-        pygame.display.update()
-
-    pygame.quit()
-
-if __name__ == "__main__":
-    main()
+    screen.fill((0, 0, 0))
+    pygame.draw.ellipse(screen, (255, 255, 255), ball)
+    pygame.draw.rect(screen, (255, 255, 255), paddle)
+    pygame.display.flip()
+    clock.tick(60)
 ```
 
 Este es el código generado y el resultado ha sido el siguiente:
 
-![Juego planteado](img/7.png)
-
-El problema que hemos detectado es que la bola iba muy lentamente, en este caso nosotros hemos decidido cambiar el refresco de la pantalla que en el prompt lo hemos reflejado como: *y que se actualice la función que mueve la bola cada 0.3 segundos*, y finalmente le hemos dado un valor de 120. 
-
-Pero le hemos preguntado a Copilot y la respuesta ha sido igualmente válida o incluso más lógica:
-
-![Cambio de velocidad](img/9.png)
-
-:::tip
-Hemos cambiado el valor de BAILE_SPEED a 5 y el juego ha mejorado bastante
-:::
-
-## Explicación del prompt
-
-Vamos a hacer una pequeña explicación del prompt. Como podéis ver los prompts no suelen ser "Hazme un juego tipo *Arkanoid*", hay que detallar claramente lo que queremos.
-
-:::note
-Es posible que ahora ya haya una respuesta para el prompt de crear un juego tipo Arkanoid ya que está relacionado con el prompt que he preguntado después y ya lo haya asociado. A vosotros os podría funcionar. La IA va aprendiendo también de lo que nosotros le "enseñamos".
-:::
-
-El prompt que hemos planteado es:
-
->Crea un juego con la bilioteca pygame para python que tenga una pantalla estática con una plataforma del 20% del total de la ventana que pueda desplazar a la izquierda o la derecha con el teclado de manera suave y rápida. La velocidad de la bola será constante de 1 y que se actualice la función que mueve la bola cada 0.3 segundos y cuando la bola choque con los extremos de la pantalla rebotará con un ángulo de 45° en la dirección que lleva, si la bola choca contra la plataforma rebotará, si rebota en la mitad derecha de la plataforma se irá hacia la derecha con un ángulo de 45° hacia arriba y si rebota en la mitad izquierda de la plataforma se  irá hacia el izquierdo con un ángulo de 45° hacia arriba. Al comienzo habrá una bola encima de la tabla sin mover y cuando se pulse la tecla espacio la bola empezará a mover hacia arriba. Escríbeme el código solamente, sin comentarios y de la manera más resumida posible. No quiero que me escribas ninguna explicación, solo quiero el código y sin comentarios.
-
-> Crea un juego con la bilioteca pygame para python
-
-Tenemos que detallar la tecnologia que queremos utilizar, aquí estamos planteando un contexto en nuestro prompt
-
-> que tenga una pantalla estática con una plataforma del 20% del total de la ventana 
-
-En este caso continuamos detallando el contexto, podríamos haber pedido una pantalla más pequeña pero ha supuesto una pantalla de 800x600, sí que le indicamos que la ventana tenga un tamaño determinado y que queremos una plataforma que es donde rebotarán las bolas. Observa que ya le doy un valor, como no le he dado un valor a la pantalla hablo en porcentajes.
-
-> que pueda desplazar a la izquierda o la derecha con el teclado de manera suave y rápida. 
-
-Le dejamos claro que queremos manejar la plataforma con el teclado y no con el ratón, especificamos suave y rápida para que entienda que si mantenemos pulsada la tecla queremos que continúe, en este caso me ha funcionado pero con otros modelos GPT no entiende *suave y rápida* 
-
-> La velocidad de la bola será constante de 1 y que se actualice la función que mueve la bola cada 0.3 segundos 
-
-Esta parte puede costar de entender un poco más, el FPS es la velocidad con la que quiero que se refresque la pantalla y se lo he dicho en segundos que la IA ha interpretado 60 fps, y la velocidad 1 porque pygame solo permite valores mayores de 1.
-
-> y cuando la bola choque con los extremos de la pantalla rebotará con un ángulo de 45° en la dirección que lleva
-
-Es importante delimitar como rebota, aquí es cuando le damos ejemplos a la IA para que entienda que tiene que rebotar en una dirección diferente, sino podría quedar rebotando de un lado a otro sin cambiar. Hay que pensar en la dinámica del juego.
-
->si la bola choca contra la plataforma rebotará, si rebota en la mitad derecha de la plataforma se irá hacia la derecha con un ángulo de 45° hacia arriba y si rebota en la mitad izquierda de la plataforma se  irá hacia el izquierdo con un ángulo de 45° hacia arriba. 
-
-Continuamos con los ejemplos que ayudan a entender qué es lo que deseamos.
-
-> Al comienzo habrá una bola encima de la tabla sin mover y cuando se pulse la tecla espacio la bola empezará a mover hacia arriba. 
-
-Hay que definir una situación inicial puesto que, como ya hemos comentado, la IA no presupone como un humano, si no especificamos algo se lo inventará y podría ser que no fuera lo que deseamos. Las presuposiciones que hace no son humanas.
-
-> Escríbeme el código solamente, sin comentarios y de la manera más resumida posible. No quiero que me escribas ninguna explicación, solo quiero el código y sin comentarios.
-
-Por último insistimos que solo queremos el código sin ningún tipo de explicación y sin ningún tipo de comentario al código. Los comentarios nos pueden ayudar a entender mejor el código, pero la plataforma tiene limitado el número de caracteres que nos da como respuesta, de este modo ahorramos cantidad de caracteres que queremos que nos dé.
+![Juego planteado](img/7.png){ width=70% }
 
 :::important
-Insitimos en que la plataforma tiene limitado el número de caracteres que nos da como respuesta, por eso le decimos que no nos dé comentarios adicionales, para que se centre solamanete en el código, que es lo que queremos.
+Tenéis que eliminar las citaciones que hace la IA al final del código, puesto que no son parte del código y pueden generar errores. En este caso: [_{{{CITATION{{{_1{](https://github.com/henrikots/fly-boy/tree/441b0442733ab0ebc499b5233804db110905a1f1/tutorial.py)
+:::
+
+:::tip
+El problema que hem detectat és que la bola anava molt lentament, així que li hem demanat que la velocitat fora major. Però li hem preguntat a Copilot i ens ha arreglat el codi.
+:::
+
+## Explicació del prompt
+
+Anem a fer una xicoteta explicació del prompt. Com podeu vore els prompts no solen ser "Fes-me un joc tipo Arkanoid", cal detallar clarament el que volem. I aquesta exlicació del prompt serveix per a qualsevol altre tipus de matèria.
+
+:::note
+És possible que ara ja hi haja una resposta per al prompt de crear un joc tipus Arkanoid ja que està relacionat amb el prompt que he preguntat després i ja ho haja associat. A vosaltres us podria funcionar. La IA va aprenent també del que nosaltres li "ensenyem".
+:::
+
+El prompt que hem plantejat és:
+
+>Crea un joc amb la bilioteca pygame per a python que tinga una pantalla estàtica amb una plataforma del 20% del total de la finestra que puga desplaçar a l'esquerra o la dreta amb el teclat de manera suau i ràpida. La velocitat de la bola será constant de 1 i que s'actualitze la funció que mou la bola cada 0.3 segons i quan la bola xoque amb els extrems de la pantalla rebotarà amb un angle de 45º en la direcció que du, si la bola xoca contra la plataforma rebotarà, si rebota en la meitat dreta de la plataforma se n'anirà cap a la dreta amb un angle de 45º cap a dalt i si rebota en la meitat esquerra de la plataforma se n'anirà cap a l'esquerre amb un angle de 45º cap a dalt. Al començament hi haurà una bola damunt de la tabla sense moure's i quan es polse la tecla espai la bola començarà a moure's cap a dalt. Escriure-me el codi només, sense comentaris i de la manera més resumida possible. No vull que m'escrigues cap explicació, només vull el codi i sense comentaris.
+
+> Crea un joc amb la bilioteca pygame per a python
+
+Hem de detallar la tecnlogia que volem utiltizar, ací estem plantejant un context en el nostre prompt
+
+> que tinga una pantalla estàtica amb una plataforma del 20% del total de la finestra 
+
+En aquest cas continuem detallant el context, podríem haver demanat una pantalla més xicoteta però ha supossat una pantalla de 800x600, si que li indiquem que la finestra tinga un tamany determinat i volem una plataforma que és on rebotaran les boles. Vegeu que li done ja un valor, com que no li he donat un valor a la pantalla li parle en percentatges.
+
+> que puga desplaçar a l'esquerra o la dreta amb el teclat de manera suau i ràpida. 
+
+Li deixem clar que volem manejar la plataforma amb el teclat i no amb el ratolí, especifiquem suau i ràpida per a que entenga que si mantenim polsat la tecla volem que continue, en aquest cas m'ha funcionat però amb altres models GPT no entén suau i ràpida* 
+
+> La velocitat de la bola será constant de 1 i que s'actualitze la funció que mou la bola cada 0.3 segons 
+
+Aquesta part pot costar d'entendre un poc més, el FPS és la velocitat amb la que vull que es refresque la pantalla i li ho he dit en segons que la IA a interpretat 60 fps, i al velocitat 1 perquè pygame només permet valors majors de 1.
+
+> i quan la bola xoque amb els extrems de la pantalla rebotarà amb un angle de 45º en la direcció que du
+
+És important delimitar com rebota, ací és quan li donem exemples a la IA per a que entenga que ha de rebotar en una direcció diferent, sino podria quedar-se rebotant d'un costat a altre sense canviar. Cal pensar en la dinàmica del joc.
+
+>si la bola xoca contra la plataforma rebotarà, si rebota en la meitat dreta de la plataforma se n'anirà cap a la dreta amb un angle de 45º cap a dalt i si rebota en la meitat esquerra de la plataforma se n'anirà cap a l'esquerre amb un angle de 45º cap a dalt. 
+
+Continuem amb els exemples que ajuden a entendre què és el que desitgem.
+
+> Al comienzo habrá una bola encima de la tabla sin #mover y cuando se polse la tecla espacio la bola empezará a #mover hacia arriba. 
+
+Hay que definir una situación inicial puesto que, como ya hemos comentado, la IA no presupone como un humano, sino especificamos algo se lo inventará y podría ser que no fuera el que deseamos. Las presuposacions que hace no son humanas.
+
+> Escribir-me el código solo, sin comentarios y de la manera más resumida posible. No quiero que me escribas ninguna explicación, solo quiero el código y sin comentarios.
+
+Por último insistimos que solo volamos el código sin ningún tipo de explicación y sin ningún tipo de comentario al código. Los comentarios nos pueden ayudar a entender mejor el código, pero la plataforma tiene limitado el número de caracteres que nos da como respuesta, de este modo estaviem cantidad de caracteres que queremos que nos dé.
+
+:::important
+Insistimos que la plataforma tiene limitado el número de caracteres que nos da como respuesta, por eso insistimos que no nos doy comentarios adicionales, porque se centre únicamente en el código que es el que volamos
 :::
 
 :::warning
 Creando este prompt, en una de las pruebas la IA me contestó:
 
-![La IA haciendo amigos](img/10.png)
+![La IA haciendo amigos](img/10.png){ width=70% }
 
-Así que no siempre obtendremos el resultado esperado y habrá que ir modificando variables hasta que nos de el resultado esperado.
+Así que no siempre obtendremos los resultados esperados y habrá que ir modificando variables hasta que nos doy el resultado esperado.
 :::
 
 No penséis que este prompt ha salido mágicamente de mi cabeza, hay que ir analizando las respuestas que va dando para ir creando el prompt, son varios intentos modificando el orden de las frases del prompt y preguntando por separado para analizar las respuestas y poder perfilar más el resultado.
 
-# Creación de páginas web
 
-Para crear páginas web de manera rápida y sencilla también podemos recurrir a las plataformas GPT, pero como hemos visto, estas tienen una limitación de caracteres de respuesta y te limitan a una página. Puedes ir preguntándole que te vaya generando cada uno de los archivos que necesitas.
+# Replit
 
-## Pineapple
+[Replit](https://replit.com) es una plataforma que nos permite crear código de manera sencilla y rápida. Podemos crear código en diferentes lenguajes de programación y nos permite compartirlo con otras personas. Además, nos permite ejecutar el código en linea y ver el resultado en tiempo real. de forma que no vayamos a pediros que ejecutéis el código a vuestro ordenador, en cambio podemos hacerlo en esta plataforma.
 
-Con [Pineapple](https://www.pineapplebuilder.com/) puedes crear una página web en cuestión de minutos. Nada más entrar en la página ya nos preguntará qué queremos hacer:
+![Replit](img/21.png){ width=70% }
 
-\awesomebox[violet]{2pt}{\faRobot}{violet}{\textbf{Una página para mi centro educativo que explique cuál es la normativa del centro y qué particularidades tiene.}}
+Replit es una paltaforma muy potente y muy utilizada, en este caso cuando ente loguem y le decimos a todo que sí nos aparecerá una pantalla como esta:
 
-![Pineapple](img/11.png)
+![Replit](img/22.png){ width=70% }
 
-De primeras ya nos pegunta por el *Bussiness details* que es el objetivo de la página web y por el *target audience*, a quién va dirigida. Nos da una propuesta para cada temática y le damos a generar la página.
+Y Damos a create Repl:
 
-![Paso 1](img/12.png)
+![Create Repl](img/23.png){ width=70% }
 
-Ahora tendremos que escoger los colores y un poco la temática, o podemos dejar lo que nos proponga...
+Nos hará un breve tutotial, y al final nos aparecerá una pantalla como esta:
 
-![Paso 2](img/13.png)
+![Pantalla de Replit](img/24.png){ width=70% }
 
-Le damos a *Save* y, como no, nos pedirá que nos inscribamos y luego pide el nombre de la "compañía", y el logo.
+Polsem la tecla Ctrl+I y veremos que ente aapreix un diálogo donde podemos escribir nuestro prompt:
 
-![Paso 3](img/14.png)
+![Prompt](img/25.png){ width=70% }
 
-Y finalmente nos aparecerá un editor para editar nuestra página, pero ya tenemos un esqueleto creado:
+Y nos da un resultado diferente a nuestra propuesta:
 
-![Paso 4](img/15.png)
+![Resultado](img/26.png){ width=70% }
 
-En nuestro caso le damos directamente a publicar y la podemos [ver](https://sailfish_rose_453.pineapplebuilder.com/)
+Lodonem a Accept y polsem el botón Run vert que hay arriba de todo. Nos aparecerá una pantalla como esta, donde polsarem la siguiente tecla para hacerla más grande:
 
-:::info
-La gran desventaja que tiene esta herramienta es que solo nos crea la página dentro del dominio que ella nos da. Los programadores siempre podrán hacer un:
-```
-wget -r [nombre de la página]
-```
-En el terminal de linux, y así, podrán utilizar el código. Aunque viene comprimido. Pero es una buena opción para experimentar
+![Pantalla principal](img/27.png){ width=70% }
+
+Y ya veamos la pantalla en grande, es importante que polsem aquí para que detecte el teclado:
+
+![Pantalla principal](img/28.png){ width=70% }
+
+:::warning
+El código generado por Copiloto ha funcionado mucho mejor, a Replit hemos cambiado los siguientes valores para que funcionara mucho más rápidamente. Pero podemos copiar el código de Copiloto y pegarlo aquí para que funciono correctamente.
+baile_speed = 20
+platform_speed = 20
+time.sleep(0.1)
 :::
 
-## Hocoos
+Replit es una plataforma muy potente y puede servirnos para introduïr a los alumnos en la programación empezando con cosas mucho más sencillas como:
 
-[Hocoos](https://magic.hocoos.com) es una plataforma dónde, con 7 pasos que nos irá preguntando, podremos crear nuestra página
+\awesomebox[violet]{2pt}{\faRobot}{violet}{Crea un programa que abra una ventana y me pregunto mi nombre, después cierra esa ventana y abra otra ventana que diga Hola + mi nombre y espero hasta que yo cierro esa ventana.}
 
-![Temática](img/16.png)
+![Programa](img/29.png){ width=70% }
 
-Iremos respondiendo a todas las cuestiones que nos va planteando
+Podéis ver el resultado [aquí](https://replit.com/join/ovvzfszftt-alviboigva)
 
-![Temática](img/19.png)
-
-Y finalmente escogeremos una de las propuestas creadas, eligiremos la paleta de colores y empezará la creación de la web y la podremos [encontrar aquí](https://tiana431.hocoos.com).
-
-Igualmente, no podemos acceder al código, pero si tenemos un dominio[^1] propio podremos acceder a nuestro archivo de configuración del DNS para que apunte desde nuestra página. El problema de esto es que hay que tener ciertos conocimientos de informática para poder realizarlo.
-
-[^1]: Un dominio es el nombre que escribimos en el navegador, por ejemplo www.microsoft.com
-
-## Mixo
-
-[Mixo](https://app.mixo.io) directamente nos plantea un prompt y una cuestión y con solo esto ya te crea una página. En el último paso ya te pide que te inscribas.
-
-![Mixo](img/20.png)
-
-El resultado podemos encontrarlo [aquí](https://www.mixo.io/site/tecno-educa-12onu)
-
-:::info
-El plan gratuito solo te deja publicar una única página web y está bastando limitado
+:::tip
+No hay que saber programar para utilizar la plataforma sino saber escribir prompts correctamente, podemos pensar que esta plataforma sirve solo para programadores, pero no es así. Puesto que fijaos la estructura del prompt, hay que saber explicar bien el que volamos. Y esto ayuda a desarrollar el pensamiento computacional
 :::
 
-## ChatGPT o Copilot
+\awesomebox[black]{2pt}{\faCode}{black}{Como docentes podemos hacer uso de github Copiloto que tendréis que solicitar a la plataforma de GitHub y que os permitirá modificar código en tiempo real y se integra muy bien dentro de Visual Studio Code.}
 
-\awesomebox[violet]{2pt}{\faRobot}{violet}{\textbf{Crea un página en un solo archivo para un centro educativo que utilize tecnología Html5 y css y esté contenido en un único Archivo. Los iconos que utilizará serán fontawesome del plan gratuito. La página mostrará 3 botones responsive que cuando se muestre desde un ordenador se vean los botones en horizontal, cuando se ponga el cursor encima de cada botón, este girará y mostrará la dirección url. Los 3 botos ocuparán la parte central de la página y tendrán un icono relacionado. El primer botón llevará a la página del cefire de Valencia: https://portal.edu.gva.es/cefirevalencia/es/inicio/ el segundo botón llevará a la página de Aules: https://aules.edu.gva.es/formaciodelprofessorat/login/index.php y el tercer botón a la dirección: https://cefire.eu/guacomole. Si se ve desde un mòvil los botones se veran de manera vertical. La página tendrá un título grande en la parte superior que mostrará el título Página de enlace y un footer que pondrá: creado con tecnología Copilot para el curso del cefire. El fondo de la página será verde claro.}}
+# Creamos una unidad en Aulas
 
-El resultado que nos da es un pequeño tutorial de como crear una página web, por lo que habrá que insistirle.
+En este apartado vayamos a crear una unidad desde 0, ya os hemos comentado que siempre es importante tener unas nociones básicas sobre el que se está preguntando. Vamos a hacer nuestra prueba en el nuestro [Aulas docente](https://aules.edu.gva.es/docent/my/).
 
-\awesomebox[violet]{2pt}{\faRobot}{violet}{¿Puedes crearme todo el código html necesario? También falta el título que irá encima de los botones y el footer que tendrá un texto en el centro mostrando lo que te he dicho.} 
+:::tip
+Tenéis opciones gratuitas de moodle como [milaulas](https://www.milaulas.com/)
+para poder hacer pruebas si no queréis utilizar el Aulas docente.
+:::
 
-Finalmente el resultado, a pesar de que no es del todo lo que esperábamos es bastante aceptable:
+## Diseño estético
+
+Existen páginas como [Colorhunt](https://colorhunt.co/) para poder utilizar colores que combinan entre sí. Nosotros hemos cogido [esta paleta de colores](https://colorhunt.co/palette/4c4b16898121e6c767f87a53) para poder hacer nuestra unidad.
+
+El diseño que vayamos a utilizar es más o menos el que hemos utilizado se este mismo curso, aunque cambiaremos algunas cosas puesto que hemos utilizado herramientas como [pandoc](https://pandoc.org/) para poder crear este documento.
+
+En primer lugar creamos nuestro curso:
+
+![Curso](img/30.png){ width=70% }
+
+![Nombre del curso](img/31.png){ width=70% }
+
+:::caution
+El curso tarda un poco  crea-se. Así que no os preocupáis.
+:::
+
+![Entramos en modo edición](img/32.png){ width=70% }
+
+Y añadimos una sección.
+
+\awesomebox[violet]{2pt}{\faRobot}{violet}{crea una división en html un titul que diga La célula y la fuente sea de color blanco y que tenga un fondo con las esquines redondejades que ocupo el 100 de su sección y el fondo sea a múltiples bandas alternas inclinadas 45 grados con los colores 4C4B16  y un color un poco menos oscuro. Es importante que el estilo esté todo contenido dentro de la misma división. Quiero que muestras solo la parte del cuerpo.}
+
+El resultado ha sido lo siguiente:
 
 ```html
-<!DOCTYPE html>
-<html lang="ca">
-<head>
-  <meta charset="UTF-8">
-  <title>Página de enlace</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-  <style>
-    footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #0072c6;
-  color: #fff;
-  text-align: center;
-  padding: 20px;
-}
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #d1e0e0;
-    }
-    header {
-      background-color: #0072c6;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    h1 {
-      font-size: 36px;
-      margin: 0;
-    }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-    .button-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      margin-top: 50px;
-    }
-    .button {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 10px;
-      padding: 10px;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      transition: transform 0.3s ease-in-out;
-      width: 100%;
-      max-width: 400px;
-      text-align: center;
-    }
-    .button:hover {
-      transform: rotate(360deg);
-    }
-    .button i {
-      font-size: 48px;
-      margin-bottom: 10px;
-    }
-    .button span {
-      font-size: 24px;
-      text-align: center;
-    }
-    footer {
-      background-color: #0072c6;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-      margin-top: 50px;
-      width: 100%;
-    }
-  </style>
-</head>
 <body>
-  <header>
-    <h1>Página de enlace</h1>
-  </header>
-  <div class="container">
-    <div class="button-container">
-      <a href="https://portal.edu.gva.es/cefirevalencia/es/inicio/" class="button">
-        <i class="fas fa-university"></i>
-        <span>Cefire de Valencia</span>
-      </a>
-      <a href="https://aules.edu.gva.es/formaciodelprofessorat/login/index.php" class="button">
-        <i class="fas fa-chalkboard-teacher"></i>
-        <span>Aulas</span>
-      </a>
-      <a href="https://cefire.eu/guacamole" class="button">
-        <i class="fas fa-book"></i>
-        <span>Guacomole</span>
-      </a>
+    <div style="background: repeating-linear-gradient(45deg, #4C4B16, #4C4B16 10px, #6C6B29 10px, #6C6B29 20px); border-radius: 15px; width: 100%; padding: 20px; text-align: center; color: white;">
+        <h1 style="color: white;">La célula</h1>
     </div>
-  </div>
-  <footer>
-    <p>Creado con tecnología Copiloto para el curso del cefire. Contacto: <a href="mailto: ar.vicenteboix@edu.gva.es" class="href">Alfredo Vicente</a></p>
-  </footer>
 </body>
-</html>
 ```
 
-Que hemos subido al nuestro [servidor que tenemos de pruebas](htps://cefire.eu) para que lo veáis.
+En Afig una actividad o recurso buscamos "Área de texto y multimedia" y copiamos el código sin la parte de body y nos aparecerá así:
 
+![Código](img/33.png){ width=90% }
 
-## Conclusiones
+:::caution
+Tenemos que copiarlo haciendo clic en el botón de código (con rojo a la imagen).
+:::
 
-Existen multitud de aplicaciones para crear webs estáticas, pero tal vez no marcan la diferencia respecto a crear tu propia página partiendo de un plantilla y crearla poco a poco. Pero siempre es más interesante tener algún conocimiento de programación web para dirigir las cuestiones para situaciones más concretas sobre qué es lo que queremos ir modificando.
+El reusultat se vería de este modo:
 
-# Más posibilidades
+![Resultado](img/34.png){ width=90% }
 
-Las posibilidades para programar en cualquier framework son infinitas y puedes tener un profesor las 24h disponible para ir preguntando aquello que necesitamos, pero hay que saber qué preguntar. Se podría haber utilizado una plataforma profesional como Unity que habría que instalar y programar con ella, es más compleja puesto que no es solo código. Aun así  hay muchos ejemplos en la red de crear un juego con Unity pero hay que ir preguntando poco a poco y diciendo "¿Y ahora que hago?".
+Podemos crear títulos más pequeños modificando un poco el prompt:
 
-La única limitación que tenemos es el tiempo que podemos dedicarle.
+\awesomebox[violet]{2pt}{\faRobot}{violet}{\textbf{Crea una división en html un título pequeño que diga "Contenidos" y esté lineat a la izquierda, la fuente del título sea de color blanco y que tenga un fondo con las esquines redondejades que ocupo el 100% de su sección y el fondo sea a múltiples bandas alternas inclinadas 45 grados con los colores #898121  y un color un poco menos oscuro, la altura de todo el contenido no tiene que ser demasiado grande. Es importante que el estilo esté todo contenido dentro de la misma división. Quiero que muestras solo la parte del cuerpo.}}
+
+El resultado ha sido lo siguiente:
+
+```html
+<div style="font-family: 'Verdana', sans-serif; color: #fff; text-align: left; font-size: 1.2em; padding: 20px; width: 100%; height: auto; background: repeating-linear-gradient(45deg, #898121, #898121 10px, #6d6b16 10px, #6d6b16 20px); border-radius: 15px; margin: auto;">
+    <h2 style="color: #fff; margin: 0;">Contenidos</h2>
+</div>
+
+```
+
+Creo que recordaréis que crearemos un curso sobre la célula en el módulo 3, así que vayamos a aprovecharlo. Añadimos una actividad o recurso #URL que quedaría de la siguiente manera:
+
+![#URL](img/35.png){ width=70% }
+
+Lo movamos a la derecha para darle un buen formato:
+
+![A la derecha](img/36.png){ width=40% }
+
+Y así se nos abre como en una ventana emergente el contenido:
+
+![Contenido](img/37.png){ width=90% }
+
+## Actividades
+
+Vayamos a crear una actividad de tipo cuestionario. Pero vamos a hacer uso de las herramientas que hemos aprendido a utilizar.
+
+Iremos a [magischool](https://app.magicschool.ai/tools) y crearemos un cuestionario. En este caso haremos un cuestionario de 5 preguntas sobre la célula.
+
+![Magischool](img/38.png){ width=70% }
+
+Creamos el qüestinari:
+
+![Cuestionario](img/39.png){ width=70% }
+
+Y el resultado que tenemos es el siguiente:
+
+![Cuestionario](img/40.png){ width=70% }
+
+:::caution
+En este caso no podemos subir la web que hemos creado con mindsmith por las características de la plataforma, pero podemos subir nuestros propios apuntes.
+:::
+
+Pero a nosotros ente interesa que estas cuestiones estén en Aulas... Así que copiaremos el resultado y utilizaremos Copiloto:
+
+\awesomebox[violet]{2pt}{\faRobot}{violet}{Crea un código xml para poder importar como cuestionario de moodle utilizant las siguientes cuestiones:\newline 
+La célula y sus partes\newline
+1. Cuál es la función principal del núcleo celular?  \newline
+a. Controlar las actividades celulares  \newline
+b. Proporcionar energía a la célula  \newline
+c. Sintetizar proteínas  \newline
+d. Almacenar lípidos  \newline
+2. Qué estructura celular está involucrada principalmente en la producción de energía?  \newline
+a. Núcleo  \newline
+b. Mitocòndria  \newline
+c. Ribosoma  \newline
+d. Retículo endoplasmático \newline 
+3. Qué parte de la célula contiene enzimas que ayudan a la digestión de material celular?  \newline
+a. Aparato de Golgi  \newline
+b. Lisosoma  \newline
+c. Cloroplasto  \newline
+d. Centriolo  \newline
+4. Cuál es el papel principal de la membrana plasmática?  \newline
+a. Sintetizar lípidos  \newline
+b. Mantener el equilibrio osmótico  \newline
+c. Controlar el que entra y sale de la célula  \newline
+d. Producir glucosa  \newline
+5. Qué orgánulo es responsable de la síntesis de proteínas?  \newline
+a. Núcleo  \newline
+b. Ribosoma  \newline
+c. Lisosoma  \newline
+d. Vacuola  \newline
+Answer Key (Always review AI generated answers for accuracy - Math is more likely to be inaccurate)
+
+a  
+b  
+b  
+c  
+b  }
+
+Y el resultado ha sido lo siguiente:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+  <question type="multichoice">
+    <name>
+      <text>Cuál es la función principal del núcleo celular?</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Cuál es la función principal del núcleo celular?</p>]]></text>
+    </questiontext>
+    <answer fraction="100">
+      <text>Controlar las actividades celulares</text>
+    </answer>
+    <answer fraction="0">
+      <text>Proporcionar energía a la célula</text>
+    </answer>
+    <answer fraction="0">
+      <text>Sintetizar proteínas</text>
+    </answer>
+    <answer fraction="0">
+      <text>Almacenar lípidos</text>
+    </answer>
+  </question>
+  
+  <question type="multichoice">
+    <name>
+      <text>Qué estructura celular está involucrada principalmente en la producción de energía?</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Qué estructura celular está involucrada principalmente en la producción de energía?</p>]]></text>
+    </questiontext>
+    <answer fraction="0">
+      <text>Núcleo</text>
+    </answer>
+    <answer fraction="100">
+      <text>Mitocòndria</text>
+    </answer>
+    <answer fraction="0">
+      <text>Ribosoma</text>
+    </answer>
+    <answer fraction="0">
+      <text>Retículo endoplasmático</text>
+    </answer>
+  </question>
+  etc...
+```
+
+Este texto lo copiamos en un fichero (creado con el notepad de windows) y lo guardamos como **questions.xml**.
+
+En nuestro Aulas añadiremos un Cuestionario  "Añade una actividad o recurso":
+
+![Cuestionario de Aulas](img/41.png){ width=90% }
+
+No hay que modificar nada más, simplemente le damos a "Guarda los cambios y vuelve al curso" y ya tendremos nuestro cuestionario creado.
+
+Y entraremos a nuestro cuestionario e iremos a Banco Banco de preguntas:
+
+![Banco de preguntas](img/42.png){ width=90% }
+
+Una vez aquí le damos a "Importa":
+
+![Importa](img/43.png){ width=90% }
+
+Tenemos que escoger las siguientes opciones:
+
+* Formato XML de Moodle
+* Arrastrar y soltar el fichero o navegar para subirlo
+
+![Opciones](img/44.png){ width=90% }
+
+Ahora podremos ver las preguntas que hemos creado:
+
+![Preguntas](img/45.png){ width=90% }
+
+:::tip
+A partir de ahora os recomiendo estos pasos para tener las cuestiones un poco más organizadas en vuestro curso.
+:::
+
+Seleccionamos todas las cuestiones y desplegamos el menú de bajo y le damos a "Mueve a...":
+
+![Mueve a](img/46.png){ width=90% }
+
+Si este al Cuestionario 1 escogemos por defecto en Cuestionario 1 y le damos a "Mueve a":
+
+![Mueve a](img/47.png){ width=90% }
+
+Una vez hemos hecho esto tenemos nuestras preguntas en nuestro banco de preguntas, pero no esto no significa que estén al cuestionario, para posarlas al cuestionario tenemos que hacer el siguiente:
+
+1. Vamos a nuestro cuestionario y le damos a "Añade una pregunta":
+
+![Cuestionario](img/48.png){ width=90% }
+
+2. Después vayamos al menú Añade y decimos del Banco de preguntas:
+  
+![Añadir pregunta](img/49.png){ width=90% }
+
+Finalmente escogemos la opción "Por defecto en Cuestionario 1" y hacemos clic en Aplica Filtros:
+
+![Filtros](img/50.png){ width=90% }
+
+Cuando aplicamos filtros Seleccionamos todas las preguntas y le damos a "Afeg las preguntas seleccionadas al cuestionario":
+
+![Añadir preguntas](img/51.png){ width=90% }
+
+Y ya tendremos nuestras preguntas añadidas al cuestionario:
+
+![Preguntas](img/52.png){ width=90% }
+
+:::tip
+Hemos hecho este proceso muy en detalle puesto que mucha gente se lia a los qüestinaris del Moodle. Para muchos de vosotros será una tarea sencilla. También es cierto que estamos hablando de 5 cuestiones, pero si volemos hacer un cuestionario de 20 preguntas puede ahorrarnos mucho trabajo.
+:::
+
+También podemos añadir:
+
+\awesomebox[violet]{2pt}{\faRobot}{violet}{Crea un feedback del siguiente cuestionario de moodle: (Aquí añadimos el código de las preguntas de Moodle)
+}
+
+I la resposta serà esta amb un feedback de cada qüestió:
+
+Fixeu-vos com ens ha afegit este camp:
+
+```xml
+      <feedback>
+        <text>Correcto! El núcleo celular es el centro de control de la célula.</text>
+      </feedback>
+```
+
+Aquí tindriem la respuesta, pero tiene un problema:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<quiz>
+  <question type="multichoice">
+    <name>
+      <text>Qué es la función principal del núcleo celular?</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Cuál es la función principal del núcleo celular?</p>]]></text>
+    </questiontext>
+    <answer fraction="100">
+      <text>Controlar las actividades celulares</text>
+      <feedback>
+        <text>Correcto! El núcleo celular es el centro de control de la célula.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>Proporcionar energía a la célula</text>
+      <feedback>
+        <text>No es correcto. La principal función del núcleo celular es controlar las actividades celulares.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>Sintetizar proteínas</text>
+      <feedback>
+        <text>Incorrecto. El núcleo controla las actividades celulares, no sintetiza proteínas directamente.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>Almacenar lípidos</text>
+      <feedback>
+        <text>No, el núcleo celular no almacena lípidos, controla las actividades celulares.</text>
+      </feedback>
+    </answer>
+  </question>
+  
+  <question type="multichoice">
+    <name>
+      <text>Qué estructura celular está involucrada principalmente en la producción de energía?</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Qué estructura celular está involucrada principalmente en la producción de energía?</p>]]></text>
+    </questiontext>
+    <answer fraction="0">
+      <text>Núcleo</text>
+      <feedback>
+        <text>No es correcto. El núcleo no está involucrado principalmente en la producción de energía.</text>
+      </feedback>
+    </answer>
+    <answer fraction="100">
+      <text>Mitocòndria</text>
+      <feedback>
+        <text>Correcto! La mitocòndria es la fuente principal de producción de energía en la célula.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>Ribosoma</text>
+      <feedback>
+        <text>Incorrecto. Los ribosomas son responsables de la síntesis de proteínas, no de la producción de energía.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>Retículo endoplasmático</text>
+      <feedback>
+        <text>No, el retículo endoplasmático no es principalmente responsable de la producción de energía.</text>
+      </feedback>
+    </answer>
+  </question>
+  
+  <question type="multichoice">
+    <name>
+      <text>Qué parte de la célula contiene enzimas que ayudan a la digestión de material celular?</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Qué parte de la célula contiene enzimas que ayudan a la digestión de material celular?</p>]]></text>
+    </questiontext>
+    <answer fraction="0">
+      <text>Aparato de Golgi</text>
+      <feedback>
+        <text>No es correcto. El Aparato de Golgi no contiene enzimas de digestión de material celular.</text>
+      </feedback>
+    </answer>
+    <answer fraction="100">
+      <text>Lisosoma</text>
+      <feedback>
+        <text>Correcto! Los lisosomas contienen enzimas que ayudan a la digestión de material celular.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>Cloroplasto</text>
+      <feedback>
+        <text>Incorrecto. Los cloroplastos no contienen enzimas de digestión de material celular.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>Centriolo</text>
+      <feedback>
+        <text>No, los centriolos no están involucrados en la digestión de material celular.</text>
+      </feedback>
+    </answer>
+  </question>
+  
+  <question type="multichoice">
+    <name>
+      <text>Cuál es el papel principal de la membrana plasmática?</text>
+    </name>
+    <questiontext format="html">
+      <text><![CDATA[<p>Cuál es el papel principal de la membrana plasmática?</p>]]></text>
+    </questiontext>
+    <answer fraction="0">
+      <text>Sintetizar lípidos</text>
+      <feedback>
+        <text>Incorrecto. La membrana plasmática no es responsable de sintetizar lípidos.</text>
+      </feedback>
+    </answer>
+    <answer fraction="0">
+      <text>Mantener el equilibrio osmótico</text>
+      <feedback>
+        <text>No es correcto. La principal función de la membrana plasmática no es mantener el equilibrio osmótico.</text>
+      </feedback>
+    </answer>
+    <answer fraction="100">
+      <text>Controlar el que entra y sale de la célula</text>
+      <feedback>
+        <text>Correcto! La función principal de la membrana plasmática es controlar el que entra y sale de la célula.</text>
+      </feedback>
+    </answer>
+    ...
+```
+
+En este caso Copiloto tiene un limit de tamany de respuesta, si volguerem hacer feedback de todas las cuestiones deuriem ir de dos en dos o de tres en tres, dependiendo de la longitud de las cuestiones.
+
+:::warning
+En ningún momento he revisado que las respuestas sean correctas, perfectamente podrían ser incorrectas. Así que es importante revisarlas.
+:::
+
+Finalmente para donarl-le un último toque en nuestro curso crearíamos un video.
+
+## Video
+
+Para crear un video podríamos utilizar la herramienta https://simpleshow.com/ que nos permite crear videos de manera sencilla y rápida. En este caso haremos un video de sobre la célula.
+
+![Simpleshow](img/53.png){ width=90% }
+
+Tenemos que dar un título a la historia y crear nuestro guion del video:
+
+![Guion](img/56.png){ width=90% }
+
+:::tip
+Para hacer el guion hemos utiltizat Copiloto que el resultado era mucho mejor.
+:::
+
+Finalmente puedes editar el video y cambiar las imágenes que utiliza, lo cual es muy recomendable en este caso puesto que su banco de imágenes no es demasiado grande. Pero podamos comprobar el resultado aquí:
+
+[https://videos.simpleshow.com/jeqommgovt](https://videos.simpleshow.com/jeqommgovt)
+
+Podríamos añadir el video en nuestro curso y ya tendríamos nuestra unidad completada.
+
+![Video](img/58.png){ width=90% }
+
+## Conclusión
+
+La inteligencia artificial no nos proporciona todo el trabajo hecho, sino que actúa como una herramienta poderosa para facilitar y agilizar nuestras tareas. Nos permite automatizar procesos repetitivos, generar contenido de manera eficiente y ofrecer soluciones rápidas a problemas complejos. Sin embargo, es esencial que los usuarios mantengamos un papel activo en la supervisión y validación de los resultados generados por la IA. Así, podemos asegurarnos que las soluciones propuestas se ajusten a nuestras necesidades específicas y mantienen un alto nivel de calidad. En resumen, la IA es una aliada que nos ayuda a ser más productivos y creativos, pero nuestra intervención y criterio continúan siendo fundamentales para obtener los mejores resultados.
